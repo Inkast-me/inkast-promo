@@ -8,7 +8,9 @@
   src: url("./assets/fonts/StratosLCWeb-Regular.ttf") format("truetype");
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
