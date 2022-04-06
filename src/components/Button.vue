@@ -6,6 +6,7 @@
 
 <style lang="scss" scoped>
 .button__wrapper {
+  font-family: "Stratos LC Web";
   background: #111111;
   border-radius: 12px;
   padding: 0.75em 0.75em calc(0.75em + 4px);

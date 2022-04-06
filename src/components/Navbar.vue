@@ -1,48 +1,53 @@
 <template>
   <nav class="nav__wrapper">
-    <div class="nav__logo">
+    <a href="/" class="nav__logo">
       <img :src="require('@/assets/logo.svg')" alt="InKast" />
-    </div>
+    </a>
 
     <div class="nav__links-wrapper">
       <a href="#product" class="nav__link">Продукт</a>
       <a href="#team" class="nav__link">Команда</a>
+      <a href="/donate" class="nav__link">Донаты</a>
     </div>
 
     <div class="nav__additional">
       <div class="nav__language">ЕN</div>
       <button class="nav__join">Присоединиться</button>
-      <img @click="openModal = !openModal" class="nav__burger" :src="require('@/assets/burger.svg')" alt="Изначально, наш проект назывался МетаСеть:)">
+      <img
+        @click="openModal = !openModal"
+        class="nav__burger"
+        :src="require('@/assets/burger.svg')"
+        alt="Изначально, наш проект назывался МетаСеть:)"
+      />
     </div>
   </nav>
 
-    <Transition name="modal">
-      <div v-if="openModal" class="modal">
-          <div @click="openModal = !openModal" class="modal__close">Close</div>
+  <Transition name="modal">
+    <div v-if="openModal" class="modal">
+      <div @click="openModal = !openModal" class="modal__close">Close</div>
 
-          <a href="#product" class="nav__link">Продукт</a>
-          <a href="#team" class="nav__link">Команда</a>
+      <a href="#product" class="nav__link">Продукт</a>
+      <a href="#team" class="nav__link">Команда</a>
 
-          <div class="nav__language">ЕN</div>
-          <button class="nav__join">Присоединиться</button>
-      </div>
-    </Transition>
+      <div class="nav__language">ЕN</div>
+      <button class="nav__join">Присоединиться</button>
+    </div>
+  </Transition>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref } from "vue";
 
 export default defineComponent({
   setup() {
-    const openModal = ref(false)
+    const openModal = ref(false);
 
     return {
-      openModal
-    }
+      openModal,
+    };
   },
-})
+});
 </script>
-
 
 <style lang="scss" scoped>
 .nav__wrapper {
@@ -160,62 +165,62 @@ export default defineComponent({
   z-index: 1001;
 
   .modal__close {
-    color: #FFFFFF;
+    color: #ffffff;
     justify-self: flex-end;
   }
 
   .nav__link {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: -0.015em;
-      font-feature-settings: "pnum" on, "lnum" on;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover,
+    &.active {
       color: #ffffff;
-      text-decoration: none;
-
-      &:hover,
-      &.active {
-        color: #ffffff;
-      }
-
-      &.disabled {
-        color: #ffffff33;
-      }
     }
 
-    .nav__language {
-      height: 40px;
-      width: 40px;
-      display: grid;
-      place-items: center;
-
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: -0.015em;
-      font-feature-settings: "pnum" on, "lnum" on;
-      color: #ffffff;
-      cursor: pointer;
+    &.disabled {
+      color: #ffffff33;
     }
+  }
 
-    .nav__join {
-      background: #292929;
-      border-radius: 8px;
-      padding: 12px;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 24px;
-      text-align: center;
-      letter-spacing: -0.015em;
-      font-feature-settings: "pnum" on, "lnum" on;
-      color: #ffffff;
-      border: none;
-      cursor: pointer;
+  .nav__language {
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
 
-      &:hover {
-        background: #343434;
-      }
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  .nav__join {
+    background: #292929;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: #343434;
     }
+  }
 }
 
 .modal-enter-active,
@@ -225,6 +230,6 @@ export default defineComponent({
 
 .modal-enter-from,
 .modal-leave-to {
-  transform: translateX(100%)
+  transform: translateX(100%);
 }
 </style>

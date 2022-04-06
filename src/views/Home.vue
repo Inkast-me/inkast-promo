@@ -53,7 +53,7 @@ export default defineComponent({
   width: 100%;
   min-height: 100vh;
   background: #111111;
-    padding: 10vh 16px 64px;
+  padding: 10vh 16px 64px;
   position: relative;
   display: grid;
   gap: 32px;

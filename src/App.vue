@@ -8,6 +8,8 @@
   src: url("./assets/fonts/StratosLCWeb-Regular.ttf") format("truetype");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 *,
 ::after,
 ::before {
@@ -23,7 +25,7 @@ body {
 }
 
 #app {
-  font-family: "Stratos LC Web", sans-serif;
+  font-family: "Stratos LC Web", "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
