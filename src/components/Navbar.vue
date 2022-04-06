@@ -98,6 +98,7 @@ export default defineComponent({
     display: flex;
     gap: 12px;
     align-items: center;
+    justify-self: flex-end;
 
     .nav__language {
       height: 40px;

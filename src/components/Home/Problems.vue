@@ -196,7 +196,7 @@ export default defineComponent({
       background: #292929 url("../../assets/cards/problems/button.svg");
       background-repeat: no-repeat;
       background-size: cover;
-      opacity: 0;
+      opacity: 1;
       display: none;
 
       &.active {
