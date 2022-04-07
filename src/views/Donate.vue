@@ -46,7 +46,7 @@
               />
             </svg>
 
-            <span>10+</span>
+            <span>12+</span>
           </div>
         </div>
         <div class="donate__links">
@@ -211,8 +211,6 @@ export default defineComponent({
   color: #fff;
 }
 
-// neww
-
 .donate__links-item {
   display: flex;
   text-decoration: none;
@@ -289,8 +287,6 @@ export default defineComponent({
 .donate__links-item__contents-custom {
   max-width: 438px !important;
 }
-
-// sheesh
 
 .donate__footer {
   display: flex;

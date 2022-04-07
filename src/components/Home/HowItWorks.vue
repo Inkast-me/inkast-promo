@@ -33,7 +33,7 @@
   .how__header {
     margin: 0;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 120px;
     line-height: 95%;
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
@@ -41,27 +41,34 @@
     padding-bottom: 40px;
     border-bottom: 1px solid #ebebeb;
 
-    @media (min-width: 768px) {
-      font-size: 120px;
+    @media (max-width: 768px) {
+      font-size: 64px;
     }
 
-    @media (min-width: 360px) {
-      font-size: 64px;
+    @media (max-width: 360px) {
+      font-size: 30px;
     }
   }
 
   .how__wrapper {
-    display: grid;
-    grid: min-content / repeat(auto-fill, minmax(500px, 1fr));
-    gap: 32px;
+    // display: grid;
+    // grid: min-content / repeat(auto-fill, minmax(500px, 1fr));
+    // gap: 32px;
+    display: flex;
+    flex-flow: wrap row;
 
     .how__title {
+      max-width: 539px;
       font-weight: 400;
       font-size: 22px;
       line-height: 118%;
       font-feature-settings: "pnum" on, "lnum" on;
       color: #111111;
-      margin: 0;
+      margin: 0 80px 40px 0;
+
+      @media (max-width: 992px) {
+        margin: 0 0 40px 0;
+      }
 
       @media (min-width: 360px) {
         font-size: 40px;

@@ -7,7 +7,7 @@
 <style lang="scss" scoped>
 .button__wrapper {
   font-family: "Stratos LC Web";
-  background: #111111;
+  background-color: #111111;
   border-radius: 12px;
   padding: 0.75em 0.75em calc(0.75em + 4px);
   border: none;
@@ -18,13 +18,14 @@
   font-feature-settings: "pnum" on, "lnum" on;
   color: #ffffff;
   cursor: pointer;
+  transition: background-color 0.16s ease-in-out;
 
   @media (min-width: 768px) {
     font-size: 32px;
   }
 
   &:hover {
-    background: #222222;
+    background-color: #222222;
   }
 }
 </style>

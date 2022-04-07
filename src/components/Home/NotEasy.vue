@@ -23,9 +23,9 @@
 
 <style lang="scss" scoped>
 .home__easy {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
+  // display: flex;
+  // flex-flow: column;
+  // justify-content: space-between;
   background: #c04cf6 url("../../assets/cards/easy/background.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,20 +35,21 @@
   .easy__header {
     margin: 0;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 120px;
     line-height: 95%;
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     padding-bottom: 40px;
+    margin-bottom: 37px;
     border-bottom: 1px solid #ffffff33;
 
-    @media (min-width: 768px) {
-      font-size: 120px;
+    @media (max-width: 768px) {
+      font-size: 64px;
     }
 
-    @media (min-width: 360px) {
-      font-size: 64px;
+    @media (max-width: 360px) {
+      font-size: 30px;
     }
   }
 
@@ -83,10 +84,11 @@
         font-size: 22px;
       }
     }
-
+    // TODO: make it like in a design with the same height and bottom: 40px from an edge of a card
+    // also upload a 2x PNG instead of svg
     .easy__illustration {
       align-self: flex-end;
-      height: 170px;
+      height: 340px;
 
       @media (min-width: 360px) {
         height: 280px;
@@ -95,7 +97,7 @@
       @media (min-width: 768px) {
         height: 340px;
         position: absolute;
-        bottom: -40px;
+        bottom: -140px;
         right: -90px;
       }
     }

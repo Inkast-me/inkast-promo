@@ -17,7 +17,9 @@
 
     <Problems />
 
-    <Show/>
+    <Show />
+
+    <Team />
   </div>
 </template>
 
@@ -34,6 +36,7 @@ import HowItWorks from "@/components/Home/HowItWorks.vue";
 import NotEasy from "@/components/Home/NotEasy.vue";
 import Problems from "@/components/Home/Problems.vue";
 import Show from "@/components/Home/Show.vue";
+import Team from "@/components/Home/Team.vue";
 
 export default defineComponent({
   name: "Home",
@@ -47,7 +50,8 @@ export default defineComponent({
     HowItWorks,
     NotEasy,
     Problems,
-    Show
+    Show,
+    Team,
   },
 });
 </script>

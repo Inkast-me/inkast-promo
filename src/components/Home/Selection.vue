@@ -1,5 +1,5 @@
 <template>
-  <section class="home__selection">
+  <section class="home__selection" id="product">
     <h3>
       Подбираем людей по&nbsp;интересам, целям, любимым занятиям и&nbsp;даже
       характеру

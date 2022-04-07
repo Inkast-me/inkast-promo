@@ -6,19 +6,19 @@
     </div>
     <div class="intrestings__wrapper">
       <div class="wrapper__line">
-        <span>мне лень</span>
-        <span>мне лень</span>
-        <span>мне лень</span>
+        <span>Фанаты настольных игр</span>
+        <span>Кодите по&nbsp;ночам</span>
+        <span>Играете в&nbsp;компьютерные игры</span>
       </div>
       <div class="wrapper__line">
-        <span>мне лень</span>
-        <span>мне лень</span>
-        <span>мне лень</span>
+        <span>Много работаете </span>
+        <span>Мечтаете стать художниками</span>
+        <span>Любите одинаковые песни</span>
       </div>
       <div class="wrapper__line">
-        <span>мне лень</span>
-        <span>мне лень</span>
-        <span>мне лень</span>
+        <span>Увлекаетесь астрологией</span>
+        <span>Смотрите по&nbsp;ночам аниме</span>
+        <span>Увлекатесь бегом</span>
       </div>
     </div>
   </section>
@@ -42,31 +42,34 @@
     border-bottom: 1px solid #ffffff1a;
 
     h3 {
+      font-size: 104px;
       margin: 0;
       font-family: "Stratos LC Web";
       font-style: normal;
       font-weight: 400;
-      font-size: 30px;
       line-height: 95%;
       letter-spacing: -0.025em;
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
 
-      @media (min-width: 768px) {
-        font-size: 104px;
+      @media (max-width: 768px) {
+        font-size: 64px;
       }
 
-      @media (min-width: 360px) {
-        font-size: 64px;
+      @media (max-width: 360px) {
+        font-size: 30px;
       }
     }
 
     .intrestings__more {
+      font-family: "Inter", sans-serif;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 100px;
       padding: 12px;
+
+      font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 140%;
       letter-spacing: -0.06px;
       text-transform: capitalize;
@@ -92,8 +95,10 @@
       flex-wrap: nowrap;
 
       transform: translateX(100%);
-      animation: lineAnimation 5s linear infinite;
+      // TODO: Just an example of speed, do it in JS please, Platon. Example -> https://dribbble.com/shots/7784835-Simple-Wine-News-Glossary-Screen
+      animation: lineAnimation 30s linear infinite;
       span {
+        white-space: nowrap;
         font-family: "Stratos LC Web";
         font-style: normal;
         font-weight: 400;

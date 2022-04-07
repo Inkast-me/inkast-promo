@@ -5,8 +5,8 @@
     </a>
 
     <div class="nav__links-wrapper">
-      <a href="#product" class="nav__link">Продукт</a>
-      <a href="#team" class="nav__link">Команда</a>
+      <a href="/#product" class="nav__link">Продукт</a>
+      <a href="/#team" class="nav__link">Команда</a>
       <a href="/donate" class="nav__link">Донаты</a>
     </div>
 
@@ -82,15 +82,26 @@ export default defineComponent({
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
       text-decoration: none;
+      transition: color 0.16s ease-in-out;
 
       &:hover,
       &.active {
-        color: #ffffff;
+        color: #414141;
       }
 
       &.disabled {
-        color: #ffffff33;
+        color: #414141;
       }
+    }
+
+    .nav__link:nth-child(3)::after {
+      content: "";
+      display: inline-block;
+      margin-bottom: 12px;
+      width: 8px;
+      height: 8px;
+      background: #f6526b;
+      border-radius: 100%;
     }
   }
 
@@ -120,6 +131,7 @@ export default defineComponent({
     }
 
     .nav__join {
+      font-family: "Stratos LC Web";
       background: #292929;
       border-radius: 8px;
       padding: 12px;
@@ -133,13 +145,14 @@ export default defineComponent({
       border: none;
       cursor: pointer;
       display: none;
+      transition: background-color 0.16s ease-in-out;
 
       @media (min-width: 768px) {
         display: initial;
       }
 
       &:hover {
-        background: #343434;
+        background-color: #343434;
       }
     }
 
@@ -202,10 +215,15 @@ export default defineComponent({
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     cursor: pointer;
+    transition: color 0.16s ease-in-out;
+  }
+
+  .nav__language:hover {
+    color: #414141;
   }
 
   .nav__join {
-    background: #292929;
+    background-color: #292929;
     border-radius: 8px;
     padding: 12px;
     font-weight: 400;
@@ -217,9 +235,10 @@ export default defineComponent({
     color: #ffffff;
     border: none;
     cursor: pointer;
+    transition: background-color 0.16s ease-in-out;
 
     &:hover {
-      background: #343434;
+      background-color: #343434;
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <section class="home__problems" @scroll="scrollHandler">
     <div class="problems__sticky">
-      <h2>Какие проблемы мы&nbsp;решаем?</h2>
+      <h2>Мы&nbsp;даём возможность решить актуальные проблемы</h2>
       <img
         :src="
           require(`@/assets/cards/problems/${problems[currentProblem].image}`)
@@ -49,25 +49,25 @@ export default defineComponent({
         title: "Отсутствие времени",
         description:
           "Если у&nbsp;вас нет времени на&nbsp;знакомства и&nbsp;вы&nbsp;много работаете, в&nbsp;нашем сервисе вы&nbsp;найдёте себе человека с&nbsp;таким&nbsp;же ритмом и&nbsp;складом жизни:)",
-        image: "time.svg",
+        image: "time.png",
       },
       {
         title: "Темы для разговоров",
         description:
           "Вам не&nbsp;придётся придумывать темы для разговоров, вам уже подобрали максимально похожими по&nbsp;интересам друг другу",
-        image: "message.svg",
+        image: "message.png",
       },
       {
         title: "Одиночество",
         description:
           "Даже имея много друзей, можно чувствовать себя одиноким, не&nbsp;находя в&nbsp;окружении собеседников по&nbsp;вашим интересам. Наш сервис найдёт человека с&nbsp;таким&nbsp;же мировоззрением, как и&nbsp;у&nbsp;вас",
-        image: "loneliness.svg",
+        image: "loneliness.png",
       },
       {
         title: "Поиск друзей",
         description:
           "В&nbsp;сервисах для знакомств вам часто пишут с&nbsp;романтическими предложениями. Наши системы статусов сразу покажут, чего ищет человек: друзей, любимого человека, либо всё вместе",
-        image: "friends.svg",
+        image: "friends.png",
       },
     ]);
 
@@ -124,17 +124,18 @@ export default defineComponent({
 
     h2 {
       font-weight: 400;
-      font-size: 64px;
+      font-size: 56px;
       line-height: 111%;
       letter-spacing: -0.05em;
       color: #ffffff;
       margin: 0;
     }
 
+    // TODO: fix size of big img like in a design. Also, fix a margin of imgs
     img {
       display: none;
       margin: 0 auto;
-      height: 400px;
+      height: 521px;
 
       @media (min-width: 768px) {
         display: block;

@@ -1,5 +1,5 @@
 <template>
-  <div class="home__team">
+  <div class="home__team" id="team">
     <div class="team__header-wrapper">
       <h2>Команда</h2>
       <span>Интерактив</span>
@@ -8,16 +8,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
-    console.log('');
-    
+    console.log("");
   },
-})
+});
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
