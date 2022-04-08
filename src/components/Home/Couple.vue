@@ -94,7 +94,7 @@
     }
 
     > img {
-      width: 95vw;
+      width: 80vw;
       height: auto;
 
       @media (min-width: 1200px) {

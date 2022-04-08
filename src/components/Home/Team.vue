@@ -90,85 +90,85 @@ export default defineComponent({
         avatar: "Alena.png",
         emoji: "paw",
         name: "Alena Samarina",
-        post: "Конченый идиот",
+        post: "Аналитик & Product Owner",
         preferredColor: "#FFE5D6",
         description:
-          "Выполняла проекты для Mars, Danone, Nexign, Schlumberger, Газпром Нефть, Северсталь, Росатом <br> Неоднократный победитель кейс-чемпионатов и хакатонов",
-        employmentExp: "4 года",
+          "Выполняла проекты для Mars, Danone, Nexign, Schlumberger, Газпром Нефть, Северсталь, Росатом <br> Неоднократный победитель кейс-чемпионатов и&nbsp;хакатонов",
+        employmentExp: "Опыт работы: 4&nbsp;года",
         link: "alencombo@gmail.com",
       },
       {
         avatar: "Alexander.png",
         emoji: "trackball",
-        name: "Alex Green",
-        post: "Самый сексуальный мужик в мире",
+        name: "Alexander Greene",
+        post: "Продуктовый дизайнер",
         preferredColor: "#E7E7E9",
         description:
           "Выполнял проекты для Яндекса, VK, Газпром, Skyeng и&nbsp;X5&nbsp;Group <br> Призер олимпиады ВШЭ в&nbsp;области дизайна и&nbsp;неоднократный победитель хакатонов",
-        employmentExp: "4 года",
-        link: "i@alexandr.page",
+        employmentExp: "Опыт работы: 4&nbsp;года",
+        link: "https://t.me/greeneboy",
       },
       {
         avatar: "Fedor.png",
         emoji: "dna",
         name: "Fedor Kabachenko",
-        post: "Горячая чикса",
+        post: "ML-инженер",
         preferredColor: "#94ADE8",
         description:
           "Выполнял проекты для Центробанка, Росатома, ParSeq, OneCell и&nbsp;BIOCAD <br> Безработный, но&nbsp;зарабатывает",
-        employmentExp: "2 года",
+        employmentExp: "Опыт работы: 2&nbsp;года",
         link: "https://t.me/padobrik",
       },
       {
-        avatar: "Plapp.png",
+        avatar: "Platon.png",
         emoji: "vulcan",
         name: "Platon Lapp",
-        post: "Злодей британец",
+        post: "Front-end developer",
         preferredColor: "#C7C789",
-        description: "гейний",
-        employmentExp: "3 года",
+        description: "Просто хороший парень",
+        employmentExp: "Опыт работы: 3&nbsp;года",
         link: "https://platon.page",
       },
       {
         avatar: "Natalia.png",
         emoji: "noevilmonkey",
         name: "Наталья Мальцева",
-        post: "Так себе шутник",
+        post: "Backend разработчик",
         preferredColor: "#FFE5D6",
         description:
           "Разработчик в&nbsp;Arrival. Строила гоночный болид в&nbsp;отделе электрики. Выполняла проекты для Mars, Schlumberger, Danone. Проводила обучение по&nbsp;программированию для студентов. <br> Получатель гранта УМНИК. Победитель хакатонов и&nbsp;кейс-чемпионатов.",
-        employmentExp: "3 года",
+        employmentExp: "Опыт работы: 3&nbsp;года",
         link: "maltsnata@gmail.com",
       },
       {
         avatar: "Ulyana.png",
         emoji: "tiger",
         name: "Ульяна Саламатова",
-        post: "Пубертатная язва",
+        post: "Android Developer",
         preferredColor: "#FFE5D6",
         description: "Пишу на&nbsp;Kotlin",
-        employmentExp: "1 года",
+        employmentExp: "Опыт работы: 1&nbsp;года",
         link: "salamatova.uv@gmail.com",
       },
       {
-        avatar: "DimASS.png",
+        avatar: "Dmitry.png",
         emoji: "offnik",
         name: "Тимощенков Дмитрий",
-        post: "Какой-то мужик",
+        post: "Backend разработчик",
         preferredColor: "#FFE5D6",
         description: "Разработчик в&nbsp;Sixhands",
-        employmentExp: "2 года",
+        employmentExp: "Опыт работы: 2&nbsp;года",
         link: "street-morik@yandex.ru",
       },
       {
         avatar: "Anna.png",
         emoji: "victory",
         name: "Анна Грохотова",
-        post: "Говнюки",
+        post: "Маркетолог",
         preferredColor: "#FFE5D6",
         description:
           "Выполняю проекты в сфере нейротехнологий <br> Знаю, как работает наш мозг и что нужно людям",
-        employmentExp: "3 года",
+        employmentExp: "Опыт работы: 3&nbsp;года",
         link: "anya.annie@yandex.ru",
       },
     ]);
@@ -211,6 +211,9 @@ export default defineComponent({
   flex-flow: column;
   gap: 32px;
   background: #292929;
+  a {
+    text-decoration: none;
+  }
 
   .team__header-wrapper {
     display: flex;
@@ -219,12 +222,28 @@ export default defineComponent({
     flex-wrap: wrap;
 
     h2 {
+      position: relative;
       margin: 0;
       font-weight: 400;
       font-size: 64px;
       line-height: 111%;
       letter-spacing: -0.05em;
       color: #ffffff;
+    }
+    h2:after {
+      position: absolute;
+      font-family: "Inter", serif;
+      content: "+3";
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      letter-spacing: -0.06px;
+      text-transform: capitalize;
+      color: #ffffff;
+      opacity: 0.4;
+      padding: 8px 16px;
+      border: 1px solid #383838;
+      border-radius: 24px;
     }
 
     span {
@@ -248,6 +267,7 @@ export default defineComponent({
     justify-content: space-between;
 
     .team__content {
+      flex: 1 1 50%;
       display: grid;
       grid-template-columns: repeat(4, minmax(200px, min-content));
       grid-auto-columns: min-content;
@@ -272,7 +292,7 @@ export default defineComponent({
             width: 37px;
           }
         }
-
+        // TODO: do smth with br tag in 'description' cuz it haven't any margin in text
         .member__post,
         .member__link,
         .member__description,
@@ -283,6 +303,7 @@ export default defineComponent({
           line-height: 140%;
           letter-spacing: -0.06px;
           color: #ffffff;
+          text-decoration: none;
         }
 
         .member__description,
@@ -295,9 +316,9 @@ export default defineComponent({
           place-items: center;
           background: var(--background, #111111);
           border-radius: 101.23px;
-          padding: 30px 16px;
+          padding: 29px 18px 35px 18px;
           position: relative;
-          transition: background 0.25s ease-in-out;
+          transition: background-color 0.25s ease-in-out;
 
           img {
             height: 180px;
@@ -325,10 +346,18 @@ export default defineComponent({
       display: none;
 
       @media (min-width: 768px) {
-        display: grid;
-        gap: 8px;
-        width: 285px;
-        grid: min-content / 100%;
+        padding-top: 28px;
+        display: block;
+        flex: 1 1 10%;
+        // display: grid;
+        // gap: 8px;
+        // width: 285px;
+        // grid: min-content / 100%;
+
+        span {
+          display: block;
+          margin-bottom: 16px;
+        }
       }
 
       .member__name {
@@ -339,6 +368,7 @@ export default defineComponent({
         color: #ffffff;
         display: flex;
         gap: 4px;
+        margin-bottom: 30px;
 
         .member__emoji {
           height: 37px;
@@ -350,13 +380,15 @@ export default defineComponent({
       .member__link,
       .member__description,
       .member__employment-exp {
-        font-family: Inter;
+        font-family: "Inter", sans-serif;
         font-weight: 500;
-        font-size: 15px;
+        font-size: 20px;
         line-height: 140%;
         letter-spacing: -0.06px;
         // text-transform: capitalize;
+        max-width: 320px;
         color: #ffffff;
+        margin-bottom: 38px;
       }
 
       .member__description,
