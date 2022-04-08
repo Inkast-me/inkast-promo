@@ -100,6 +100,7 @@ export default defineComponent({
   overflow-y: auto;
   position: relative;
   gap: 40px;
+  min-height: 95vh !important;
 
   @media (min-width: 768px) {
     grid: min-content / repeat(2, 1fr);

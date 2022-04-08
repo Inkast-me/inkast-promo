@@ -42,6 +42,11 @@ export default defineComponent({
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
   }
+
+  span:first-child {
+      opacity: 0.4;
+    }
+
   a {
     font-weight: 400;
     font-size: 20px;

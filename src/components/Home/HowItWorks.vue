@@ -78,6 +78,7 @@
     .how__description {
       display: grid;
       gap: 40px;
+      margin-top: 16px;
 
       font-weight: 400;
       font-size: 16px;
