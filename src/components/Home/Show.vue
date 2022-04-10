@@ -65,13 +65,17 @@ export default defineComponent({
 
   .show__header {
     font-weight: 400;
-    font-size: 68px;
+    font-size: 30px;
     line-height: 120%;
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     max-width: 900px;
     margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 68px;
+    }
   }
 
   .show__wrapper {
@@ -99,14 +103,23 @@ export default defineComponent({
       .couple_left,
       .couple_right,
       .couple_join {
-        padding: 18px 8px;
+        padding: 11px 5px;
         border-radius: 71.0807px;
-        min-width: 150px;
+        min-width: 90px;
         display: grid;
         place-items: center;
 
+        @media (min-width: 768px) {
+          padding: 18px 8px;
+          min-width: 150px;
+        }
+
         img {
-          height: 136px;
+          height: 80px;
+          
+          @media (min-width: 768px) {
+            height: 136px;
+          }
           // width: 136px;
         }
       }
@@ -124,11 +137,21 @@ export default defineComponent({
       }
 
       .couple_join {
-        padding: 35px;
+        padding: 20px;
         background: #292929;
 
-        img {
-          height: 100px;
+        @media (min-width: 768px) {
+          padding: 35px;
+        }
+
+        svg {
+          width: 50px;
+          height: 60px;
+          
+          @media (min-width: 768px) {
+            width: 79px;
+            height: 100px;
+          }
         }
         svg path {
           transition: opacity 0.2s ease-in-out;

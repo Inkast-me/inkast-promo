@@ -44,23 +44,27 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  gap: 24px;
+  gap: 8px;
+
+  @media (min-width: 768px) {
+    gap: 24px;
+  }
 
   .rare__header {
     font-weight: 400;
-    font-size: 80px;
+    font-size: 30px;
     line-height: 111%;
     letter-spacing: -0.05em;
     color: #ffffff;
     max-width: 940px;
     margin: 0;
 
-    @media (max-width: 768px) {
-      font-size: 56px;
+    @media (min-width: 992px) {
+      font-size: 80px;
     }
 
-    @media (max-width: 360px) {
-      font-size: 30px;
+    @media (min-width: 768px) {
+      font-size: 56px;
     }
 
     span {
@@ -78,11 +82,26 @@
     .rare__link {
       background: #29292933;
       border-radius: 48.5517px;
-      padding: 24px;
+      padding: 14px;
       cursor: pointer;
       z-index: 1;
       align-self: flex-start;
       margin-bottom: 21px;
+
+      @media (min-width: 768px) {
+        padding: 24px;
+      }
+
+      svg {
+        width: 30px;
+        height: 38px;
+
+        @media (min-width: 768px) {
+          width: 54px;
+          height: 68px;
+        }
+      }
+
       .svgavatar {
         transition: opacity 0.16s ease-in-out;
       }
@@ -102,11 +121,11 @@
       color: #ffffff;
       max-width: 430px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 32px;
       }
 
-      @media (min-width: 360px) {
+      @media (min-width: 768px) {
         font-size: 24px;
       }
     }

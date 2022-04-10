@@ -2,6 +2,7 @@
   <div class="home__footer">
     <span>Inkast 2022</span>
     <span
+      class="footer__love"
       >С&nbsp;<img
         src="@/assets/red_heart.png"
         alt="heart"
@@ -23,17 +24,27 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home__footer {
-  color: #fff;
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-between;
-  padding: 0 60px;
+  color: #FFFFFF;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 12px;
 
-  span {
+  @media (min-width: 992px) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 16px;
     display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+  }
+
+  .footer__love {
+    display: inline-flex;
     flex-flow: nowrap row;
     align-items: center;
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
@@ -44,8 +55,8 @@ export default defineComponent({
   }
 
   span:first-child {
-      opacity: 0.4;
-    }
+    opacity: 0.4;
+  }
 
   a {
     font-weight: 400;

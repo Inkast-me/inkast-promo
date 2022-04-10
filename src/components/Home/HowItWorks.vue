@@ -33,20 +33,20 @@
   .how__header {
     margin: 0;
     font-weight: 400;
-    font-size: 120px;
     line-height: 95%;
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #111111;
     padding-bottom: 40px;
     border-bottom: 1px solid #ebebeb;
+      font-size: 30px;
 
-    @media (max-width: 768px) {
-      font-size: 64px;
+    @media (min-width: 992px) {
+      font-size: 120px;
     }
 
-    @media (max-width: 360px) {
-      font-size: 30px;
+    @media (min-width: 768px) {
+      font-size: 64px;
     }
   }
 
@@ -60,17 +60,17 @@
     .how__title {
       max-width: 539px;
       font-weight: 400;
-      font-size: 22px;
       line-height: 118%;
       font-feature-settings: "pnum" on, "lnum" on;
       color: #111111;
-      margin: 0 80px 40px 0;
+      font-size: 22px;
+      margin: 0 0 40px 0;
 
-      @media (max-width: 992px) {
-        margin: 0 0 40px 0;
+      @media (min-width: 992px) {
+        margin: 0 80px 40px 0;
       }
 
-      @media (min-width: 360px) {
+      @media (min-width: 768px) {
         font-size: 40px;
       }
     }

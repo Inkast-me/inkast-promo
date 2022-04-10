@@ -74,7 +74,7 @@ export default defineComponent({
   display: grid;
   gap: 32px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     padding: 104px 64px 32px;
   }
 
@@ -84,7 +84,7 @@ export default defineComponent({
     border-radius: 24px;
     padding: 24px 8px;
 
-    @media (min-width: 360px) {
+    @media (min-width: 768px) {
       padding: 48px 40px 64px;
     }
   }

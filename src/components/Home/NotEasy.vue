@@ -35,7 +35,6 @@
   .easy__header {
     margin: 0;
     font-weight: 400;
-    font-size: 120px;
     line-height: 95%;
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
@@ -43,13 +42,14 @@
     padding-bottom: 40px;
     margin-bottom: 37px;
     border-bottom: 1px solid #ffffff33;
+    font-size: 30px;
 
-    @media (max-width: 768px) {
-      font-size: 64px;
+    @media (min-width: 992px) {
+      font-size: 120px;
     }
 
-    @media (max-width: 360px) {
-      font-size: 30px;
+    @media (min-width: 768px) {
+      font-size: 64px;
     }
   }
 
@@ -66,7 +66,7 @@
       color: #ffffff;
       max-width: 700px;
 
-      @media (min-width: 360px) {
+      @media (min-width: 768px) {
         font-size: 40px;
       }
     }
@@ -80,7 +80,7 @@
       color: #ffffff;
       max-width: 450px;
 
-      @media (min-width: 360px) {
+      @media (min-width: 768px) {
         font-size: 22px;
       }
     }
@@ -88,14 +88,13 @@
     // also upload a 2x PNG instead of svg
     .easy__illustration {
       align-self: flex-end;
-      height: 340px;
-
-      @media (min-width: 360px) {
-        height: 280px;
-      }
+      width: 100%;
+      margin-left: -20px;
+      // height: 170px;
 
       @media (min-width: 768px) {
         height: 340px;
+        width: auto;
         position: absolute;
         bottom: -140px;
         right: -90px;

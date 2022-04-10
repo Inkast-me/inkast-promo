@@ -13,7 +13,9 @@
           @click="currentMember = index"
         >
           <div class="member__name">
-            {{ member.name }}
+            {{ member.name.split(' ')[0] }}
+            <br>
+            {{ member.name.split(' ')[1]}}
             <img
               class="member__emoji"
               :src="require(`@/assets/team/emoji/${member.emoji}.png`)"
@@ -93,7 +95,7 @@ export default defineComponent({
         post: "Аналитик & Product Owner",
         preferredColor: "#FFE5D6",
         description:
-          "Выполняла проекты для Mars, Danone, Nexign, Schlumberger, Газпром Нефть, Северсталь, Росатом <br> Неоднократный победитель кейс-чемпионатов и&nbsp;хакатонов",
+          "Выполняла проекты для Mars, Danone, Nexign, Schlumberger, Газпром Нефть, Северсталь, Росатом <br><br> Неоднократный победитель кейс-чемпионатов и&nbsp;хакатонов",
         employmentExp: "Опыт работы: 4&nbsp;года",
         link: "alencombo@gmail.com",
       },
@@ -104,7 +106,7 @@ export default defineComponent({
         post: "Продуктовый дизайнер",
         preferredColor: "#E7E7E9",
         description:
-          "Выполнял проекты для Яндекса, VK, Газпром, Skyeng и&nbsp;X5&nbsp;Group <br> Призер олимпиады ВШЭ в&nbsp;области дизайна и&nbsp;неоднократный победитель хакатонов",
+          "Выполнял проекты для Яндекса, VK, Газпром, Skyeng и&nbsp;X5&nbsp;Group <br><br> Призер олимпиады ВШЭ в&nbsp;области дизайна и&nbsp;неоднократный победитель хакатонов",
         employmentExp: "Опыт работы: 4&nbsp;года",
         link: "https://t.me/greeneboy",
       },
@@ -115,7 +117,7 @@ export default defineComponent({
         post: "ML-инженер",
         preferredColor: "#94ADE8",
         description:
-          "Выполнял проекты для Центробанка, Росатома, ParSeq, OneCell и&nbsp;BIOCAD <br> Безработный, но&nbsp;зарабатывает",
+          "Выполнял проекты для Центробанка, Росатома, ParSeq, OneCell и&nbsp;BIOCAD <br><br> Безработный, но&nbsp;зарабатывает",
         employmentExp: "Опыт работы: 2&nbsp;года",
         link: "https://t.me/padobrik",
       },
@@ -136,7 +138,7 @@ export default defineComponent({
         post: "Backend разработчик",
         preferredColor: "#FFE5D6",
         description:
-          "Разработчик в&nbsp;Arrival. Строила гоночный болид в&nbsp;отделе электрики. Выполняла проекты для Mars, Schlumberger, Danone. Проводила обучение по&nbsp;программированию для студентов. <br> Получатель гранта УМНИК. Победитель хакатонов и&nbsp;кейс-чемпионатов.",
+          "Разработчик в&nbsp;Arrival. Строила гоночный болид в&nbsp;отделе электрики. Выполняла проекты для Mars, Schlumberger, Danone. Проводила обучение по&nbsp;программированию для студентов. <br><br> Получатель гранта УМНИК. Победитель хакатонов и&nbsp;кейс-чемпионатов.",
         employmentExp: "Опыт работы: 3&nbsp;года",
         link: "maltsnata@gmail.com",
       },
@@ -167,7 +169,7 @@ export default defineComponent({
         post: "Маркетолог",
         preferredColor: "#FFE5D6",
         description:
-          "Выполняю проекты в сфере нейротехнологий <br> Знаю, как работает наш мозг и что нужно людям",
+          "Выполняю проекты в сфере нейротехнологий <br><br> Знаю, как работает наш мозг и что нужно людям",
         employmentExp: "Опыт работы: 3&nbsp;года",
         link: "anya.annie@yandex.ru",
       },
@@ -183,16 +185,12 @@ export default defineComponent({
 
     const defineLinkText = (link: string) => {
       if (email.test(link)) return link.replace("mailto:", "");
-      else if (url.test(link) && !link.includes("/"))
+      else if (
+        url.test(link) &&
+        !link.replace("https://", "").replace("http://", "").includes("/")
+      )
         return link.replace("https://", "").replace("http://", "");
-      else
-        return (
-          "@" +
-          link
-            .replace("https://", "")
-            .replace("http://", "")
-            .slice(link.lastIndexOf("/"), link.length)
-        );
+      else return "@" + link.slice(link.lastIndexOf("/") + 1, link.length);
     };
 
     return {
@@ -225,25 +223,35 @@ export default defineComponent({
       position: relative;
       margin: 0;
       font-weight: 400;
-      font-size: 64px;
+      font-size: 30px;
       line-height: 111%;
       letter-spacing: -0.05em;
       color: #ffffff;
-    }
-    h2:after {
-      position: absolute;
-      font-family: "Inter", serif;
-      content: "+3";
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 140%;
-      letter-spacing: -0.06px;
-      text-transform: capitalize;
-      color: #ffffff;
-      opacity: 0.4;
-      padding: 8px 16px;
-      border: 1px solid #383838;
-      border-radius: 24px;
+
+      @media (min-width: 768px) {
+        font-size: 64px;
+      }
+
+      &:after {
+        position: absolute;
+        content: "+3";
+        font-family: "Inter", serif;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 140%;
+        letter-spacing: -0.06px;
+        text-transform: capitalize;
+        color: #ffffff;
+        opacity: 0.4;
+        padding: 4px 8px;
+        border-radius: 24px;
+        border: 1px solid #383838;
+
+        @media (min-width: 768px) {
+          font-size: 20px;
+          padding: 8px 16px;
+        }
+      }
     }
 
     span {
@@ -257,6 +265,11 @@ export default defineComponent({
       padding: 24px;
       background: #383838;
       border-radius: 100px;
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
     }
   }
 
@@ -269,16 +282,30 @@ export default defineComponent({
     .team__content {
       flex: 1 1 50%;
       display: grid;
-      grid-template-columns: repeat(4, minmax(200px, min-content));
-      grid-auto-columns: min-content;
-      grid-auto-rows: min-content;
-      gap: 20px 16px;
       justify-content: center;
+      align-items: center;
+      gap: 48px 16px;
+
+      @media (min-width: 768px) {
+        gap: 20px 16px;
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
+        grid-template-rows: repeat(2, minmax(180px, min-content));
+      }
 
       .team__member {
         display: grid;
         gap: 8px;
         grid: min-content / 100%;
+        grid-template-columns: 1fr 96px;
+        align-items: center;
+
+        @media (min-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+
+        > * {
+          grid-column: span 2;
+        }
 
         .member__name {
           font-weight: 400;
@@ -286,10 +313,11 @@ export default defineComponent({
           line-height: 111%;
           letter-spacing: -0.05em;
           color: #ffffff;
+          grid-column: span 1;
 
           .member__emoji {
-            height: 37px;
-            width: 37px;
+            height: 24px;
+            width: 24px;
           }
         }
         // TODO: do smth with br tag in 'description' cuz it haven't any margin in text
@@ -312,17 +340,18 @@ export default defineComponent({
         }
 
         .member__avatar {
+          grid-column: span 1;
           display: grid;
           place-items: center;
           background: var(--background, #111111);
           border-radius: 101.23px;
-          padding: 29px 18px 35px 18px;
+          padding: 12px 8px 16px 8px;
           position: relative;
           transition: background-color 0.25s ease-in-out;
 
           img {
-            height: 180px;
-            width: 180px;
+            height: 100%;
+            width: 100%;
           }
         }
 
@@ -333,6 +362,7 @@ export default defineComponent({
 
           .member__avatar {
             background: #111111;
+            padding: 29px 18px 35px 18px;
 
             &:hover {
               background: var(--background, #111111);

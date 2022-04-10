@@ -58,15 +58,17 @@
     h3 {
       margin: 0 129px 40px 0;
       font-weight: 400;
-      font-size: 64px;
+      font-size: 32px;
+      margin: 0 0 24px 0;
       line-height: 111%;
       letter-spacing: -0.05em;
       color: #000000;
-      max-width: 600px;
-      min-width: 500px;
 
-      @media (max-width: 992px) {
+      @media (min-width: 768px) {
+        font-size: 64px;
         margin: 0 0 40px 0;
+        max-width: 600px;
+        min-width: 500px;
       }
     }
 
@@ -94,18 +96,14 @@
     }
 
     > img {
-      width: 80vw;
+      width: 120vh; //70vw
+      height: 70vh;
       height: auto;
 
       @media (min-width: 1200px) {
         position: absolute;
         bottom: -30px;
         right: -100px;
-      }
-
-      @media (max-width: 992px) {
-        width: 120vh; //70vw
-        height: 70vh;
       }
     }
 

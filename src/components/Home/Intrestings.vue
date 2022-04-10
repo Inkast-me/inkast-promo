@@ -42,7 +42,7 @@
     border-bottom: 1px solid #ffffff1a;
 
     h3 {
-      font-size: 104px;
+      font-size: 30px;
       margin: 0;
       font-family: "Stratos LC Web";
       font-style: normal;
@@ -52,12 +52,12 @@
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
 
-      @media (max-width: 768px) {
-        font-size: 64px;
+      @media (min-width: 992px) {
+        font-size: 104px;
       }
 
-      @media (max-width: 360px) {
-        font-size: 30px;
+      @media (min-width: 768px) {
+        font-size: 64px;
       }
     }
 
@@ -75,7 +75,7 @@
       text-transform: capitalize;
       color: #ffffff;
 
-      @media (min-width: 360px) {
+      @media (min-width: 768px) {
         padding: 24px;
         font-size: 20px;
       }

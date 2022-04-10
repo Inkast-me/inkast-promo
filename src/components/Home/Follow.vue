@@ -1,7 +1,6 @@
 <template>
   <section class="home__follow" id="follow">
-    <div class="follow__text-wrapper">
-      <h3>Будем<br />друзьями!</h3>
+      <h2>Будем<br>друзьями!</h2>
       <div class="follow__social-wrapper">
         <a href="https://vk.com/inkast_me">
           <svg
@@ -61,16 +60,15 @@
           </svg>
         </a>
       </div>
-    </div>
-    <div class="follow_form-wrapper">
+    <div class="follow__form-wrapper">
       <span
         >Подпишитесь на&nbsp;обновления, чтобы не&nbsp;пропустить запуск</span
       >
       <!-- TODO: add a grey text to input by default -->
       <input type="text" />
       <input type="text" />
-      <Button>Присоединиться</Button>
     </div>
+    <Button class="follow__join">Присоединиться</Button>
   </section>
 </template>
 
@@ -91,80 +89,130 @@ export default defineComponent({
   background: #d172fd url("../../assets/cards/follow.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-between;
-  align-items: flex-start;
   background-position: bottom right;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "title" "inputs" "join" "socials";
+  gap: 40px;
+  justify-content: space-between;
   min-height: auto !important;
 
-  .follow__text-wrapper {
-    display: flex;
-    flex-flow: wrap column;
+  @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "title title" 
+                            "inputs inputs"
+                            "join socials";
+  }
 
-    h3 {
-      margin: 0;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 120px;
-      line-height: 95%;
-      letter-spacing: -0.025em;
-      font-feature-settings: "pnum" on, "lnum" on;
-      color: #ffffff;
-      font-size: 120px;
-      margin-bottom: 116px;
+  @media (min-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "title inputs"
+                            "socials join";
+  }
 
-      @media (max-width: 768px) {
-        font-size: 64px;
-      }
+
+  h2 {
+    grid-area: title;
+    margin: 0;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 95%;
+    letter-spacing: -0.025em;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #ffffff;
+
+    @media (min-width: 992px) {
+      font-size: 120px;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 90px;
     }
   }
 
   .follow__social-wrapper {
+    grid-area: socials;
+    justify-self: center;
     display: flex;
     gap: 32px;
 
+    @media (min-width: 768px) {
+      justify-self: flex-end;
+    }
+
+    @media (min-width: 992px) {
+      justify-self: flex-start;
+    }
+
     a {
       transition: transform 0.2s ease-in-out;
+
+      svg {
+        height: 52px;
+        width: 52px;
+  
+        @media (min-width: 768px) {
+          height: 76px;
+          width: 76px;
+        }
+      }
     }
     a:hover {
       transform: scale(0.95);
     }
   }
 
-  .follow_form-wrapper {
+  .follow__form-wrapper {
+    grid-area: inputs;
     display: flex;
     flex-flow: nowrap column;
-    max-width: 537px;
-    margin-top: 32px;
+
+    @media (min-width: 992px) {
+      margin-top: 32px;
+    }
 
     input {
       font-family: "Inter", sans-serif;
       margin-bottom: 24px;
-      padding: 24px;
+      padding: 12px;
       border-radius: 12px;
       border: none;
       font-style: normal;
       font-weight: 500;
-      font-size: 20px;
+      font-size: 15px;
       line-height: 140%;
       letter-spacing: -0.06px;
       text-transform: capitalize;
       color: #292929;
+
+      @media (min-width: 768px) {
+        padding: 24px;
+        font-size: 20px;
+      }
     }
 
-    .button__wrapper {
-      width: fit-content;
-    }
 
     span {
       margin-bottom: 40px;
       font-style: normal;
       font-weight: 400;
-      font-size: 28px;
+      font-size: 16px;
       line-height: 114%;
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
+      max-width: 537px;
+
+      @media (min-width: 768px) {
+        font-size: 28px;
+      }
+    }
+  }
+  .follow__join {
+    grid-area: join;
+
+    @media (min-width: 768px) {
+      justify-self: flex-start;
     }
   }
 }

@@ -125,11 +125,15 @@ export default defineComponent({
 
     h2 {
       font-weight: 400;
-      font-size: 56px;
+      font-size: 26px;
       line-height: 111%;
       letter-spacing: -0.05em;
       color: #ffffff;
       margin: 0;
+
+      @media (min-width: 768px) {
+        font-size: 56px;
+      }
     }
 
     // TODO: fix size of big img like in a design. Also, fix a margin of imgs
@@ -153,15 +157,16 @@ export default defineComponent({
       padding: 24px;
       background: #393939;
       border-radius: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: grid;
+      grid: "title image" min-content
+            "description description" min-content / 1fr auto;
+      align-items: center;
       gap: 24px;
 
       .scroll__title {
-        flex: 0 0 100%;
+        grid-area: title;
         font-weight: 400;
-        font-size: 28px;
+        font-size: 22px;
         line-height: 28px;
         font-feature-settings: "pnum" on, "lnum" on;
         color: #ffffff;
@@ -170,25 +175,26 @@ export default defineComponent({
       }
 
       .scroll__description {
-        flex: 0 0 350px;
+        grid-area: description;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 140%;
         letter-spacing: -0.06px;
         color: #ffffff99;
+        max-width: 350px;
       }
 
       .scroll__image {
-        flex: 0 0 auto;
+        grid-area: image;
         background: #292929;
         border-radius: 50.069px;
-        height: 120px;
-        width: 110px;
+        height: 56px;
+        width: 50px;
         display: grid;
         place-items: center;
 
         img {
-          height: 120px;
+          height: 56px;
         }
       }
     }

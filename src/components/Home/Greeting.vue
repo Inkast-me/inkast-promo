@@ -69,7 +69,7 @@
   gap: 24px;
   padding-top: 54px;
   margin-bottom: 73px;
-  padding-left: max(5vw, 9.861vw);
+  padding-left: max(5vw, 9.861vh);
   padding-right: 34px;
 
   @media (min-width: 768px) {
@@ -85,15 +85,14 @@
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     user-select: none;
-    // min-width: 6em;
     margin: 0;
 
     @media (max-width: 992px) {
       font-size: 104px;
     }
 
-    @media (max-width: 360px) {
-      font-size: 104px;
+    @media (max-width: 768px) {
+      font-size: 48px;
     }
   }
 
