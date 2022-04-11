@@ -1,8 +1,8 @@
 <template>
   <section class="home__greeting">
     <h1>
-      Привет! <br />
-      Это&nbsp;Inkast
+      <span v-html="t('Home.greeting.hello')"></span> <br />
+      <span v-html="t('Home.greeting.inkast')"></span>
     </h1>
 
     <div class="greeting__socials">
@@ -60,6 +60,22 @@
     </div>
   </section>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+export default defineComponent({
+  setup() {
+    const { t } = useI18n()
+
+    return {
+      t
+    }
+  },
+})
+</script>
+
 
 <style lang="scss" scoped>
 .home__greeting {

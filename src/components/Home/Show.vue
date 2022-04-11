@@ -1,11 +1,9 @@
 <template>
   <section class="home__show">
-    <h2 class="show__header">
-      Inkast знает этого человека и готов показать вам друг друга
-    </h2>
+    <h2 class="show__header" v-html="t('Home.show.title')"></h2>
 
     <div class="show__wrapper">
-      <Button class="show__button">Найти друга</Button>
+      <Button href="#follow" class="show__button" v-html="t('Home.show.join')"></Button>
       <div class="show__couple">
         <div class="couple_left">
           <img :src="require('@/assets/man.png')" alt="Maaaan" />
@@ -41,13 +39,18 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Button from "@/components/Button.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   components: {
     Button,
   },
   setup() {
-    console.log();
+    const {t} = useI18n()
+
+    return {
+      t
+    }
   },
 });
 </script>
@@ -116,7 +119,7 @@ export default defineComponent({
 
         img {
           height: 80px;
-          
+
           @media (min-width: 768px) {
             height: 136px;
           }
@@ -147,7 +150,7 @@ export default defineComponent({
         svg {
           width: 50px;
           height: 60px;
-          
+
           @media (min-width: 768px) {
             width: 79px;
             height: 100px;

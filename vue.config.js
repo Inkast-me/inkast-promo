@@ -2,7 +2,7 @@ module.exports = {
   pluginOptions: {
     i18n: {
       locale: "ru-RU",
-      fallbackLocale: "ru-RU",
+      fallbackLocale: "en-US",
       localeDir: "locales",
       enableLegacy: false,
       runtimeOnly: false,

@@ -1,3 +1,176 @@
 {
-  "message": "hello i18n !!"
+  "Home": {
+    "nav": {
+      "product": "Продукт",
+      "team": "Команда",
+      "donate": "Донаты",
+      "language": "EN",
+      "join": "Присоединиться"
+    },
+    "greeting": {
+      "hello": "Привет!",
+      "inkast": "Это Inkast"
+    },
+    "selection": {
+      "title": "Подбираем людей по&nbsp;интересам, целям, любимым занятиям и&nbsp;даже характеру",
+      "join": "Присоединиться"
+    },
+    "couple": {
+      "title": "Где-то на&nbsp;земле существует человек, который создан именно для тебя",
+      "additional": "И&nbsp;вы&nbsp;еще не&nbsp;знаете о&nbsp;существовании друг друга"
+    },
+    "intrestings": {
+      "title": "Представьте <br> Может быть, вы&nbsp;оба...",
+      "additional": "Интересов"
+    },
+    "rare": {
+      "title": "И&nbsp;лишь только редкий случай мог&nbsp;бы вас свести <br> Этот случай&nbsp;&mdash; <span>уже сейчас</span>",
+      "additional": "Вы&nbsp;оба сочетаете в&nbsp;себе многогранную комбинацию разных вкусов, интересов и&nbsp;взглядов на&nbsp;жизнь. Найти похожих людей очень трудно, но&nbsp;для нас это не&nbsp;проблема"
+    },
+    "howItWorks": {
+      "title": "Как это работает?",
+      "additional": "Сейчас у&nbsp;каждого человека в&nbsp;сети есть свой цифровой портрет, который строится на&nbsp;основе его метаданных",
+      "description": "Можете не&nbsp;волноваться о&nbsp;конфиденциальной информации, потому что вы&nbsp;самостоятельно предоставляете доступ только к&nbsp;тем метаданным, по&nbsp;которым хотели&nbsp;бы найти себе любимого человека или друга <br><br> Например, вы&nbsp;можете находить людей по&nbsp;просмотренным видео в&nbsp;ТикТок или подпискам на&nbsp;паблики ВКонтакте"
+    },
+    "notEasy": {
+      "title": "Не&nbsp;всё так просто",
+      "additional": "Мы&nbsp;создали свои собственные алгоритмы машинного обучения, которые создают ваших цифровых двойников, приписывая им&nbsp;определенные интересы и&nbsp;характер",
+      "description": "Цифровые двойники сравниваются дополнительными алгоритмами и&nbsp;прогнозируются наилучшие комбинации людей для вас"
+    },
+    "problems": {
+      "title": "Мы&nbsp;даём возможность решить актуальные проблемы",
+      "cards": [
+        {
+          "title": "Отсутствие времени",
+          "image": "time.png",
+          "description": "Если у&nbsp;вас нет времени на&nbsp;знакомства и&nbsp;вы&nbsp;много работаете, в&nbsp;нашем сервисе вы&nbsp;найдёте себе человека с&nbsp;таким&nbsp;же ритмом и&nbsp;складом жизни:)"
+        },
+        {
+          "title": "Темы для разговоров",
+          "image": "message.png",
+          "description": "Вам не&nbsp;придётся придумывать темы для разговоров, вам уже подобрали максимально похожими по&nbsp;интересам друг другу"
+        },
+        {
+          "title": "Одиночество",
+          "image": "loneliness.png",
+          "description": "Даже имея много друзей, можно чувствовать себя одиноким, не&nbsp;находя в&nbsp;окружении собеседников по&nbsp;вашим интересам. Наш сервис найдёт человека с&nbsp;таким&nbsp;же мировоззрением, как и&nbsp;у&nbsp;вас"
+        },
+        {
+          "title": "Поиск друзей",
+          "image": "friends.png",
+          "description": "В&nbsp;сервисах для знакомств вам часто пишут с&nbsp;романтическими предложениями. Наши системы статусов сразу покажут, чего ищет человек: друзей, любимого человека, либо всё вместе"
+        }
+      ],
+      "join": "Присоединиться"
+    },
+    "show": {
+      "title": "Inkast знает этого человека и&nbsp;готов показать вам друг друга",
+      "join": "Найти друга"
+    },
+    "team": {
+      "title": "Команда",
+      "interactive": "Интерактив",
+      "members": [
+      {
+        "avatar": "Alena.png",
+        "emoji": "paw",
+        "name": "Алёна Самарина",
+        "post": "Аналитик & Product Owner",
+        "preferredColor": "FFE5D6",
+        "description":
+          "Выполняла проекты для Mars, Danone, Nexign, Schlumberger, Газпром Нефть, Северсталь, Росатом <br><br> Неоднократный победитель кейс-чемпионатов и&nbsp;хакатонов",
+        "employmentExp": "Опыт работы: 4&nbsp;года",
+        "link": "alencombo&#64;gmail.com"
+      },
+      {
+        "avatar": "Alexander.png",
+        "emoji": "trackball",
+        "name": "Александр Грин",
+        "post": "Продуктовый дизайнер",
+        "preferredColor": "E7E7E9",
+        "description":
+          "Выполнял проекты для Яндекса, VK, Газпром, Skyeng и&nbsp;X5&nbsp;Group <br><br> Призер олимпиады ВШЭ в&nbsp;области дизайна и&nbsp;неоднократный победитель хакатонов",
+        "employmentExp": "Опыт работы: 4&nbsp;года",
+        "link": "https://t.me/greeneboy"
+      },
+      {
+        "avatar": "Fedor.png",
+        "emoji": "dna",
+        "name": "Федор Кабаченко",
+        "post": "ML-инженер",
+        "preferredColor": "94ADE8",
+        "description":
+          "Выполнял проекты для Центробанка, Росатома, ParSeq, OneCell и&nbsp;BIOCAD <br><br> Безработный, но&nbsp;зарабатывает",
+        "employmentExp": "Опыт работы: 2&nbsp;года",
+        "link": "https://t.me/padobrik"
+      },
+      {
+        "avatar": "Platon.png",
+        "emoji": "vulcan",
+        "name": "Лапп Платон",
+        "post": "Front-end разработчик",
+        "preferredColor": "C7C789",
+        "description": "Просто хороший парень",
+        "employmentExp": "Опыт работы: 3&nbsp;года",
+        "link": "https://platon.page"
+      },
+      {
+        "avatar": "Natalia.png",
+        "emoji": "noevilmonkey",
+        "name": "Наталья Мальцева",
+        "post": "Backend разработчик",
+        "preferredColor": "E0C49E",
+        "description":
+          "Разработчик в&nbsp;Arrival. Строила гоночный болид в&nbsp;отделе электрики. Выполняла проекты для Mars, Schlumberger, Danone. Проводила обучение по&nbsp;программированию для студентов. <br><br> Получатель гранта УМНИК. Победитель хакатонов и&nbsp;кейс-чемпионатов.",
+        "employmentExp": "Опыт работы: 3&nbsp;года",
+        "link": "maltsnata&#64;gmail.com"
+      },
+      {
+        "avatar": "Ulyana.png",
+        "emoji": "tiger",
+        "name": "Ульяна Саламатова",
+        "post": "Android Developer",
+        "preferredColor": "E6F7A2",
+        "description": "Пишу на&nbsp;Kotlin",
+        "employmentExp": "Опыт работы: 1&nbsp;года",
+        "link": "salamatova.uv&#64;gmail.com"
+      },
+      {
+        "avatar": "Dmitry.png",
+        "emoji": "offnik",
+        "name": "Тимощенков Дмитрий",
+        "post": "Backend разработчик",
+        "preferredColor": "F8DFBE",
+        "description": "Разработчик в&nbsp;Sixhands",
+        "employmentExp": "Опыт работы: 2&nbsp;года",
+        "link": "street-morik&#64;yandex.ru"
+      },
+      {
+        "avatar": "Anna.png",
+        "emoji": "victory",
+        "name": "Анна Грохотова",
+        "post": "Маркетолог",
+        "preferredColor": "FFE5D6",
+        "description":
+          "Выполняю проекты в сфере нейротехнологий <br><br> Знаю, как работает наш мозг и что нужно людям",
+        "employmentExp": "Опыт работы: 3&nbsp;года",
+        "link": "anya.annie&#64;yandex.ru"
+      }
+    ]
+    },
+    "follow": {
+      "title": "Будем <br> друзьями!",
+      "additional": "Подпишитесь на&nbsp;обновления, чтобы не&nbsp;пропустить запуск",
+      "inputs": {
+        "name": "Имя",
+        "email": "Почта"
+      },
+      "join": "Присоединиться"
+    },
+    "footer": {
+      "with": "С ",
+      "love": " из Санкт-Петербурга",
+      "termsAndPolicy": "Условия и&nbsp;Политика"
+    }
+  }
 }

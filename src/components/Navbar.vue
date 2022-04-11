@@ -5,14 +5,14 @@
     </a>
 
     <div class="nav__links-wrapper">
-      <a href="/#product" class="nav__link">Продукт</a>
-      <a href="/#team" class="nav__link">Команда</a>
-      <a href="/donate" class="nav__link">Донаты</a>
+      <a href="/#product" class="nav__link" v-html="t('Home.nav.product')"></a>
+      <a href="/#team" class="nav__link" v-html="t('Home.nav.team')"></a>
+      <router-link to="/donate" class="nav__link" v-html="t('Home.nav.donate')"></router-link>
     </div>
 
     <div class="nav__additional">
-      <div class="nav__language">ЕN</div>
-      <button class="nav__join">Присоединиться</button>
+      <div class="nav__language" @click="switchLang" v-html="t('Home.nav.language')"></div>
+      <a href="#follow" class="nav__join" v-html="t('Home.nav.join')"></a>
       <img
         @click="openModal = !openModal"
         class="nav__burger"
@@ -26,24 +26,35 @@
     <div v-if="openModal" class="modal">
       <div @click="openModal = !openModal" class="modal__close">Close</div>
 
-      <a href="#product" class="nav__link">Продукт</a>
-      <a href="#team" class="nav__link">Команда</a>
+      <a href="#product" class="nav__link" v-html="t('Home.nav.product')"></a>
+      <a href="#team" class="nav__link" v-html="t('Home.nav.team')"></a>
 
-      <div class="nav__language">ЕN</div>
-      <button class="nav__join">Присоединиться</button>
+      <div class="nav__language" @click="switchLang" v-html="t('Home.nav.language')"></div>
+      <a href="#follow" class="nav__join" v-html="t('Home.nav.join')"></a>
     </div>
   </Transition>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
     const openModal = ref(false);
+    const { t, availableLocales, locale } = useI18n()
+
+    const switchLang = () => {
+      locale.value =
+          locale.value == availableLocales[0]
+            ? availableLocales[1]
+            : availableLocales[0];
+    }
 
     return {
       openModal,
+      switchLang,
+      t
     };
   },
 });
@@ -146,6 +157,7 @@ export default defineComponent({
       cursor: pointer;
       display: none;
       transition: background-color 0.16s ease-in-out;
+      text-decoration: none;
 
       @media (min-width: 768px) {
         display: initial;

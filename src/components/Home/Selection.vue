@@ -1,10 +1,7 @@
 <template>
   <section class="home__selection" id="product">
-    <h3>
-      Подбираем людей по&nbsp;интересам, целям, любимым занятиям и&nbsp;даже
-      характеру
-    </h3>
-    <Button>Присоединиться</Button>
+    <h3 v-html="t('Home.selection.title')"></h3>
+    <Button href="#follow" v-html="t('Home.selection.join')"></Button>
   </section>
 </template>
 
@@ -12,11 +9,19 @@
 import { defineComponent } from "vue";
 
 import Button from "@/components/Button.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   components: {
     Button,
   },
+  setup() {
+    const { t } = useI18n()
+
+    return {
+      t
+    }
+  }
 });
 </script>
 

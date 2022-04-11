@@ -1,17 +1,10 @@
 <template>
   <section class="home__easy">
-    <h2 class="easy__header">Не&nbsp;всё так просто</h2>
+    <h2 class="easy__header" v-html="t('Home.notEasy.title')"></h2>
 
     <div class="easy__wrapper">
-      <div class="easy__title">
-        Мы&nbsp;создали свои собственные алгоритмы машинного обучения, которые
-        создают ваших цифровых двойников, приписывая им&nbsp;определенные
-        интересы и&nbsp;характер
-      </div>
-      <div class="easy__description">
-        Цифровые двойники сравниваются дополнительными алгоритмами
-        и&nbsp;прогнозируются наилучшие комбинации людей для вас
-      </div>
+      <div class="easy__title" v-html="t('Home.notEasy.additional')"></div>
+      <div class="easy__description" v-html="t('Home.notEasy.description')"></div>
       <img
         class="easy__illustration"
         :src="require('@/assets/cards/easy/illustration.svg')"
@@ -20,6 +13,22 @@
     </div>
   </section>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+export default defineComponent({
+  setup() {
+    const { t } = useI18n()
+
+    return {
+      t
+    }
+  },
+})
+</script>
+
 
 <style lang="scss" scoped>
 .home__easy {

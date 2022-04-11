@@ -1,9 +1,6 @@
 <template>
   <section class="home__rare">
-    <h2 class="rare__header">
-      И&nbsp;лишь только редкий случай мог&nbsp;бы вас свести <br />
-      Этот случай&nbsp;&mdash;<span> уже сейчас</span>
-    </h2>
+    <h2 class="rare__header" v-html="t('Home.rare.title')"></h2>
 
     <div class="rare__media-wrapper">
       <a href="#follow" class="rare__link">
@@ -26,14 +23,26 @@
           />
         </svg>
       </a>
-      <span class="rare__text">
-        Вы&nbsp;оба сочетаете в&nbsp;себе многогранную комбинацию разных вкусов,
-        интересов и&nbsp;взглядов на&nbsp;жизнь. Найти похожих людей очень
-        трудно, но&nbsp;для нас это не&nbsp;проблема
-      </span>
+      <span class="rare__text" v-html="t('Home.rare.additional')"></span>
     </div>
   </section>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+export default defineComponent({
+  setup() {
+    const { t } = useI18n()
+
+    return {
+      t
+    }
+  },
+})
+</script>
+
 
 <style lang="scss" scoped>
 .home__rare {
@@ -67,7 +76,7 @@
       font-size: 56px;
     }
 
-    span {
+    :deep(span) {
       color: #7dff70;
     }
   }

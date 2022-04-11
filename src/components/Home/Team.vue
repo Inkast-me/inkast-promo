@@ -1,76 +1,76 @@
 <template>
   <section class="home__team" id="team">
     <div class="team__header-wrapper">
-      <h2>Команда</h2>
-      <span>Интерактив</span>
+      <h2 v-html="t('Home.team.title')"></h2>
+      <span v-html="t('Home.team.interactive')"></span>
     </div>
     <div class="team__content-wrapper">
       <div class="team__content">
         <div
           class="team__member"
-          v-for="(member, index) in team"
+          v-for="index in 8"
           :key="index"
-          @click="currentMember = index"
+          @click="currentMember = index-1"
         >
           <div class="member__name">
-            {{ member.name.split(' ')[0] }}
-            <br>
-            {{ member.name.split(' ')[1]}}
+            {{ t(`Home.team.members[${index-1}].name`).split(" ")[0] }}
+            <br />
+            {{ t(`Home.team.members[${index-1}].name`).split(" ")[1] }}
             <img
               class="member__emoji"
-              :src="require(`@/assets/team/emoji/${member.emoji}.png`)"
+              :src="require(`@/assets/team/emoji/${t(`Home.team.members[${index-1}].emoji`)}.png`)"
             />
           </div>
 
           <div
             class="member__avatar"
-            :style="{ '--background': member.preferredColor }"
+            :style="{ '--background': '#'+t(`Home.team.members[${index-1}].preferredColor`) }"
           >
             <img
-              :src="require(`@/assets/team/avatars/${member.avatar}`)"
-              :alt="member.name"
+              :src="require(`@/assets/team/avatars/${t(`Home.team.members[${index-1}].avatar`)}`)"
+              :alt="t(`Home.team.members[${index-1}].name`)"
             />
           </div>
 
-          <div class="member__post" v-html="member.post"></div>
-          <div class="member__description" v-html="member.description"></div>
+          <div class="member__post" v-html="t(`Home.team.members[${index-1}].post`)"></div>
+          <div class="member__description" v-html="t(`Home.team.members[${index-1}].description`)"></div>
           <div
             class="member__employment-exp"
-            v-html="member.employmentExp"
+            v-html="t(`Home.team.members[${index-1}].employmentExp`)"
           ></div>
           <a
             class="member__link"
             target="_blank"
-            :href="defineLink(member.link)"
-            >{{ defineLinkText(member.link) }}</a
+            :href="defineLink(t(`Home.team.members[${index-1}].link`))"
+            >{{ defineLinkText(t(`Home.team.members[${index-1}].link`)) }}</a
           >
         </div>
       </div>
       <div class="team__description">
         <span class="member__name">
-          {{ team[currentMember].name }}
+          {{ t(`Home.team.members[${currentMember}].name`) }}
           <img
             class="member__emoji"
             :src="
-              require(`@/assets/team/emoji/${team[currentMember].emoji}.png`)
+              require(`@/assets/team/emoji/${t(`Home.team.members[${currentMember}].emoji`)}.png`)
             "
           />
         </span>
 
-        <span class="member__post" v-html="team[currentMember].post"></span>
+        <span class="member__post" v-html="t(`Home.team.members[${currentMember}].post`)"></span>
         <span
           class="member__description"
-          v-html="team[currentMember].description"
+          v-html="t(`Home.team.members[${currentMember}].description`)"
         ></span>
         <span
           class="member__employment-exp"
-          v-html="team[currentMember].employmentExp"
+          v-html="t(`Home.team.members[${currentMember}].employmentExp`)"
         ></span>
         <a
           class="member__link"
           target="_blank"
-          :href="defineLink(team[currentMember].link)"
-          >{{ defineLinkText(team[currentMember].link) }}</a
+          :href="defineLink(t(`Home.team.members[${currentMember}].link`))"
+          >{{ defineLinkText(t(`Home.team.members[${currentMember}].link`)) }}</a
         >
       </div>
     </div>
@@ -79,111 +79,28 @@
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
+    const { t } = useI18n()
+
     const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const http = /(http(s?)):\/\//i;
     const url =
       /[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)?/gi;
 
-    const team = computed(() => [
-      {
-        avatar: "Alena.png",
-        emoji: "paw",
-        name: "Alena Samarina",
-        post: "Аналитик & Product Owner",
-        preferredColor: "#FFE5D6",
-        description:
-          "Выполняла проекты для Mars, Danone, Nexign, Schlumberger, Газпром Нефть, Северсталь, Росатом <br><br> Неоднократный победитель кейс-чемпионатов и&nbsp;хакатонов",
-        employmentExp: "Опыт работы: 4&nbsp;года",
-        link: "alencombo@gmail.com",
-      },
-      {
-        avatar: "Alexander.png",
-        emoji: "trackball",
-        name: "Alexander Greene",
-        post: "Продуктовый дизайнер",
-        preferredColor: "#E7E7E9",
-        description:
-          "Выполнял проекты для Яндекса, VK, Газпром, Skyeng и&nbsp;X5&nbsp;Group <br><br> Призер олимпиады ВШЭ в&nbsp;области дизайна и&nbsp;неоднократный победитель хакатонов",
-        employmentExp: "Опыт работы: 4&nbsp;года",
-        link: "https://t.me/greeneboy",
-      },
-      {
-        avatar: "Fedor.png",
-        emoji: "dna",
-        name: "Fedor Kabachenko",
-        post: "ML-инженер",
-        preferredColor: "#94ADE8",
-        description:
-          "Выполнял проекты для Центробанка, Росатома, ParSeq, OneCell и&nbsp;BIOCAD <br><br> Безработный, но&nbsp;зарабатывает",
-        employmentExp: "Опыт работы: 2&nbsp;года",
-        link: "https://t.me/padobrik",
-      },
-      {
-        avatar: "Platon.png",
-        emoji: "vulcan",
-        name: "Platon Lapp",
-        post: "Front-end developer",
-        preferredColor: "#C7C789",
-        description: "Просто хороший парень",
-        employmentExp: "Опыт работы: 3&nbsp;года",
-        link: "https://platon.page",
-      },
-      {
-        avatar: "Natalia.png",
-        emoji: "noevilmonkey",
-        name: "Наталья Мальцева",
-        post: "Backend разработчик",
-        preferredColor: "#FFE5D6",
-        description:
-          "Разработчик в&nbsp;Arrival. Строила гоночный болид в&nbsp;отделе электрики. Выполняла проекты для Mars, Schlumberger, Danone. Проводила обучение по&nbsp;программированию для студентов. <br><br> Получатель гранта УМНИК. Победитель хакатонов и&nbsp;кейс-чемпионатов.",
-        employmentExp: "Опыт работы: 3&nbsp;года",
-        link: "maltsnata@gmail.com",
-      },
-      {
-        avatar: "Ulyana.png",
-        emoji: "tiger",
-        name: "Ульяна Саламатова",
-        post: "Android Developer",
-        preferredColor: "#FFE5D6",
-        description: "Пишу на&nbsp;Kotlin",
-        employmentExp: "Опыт работы: 1&nbsp;года",
-        link: "salamatova.uv@gmail.com",
-      },
-      {
-        avatar: "Dmitry.png",
-        emoji: "offnik",
-        name: "Тимощенков Дмитрий",
-        post: "Backend разработчик",
-        preferredColor: "#FFE5D6",
-        description: "Разработчик в&nbsp;Sixhands",
-        employmentExp: "Опыт работы: 2&nbsp;года",
-        link: "street-morik@yandex.ru",
-      },
-      {
-        avatar: "Anna.png",
-        emoji: "victory",
-        name: "Анна Грохотова",
-        post: "Маркетолог",
-        preferredColor: "#FFE5D6",
-        description:
-          "Выполняю проекты в сфере нейротехнологий <br><br> Знаю, как работает наш мозг и что нужно людям",
-        employmentExp: "Опыт работы: 3&nbsp;года",
-        link: "anya.annie@yandex.ru",
-      },
-    ]);
-
     const currentMember = ref(0);
 
     const defineLink = (link: string) => {
+      link = link.replace('&#64;', '@')
       if (email.test(link)) return `mailto:${link}`;
       else if (!http.test(link)) return `https://${link}`;
       else return link;
     };
 
     const defineLinkText = (link: string) => {
+      link = link.replace('&#64;', '@')
       if (email.test(link)) return link.replace("mailto:", "");
       else if (
         url.test(link) &&
@@ -194,7 +111,7 @@ export default defineComponent({
     };
 
     return {
-      team,
+      t,
       defineLink,
       defineLinkText,
       currentMember,
@@ -363,6 +280,7 @@ export default defineComponent({
           .member__avatar {
             background: #111111;
             padding: 29px 18px 35px 18px;
+            cursor: pointer;
 
             &:hover {
               background: var(--background, #111111);

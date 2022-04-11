@@ -1,30 +1,35 @@
 <template>
   <div class="home__footer">
     <span>Inkast 2022</span>
-    <span
-      class="footer__love"
-      >С&nbsp;<img
+    <span class="footer__love"
+      >{{t('Home.footer.with')}}<img
         src="@/assets/red_heart.png"
         alt="heart"
-      />&nbsp;из&nbsp;Санкт-Петербурга</span
+      />{{t('Home.footer.love')}}</span
     >
-    <a href="">Условия и Политика</a>
+    <a href="" v-html="t('Home.footer.termsAndPolicy')"></a>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 export default defineComponent({
   setup() {
-    console.log("this is footer");
+    const { t } = useI18n()
+
+    return {
+      t
+    }
   },
-});
+})
 </script>
+
 
 <style lang="scss" scoped>
 .home__footer {
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   display: grid;
   place-items: center;
@@ -52,6 +57,10 @@ export default defineComponent({
     letter-spacing: -0.015em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
+
+    img {
+      margin: 0 4px;
+    }
   }
 
   span:first-child {

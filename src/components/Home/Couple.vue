@@ -1,13 +1,8 @@
 <template>
   <section class="home__couple">
     <div class="couple__text-wrapper">
-      <h3>
-        Где-то на&nbsp;земле существует человек, который создан именно
-        для&nbsp;тебя
-      </h3>
-      <span
-        >И&nbsp;вы&nbsp;еще не&nbsp;знаете о&nbsp;существовании друг друга</span
-      >
+      <h3 v-html="t('Home.couple.title')"></h3>
+      <span v-html="t('Home.couple.additional')"></span>
     </div>
     <div class="couple__media-wrapper">
       <img :src="require('@/assets/cards/couple.png')" alt="Couple in Russia" />
@@ -34,6 +29,22 @@
     </div>
   </section>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+export default defineComponent({
+  setup() {
+    const { t } = useI18n()
+
+    return {
+      t
+    }
+  },
+})
+</script>
+
 
 <style lang="scss" scoped>
 .home__couple {

@@ -1,8 +1,20 @@
 <template>
-  <button class="button__wrapper">
+  <a :href="href" class="button__wrapper" v-if="href">
+    <slot></slot>
+  </a>
+  <button class="button__wrapper" v-else>
     <slot></slot>
   </button>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  props: ['href']
+})
+</script>
+
 
 <style lang="scss" scoped>
 .button__wrapper {
@@ -19,6 +31,8 @@
   color: #ffffff;
   cursor: pointer;
   transition: background-color 0.16s ease-in-out;
+  text-decoration: none;
+  text-align: center;
 
   @media (min-width: 768px) {
     font-size: 32px;

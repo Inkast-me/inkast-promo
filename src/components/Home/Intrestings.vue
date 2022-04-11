@@ -1,8 +1,8 @@
 <template>
   <section class="home__intrestings">
     <div class="intrestings__text-wrapper">
-      <h3>Представьте<br />Может быть, вы&nbsp;оба...</h3>
-      <div class="intrestings__more">+95 интересов</div>
+      <h3 v-html="t('Home.intrestings.title')"></h3>
+      <div class="intrestings__more">+95 {{t('Home.intrestings.additional')}}</div>
     </div>
     <div class="intrestings__wrapper">
       <div class="wrapper__line">
@@ -23,6 +23,22 @@
     </div>
   </section>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+export default defineComponent({
+  setup() {
+    const { t } = useI18n()
+
+    return {
+      t
+    }
+  },
+})
+</script>
+
 
 <style lang="scss" scoped>
 .home__intrestings {

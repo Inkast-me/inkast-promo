@@ -1,0 +1,176 @@
+{
+  "Home": {
+    "nav": {
+      "product": "Product",
+      "team": "Team",
+      "donate": "Donate",
+      "language": "RU",
+      "join": "Join"
+    },
+    "greeting": {
+      "hello": "Welcome",
+      "inkast": "to Inkast"
+    },
+    "selection": {
+      "title": "Find people according to&nbsp;interests, goals, favorite activities and even by&nbsp;character",
+      "join": "Join"
+    },
+    "couple": {
+      "title": "Somewhere on&nbsp;Earth, there is&nbsp;a&nbsp;person who is&nbsp;the right match for you",
+      "additional": "Perhaps, you do&nbsp;not know about each other&rsquo;s existence yet"
+    },
+    "intrestings": {
+      "title": "Imagine <br> Both of&nbsp;you...",
+      "additional": "Interests"
+    },
+    "rare": {
+      "title": "Only a&nbsp;rare chance could bring you together <br> The time is&nbsp;<span>now</span>",
+      "additional": "You are a&nbsp;combination of&nbsp;different tastes, interests, and outlooks on&nbsp;life. Finding a&nbsp;similar person is&nbsp;too difficult, but it&nbsp;is&nbsp;not a&nbsp;problem for&nbsp;us"
+    },
+    "howItWorks": {
+      "title": "How it&nbsp;works",
+      "additional": "Today everyone has their digital portrait based on&nbsp;metadata",
+      "description": "You do&nbsp;not have to&nbsp;worry about the privacy of&nbsp;your data, since only you choose the information that appears in&nbsp;the public domain. Therefore, we&nbsp;will use only the metadata you provide to&nbsp;find people who are the most suitable for you. <br><br> For instance, you could find people with similar interests in&nbsp;TikTok video categories or&nbsp;with the same&nbsp;VK subscriptions."
+    },
+    "notEasy": {
+      "title": "It&nbsp;is&nbsp;not that easy",
+      "additional": "We&nbsp;have created our own machine learning algorithms that allow you to&nbsp;project your digital twin into the Web. These &laquo;metacopies&raquo; have certain preferences and character.",
+      "description": "Digital twins are compared by&nbsp;additional algorithms. As&nbsp;a&nbsp;result, the most fitting people are matched to&nbsp;you."
+    },
+    "problems": {
+      "title": "We&nbsp;provide an&nbsp;opportunity to&nbsp;solve current problems",
+      "cards": [
+        {
+          "title": "Lack of&nbsp;time",
+          "image": "time.png",
+          "description": "If&nbsp;you work hard every day and do&nbsp;not have time for dating, you will find a&nbsp;person with the same pace of&nbsp;life"
+        },
+        {
+          "title": "Talking points",
+          "image": "message.png",
+          "description": "The search for topics for a&nbsp;conversation remains in&nbsp;the past, we&nbsp;have already selected the ideal pen pal for you"
+        },
+        {
+          "title": "Loneliness",
+          "image": "loneliness.png",
+          "description": "Because of&nbsp;the lack of&nbsp;common interests you can feel lonely even with lots of&nbsp;friends. Our service will help you to&nbsp;find a&nbsp;person with the same traits"
+        },
+        {
+          "title": "Search for friends",
+          "image": "friends.png",
+          "description": "Dating services only provide romantic offers. In&nbsp;contrast, our status systems will immediatly show what a&nbsp;person is&nbsp;looking for. A&nbsp;friend? A&nbsp;loved one? Or&nbsp;both?"
+        }
+      ],
+      "join": "Join"
+    },
+    "show": {
+      "title": "Inkast knows this person and is&nbsp;ready to&nbsp;introduce you to&nbsp;each other",
+      "join": "Find a&nbsp;friend"
+    },
+    "team": {
+      "title": "Team",
+      "interactive": "Interactive",
+      "members": [
+      {
+        "avatar": "Alena.png",
+        "emoji": "paw",
+        "name": "Alena Samarina",
+        "post": "Analyst & Product Owner",
+        "preferredColor": "FFE5D6",
+        "description":
+          "Carried out projects for Mars, Danone, Nexign, Schlumberger, Gazprom Neft, Severstal and Rosatom <br><br>Multiple winner of&nbsp;case championships and hackathons",
+        "employmentExp": "Work experience: 4&nbsp;years",
+        "link": "alencombo&#64;gmail.com"
+      },
+      {
+        "avatar": "Alexander.png",
+        "emoji": "trackball",
+        "name": "Alexander Greene",
+        "post": "Product Designer",
+        "preferredColor": "E7E7E9",
+        "description":
+          "Carried out projects for Yandex, VK, Gazprom, Skyeng and X5&nbsp;Group <br><br> Winner of&nbsp;the HSE Olympiad in&nbsp;the field of&nbsp;design and multiple winner of&nbsp;hackathons",
+        "employmentExp": "Work experience: 4&nbsp;years",
+        "link": "https://t.me/greeneboy"
+      },
+      {
+        "avatar": "Fedor.png",
+        "emoji": "dna",
+        "name": "Fedor Kabachenko",
+        "post": "ML-Engineer",
+        "preferredColor": "94ADE8",
+        "description":
+          "Carried out projects for the Central Bank, Rosatom, ParSeq, OneCell and BIOCAD <br><br> Unemployed, but earns",
+        "employmentExp": "Work experience: 2&nbsp;years",
+        "link": "https://t.me/padobrik"
+      },
+      {
+        "avatar": "Platon.png",
+        "emoji": "vulcan",
+        "name": "Platon Lapp",
+        "post": "Front-end developer",
+        "preferredColor": "C7C789",
+        "description": "Just a cool guy",
+        "employmentExp": "Work experience: 3&nbsp;years",
+        "link": "https://platon.page"
+      },
+      {
+        "avatar": "Natalia.png",
+        "emoji": "noevilmonkey",
+        "name": "Natalia Maltseva",
+        "post": "Backend developer",
+        "preferredColor": "E0C49E",
+        "description":
+          "Developer at&nbsp;Arrival. Built a&nbsp;racing car in&nbsp;the electrics department. Performed projects for Mars, Schlumberger, Danone. Conducted programming training for students. <br><br> The recipient of&nbsp;the UMNIK grant. Winner of&nbsp;hackathons and case championships.",
+        "employmentExp": "Work experience: 3&nbsp;years",
+        "link": "maltsnata&#64;gmail.com"
+      },
+      {
+        "avatar": "Ulyana.png",
+        "emoji": "tiger",
+        "name": "Ulyana Salamatova",
+        "post": "Android Developer",
+        "preferredColor": "E6F7A2",
+        "description": "Code on&nbsp;Kotlin",
+        "employmentExp": "Work experience: 1&nbsp;year",
+        "link": "salamatova.uv&#64;gmail.com"
+      },
+      {
+        "avatar": "Dmitry.png",
+        "emoji": "offnik",
+        "name": "Timoshenkov Dmitry",
+        "post": "Backend Developer",
+        "preferredColor": "F8DFBE",
+        "description": "Developer in&nbsp;Sixhands",
+        "employmentExp": "Work experience: 2&nbsp;years",
+        "link": "street-morik&#64;yandex.ru"
+      },
+      {
+        "avatar": "Anna.png",
+        "emoji": "victory",
+        "name": "Anna Grokhotova",
+        "post": "Marketing specialist",
+        "preferredColor": "FFE5D6",
+        "description":
+          "Carry out projects in&nbsp;the field of&nbsp;neurotechnology <br><br> Know how our brain works and what people need",
+        "employmentExp": "Work experience: 3&nbsp;years",
+        "link": "anya.annie&#64;yandex.ru"
+      }
+    ]
+    },
+    "follow": {
+      "title": "Let&rsquo;s be <br> friends!",
+      "additional": "Subscribe for updates so&nbsp;you do&nbsp;not miss the launch",
+      "inputs": {
+        "name": "Name",
+        "email": "E-mail"
+      },
+      "join": "Join"
+    },
+    "footer": {
+      "with": "With ",
+      "love": " from Saint-Petersburg",
+      "termsAndPolicy": "Terms &amp;&nbsp;Policies"
+    }
+  }
+}
