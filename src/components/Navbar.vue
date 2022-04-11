@@ -7,11 +7,19 @@
     <div class="nav__links-wrapper">
       <a href="/#product" class="nav__link" v-html="t('Home.nav.product')"></a>
       <a href="/#team" class="nav__link" v-html="t('Home.nav.team')"></a>
-      <router-link to="/donate" class="nav__link" v-html="t('Home.nav.donate')"></router-link>
+      <router-link
+        to="/donate"
+        class="nav__link"
+        v-html="t('Home.nav.donate')"
+      ></router-link>
     </div>
 
     <div class="nav__additional">
-      <div class="nav__language" @click="switchLang" v-html="t('Home.nav.language')"></div>
+      <div
+        class="nav__language"
+        @click="switchLang"
+        v-html="t('Home.nav.language')"
+      ></div>
       <a href="#follow" class="nav__join" v-html="t('Home.nav.join')"></a>
       <img
         @click="openModal = !openModal"
@@ -29,7 +37,11 @@
       <a href="#product" class="nav__link" v-html="t('Home.nav.product')"></a>
       <a href="#team" class="nav__link" v-html="t('Home.nav.team')"></a>
 
-      <div class="nav__language" @click="switchLang" v-html="t('Home.nav.language')"></div>
+      <div
+        class="nav__language"
+        @click="switchLang"
+        v-html="t('Home.nav.language')"
+      ></div>
       <a href="#follow" class="nav__join" v-html="t('Home.nav.join')"></a>
     </div>
   </Transition>
@@ -42,19 +54,19 @@ import { useI18n } from "vue-i18n";
 export default defineComponent({
   setup() {
     const openModal = ref(false);
-    const { t, availableLocales, locale } = useI18n()
+    const { t, availableLocales, locale } = useI18n();
 
     const switchLang = () => {
       locale.value =
-          locale.value == availableLocales[0]
-            ? availableLocales[1]
-            : availableLocales[0];
-    }
+        locale.value == availableLocales[0]
+          ? availableLocales[1]
+          : availableLocales[0];
+    };
 
     return {
       openModal,
       switchLang,
-      t
+      t,
     };
   },
 });

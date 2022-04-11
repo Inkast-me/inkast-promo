@@ -62,8 +62,8 @@
     </div>
     <div class="follow__form-wrapper">
       <span v-html="t('Home.follow.additional')"></span>
-      <input type="text" :placeholder="t('Home.follow.inputs.name')"/>
-      <input type="text" :placeholder="t('Home.follow.inputs.email')"/>
+      <input type="text" :placeholder="t('Home.follow.inputs.name')" />
+      <input type="text" :placeholder="t('Home.follow.inputs.email')" />
     </div>
     <Button class="follow__join" v-html="t('Home.follow.join')"></Button>
   </section>
@@ -80,12 +80,12 @@ export default defineComponent({
     Button,
   },
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     return {
-      t
-    }
-  }
+      t,
+    };
+  },
 });
 </script>
 

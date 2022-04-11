@@ -3,7 +3,11 @@
     <h2 class="show__header" v-html="t('Home.show.title')"></h2>
 
     <div class="show__wrapper">
-      <Button href="#follow" class="show__button" v-html="t('Home.show.join')"></Button>
+      <Button
+        href="#follow"
+        class="show__button"
+        v-html="t('Home.show.join')"
+      ></Button>
       <div class="show__couple">
         <div class="couple_left">
           <img :src="require('@/assets/man.png')" alt="Maaaan" />
@@ -46,11 +50,11 @@ export default defineComponent({
     Button,
   },
   setup() {
-    const {t} = useI18n()
+    const { t } = useI18n();
 
     return {
-      t
-    }
+      t,
+    };
   },
 });
 </script>

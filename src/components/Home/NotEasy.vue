@@ -4,7 +4,10 @@
 
     <div class="easy__wrapper">
       <div class="easy__title" v-html="t('Home.notEasy.additional')"></div>
-      <div class="easy__description" v-html="t('Home.notEasy.description')"></div>
+      <div
+        class="easy__description"
+        v-html="t('Home.notEasy.description')"
+      ></div>
       <img
         class="easy__illustration"
         :src="require('@/assets/cards/easy/illustration.svg')"
@@ -15,20 +18,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     return {
-      t
-    }
+      t,
+    };
   },
-})
+});
 </script>
-
 
 <style lang="scss" scoped>
 .home__easy {

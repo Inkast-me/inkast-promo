@@ -3,19 +3,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
-    const { locale } = useI18n()
-    const language = navigator.language
+    const { locale } = useI18n();
+    const language = navigator.language;
 
-    locale.value = language
+    locale.value = language;
   },
-})
+});
 </script>
-
 
 <style lang="scss">
 @font-face {

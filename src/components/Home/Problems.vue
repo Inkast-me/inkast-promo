@@ -4,7 +4,9 @@
       <h2 v-html="t('Home.problems.title')"></h2>
       <img
         :src="
-          require(`@/assets/cards/problems/${t(`Home.problems.cards[${currentProblem}].image`)}`)
+          require(`@/assets/cards/problems/${t(
+            `Home.problems.cards[${currentProblem}].image`
+          )}`)
         "
         :alt="t(`Home.problems.cards[${currentProblem}].title`)"
       />
@@ -14,20 +16,30 @@
         class="scroll__wrapper"
         v-for="index in 4"
         :key="index"
-        :data-problem-id="index-1"
+        :data-problem-id="index - 1"
       >
-        <div class="scroll__title" v-html="t(`Home.problems.cards[${index-1}].title`)"></div>
-        <div class="scroll__description" v-html="t(`Home.problems.cards[${index-1}].description`)"></div>
+        <div
+          class="scroll__title"
+          v-html="t(`Home.problems.cards[${index - 1}].title`)"
+        ></div>
+        <div
+          class="scroll__description"
+          v-html="t(`Home.problems.cards[${index - 1}].description`)"
+        ></div>
         <div class="scroll__image">
           <img
-            :src="require(`@/assets/cards/problems/${t(`Home.problems.cards[${index-1}].image`)}`)"
-            :alt="t(`Home.problems.cards[${index-1}].title`)"
+            :src="
+              require(`@/assets/cards/problems/${t(
+                `Home.problems.cards[${index - 1}].image`
+              )}`)
+            "
+            :alt="t(`Home.problems.cards[${index - 1}].title`)"
           />
         </div>
       </div>
-      <Button 
+      <Button
         href="#follow"
-        :class="{ active: currentProblem == 3 }" 
+        :class="{ active: currentProblem == 3 }"
         class="scroll__join"
         v-html="t('Home.problems.join')"
       ></Button>
@@ -48,7 +60,7 @@ export default defineComponent({
   },
 
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     const currentProblem = ref(0);
 
@@ -146,8 +158,8 @@ export default defineComponent({
 
       @media (min-width: 768px) {
         grid:
-        "title image" min-content
-        "description image" min-content / 1fr auto;
+          "title image" min-content
+          "description image" min-content / 1fr auto;
         align-items: flex-end;
         gap: 24px;
       }

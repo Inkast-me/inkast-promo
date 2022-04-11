@@ -16,12 +16,12 @@ export default defineComponent({
     Button,
   },
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     return {
-      t
-    }
-  }
+      t,
+    };
+  },
 });
 </script>
 

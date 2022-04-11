@@ -3,26 +3,28 @@
     <h2 class="how__header" v-html="t('Home.howItWorks.title')"></h2>
     <div class="how__wrapper">
       <h3 class="how__title" v-html="t('Home.howItWorks.additional')"></h3>
-      <div class="how__description" v-html="t('Home.howItWorks.description')"></div>
+      <div
+        class="how__description"
+        v-html="t('Home.howItWorks.description')"
+      ></div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
-    const {t} = useI18n()
+    const { t } = useI18n();
 
     return {
-      t
-    }
+      t,
+    };
   },
-})
+});
 </script>
-
 
 <style lang="scss" scoped>
 .home__how {

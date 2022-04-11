@@ -10,39 +10,56 @@
           class="team__member"
           v-for="index in 8"
           :key="index"
-          @click="currentMember = index-1"
+          @click="currentMember = index - 1"
         >
           <div class="member__name">
-            {{ t(`Home.team.members[${index-1}].name`).split(" ")[0] }}
+            {{ t(`Home.team.members[${index - 1}].name`).split(" ")[0] }}
             <br />
-            {{ t(`Home.team.members[${index-1}].name`).split(" ")[1] }}
+            {{ t(`Home.team.members[${index - 1}].name`).split(" ")[1] }}
             <img
               class="member__emoji"
-              :src="require(`@/assets/team/emoji/${t(`Home.team.members[${index-1}].emoji`)}.png`)"
+              :src="
+                require(`@/assets/team/emoji/${t(
+                  `Home.team.members[${index - 1}].emoji`
+                )}.png`)
+              "
             />
           </div>
 
           <div
             class="member__avatar"
-            :style="{ '--background': '#'+t(`Home.team.members[${index-1}].preferredColor`) }"
+            :style="{
+              '--background':
+                '#' + t(`Home.team.members[${index - 1}].preferredColor`),
+            }"
           >
             <img
-              :src="require(`@/assets/team/avatars/${t(`Home.team.members[${index-1}].avatar`)}`)"
-              :alt="t(`Home.team.members[${index-1}].name`)"
+              :src="
+                require(`@/assets/team/avatars/${t(
+                  `Home.team.members[${index - 1}].avatar`
+                )}`)
+              "
+              :alt="t(`Home.team.members[${index - 1}].name`)"
             />
           </div>
 
-          <div class="member__post" v-html="t(`Home.team.members[${index-1}].post`)"></div>
-          <div class="member__description" v-html="t(`Home.team.members[${index-1}].description`)"></div>
+          <div
+            class="member__post"
+            v-html="t(`Home.team.members[${index - 1}].post`)"
+          ></div>
+          <div
+            class="member__description"
+            v-html="t(`Home.team.members[${index - 1}].description`)"
+          ></div>
           <div
             class="member__employment-exp"
-            v-html="t(`Home.team.members[${index-1}].employmentExp`)"
+            v-html="t(`Home.team.members[${index - 1}].employmentExp`)"
           ></div>
           <a
             class="member__link"
             target="_blank"
-            :href="defineLink(t(`Home.team.members[${index-1}].link`))"
-            >{{ defineLinkText(t(`Home.team.members[${index-1}].link`)) }}</a
+            :href="defineLink(t(`Home.team.members[${index - 1}].link`))"
+            >{{ defineLinkText(t(`Home.team.members[${index - 1}].link`)) }}</a
           >
         </div>
       </div>
@@ -52,12 +69,17 @@
           <img
             class="member__emoji"
             :src="
-              require(`@/assets/team/emoji/${t(`Home.team.members[${currentMember}].emoji`)}.png`)
+              require(`@/assets/team/emoji/${t(
+                `Home.team.members[${currentMember}].emoji`
+              )}.png`)
             "
           />
         </span>
 
-        <span class="member__post" v-html="t(`Home.team.members[${currentMember}].post`)"></span>
+        <span
+          class="member__post"
+          v-html="t(`Home.team.members[${currentMember}].post`)"
+        ></span>
         <span
           class="member__description"
           v-html="t(`Home.team.members[${currentMember}].description`)"
@@ -70,7 +92,9 @@
           class="member__link"
           target="_blank"
           :href="defineLink(t(`Home.team.members[${currentMember}].link`))"
-          >{{ defineLinkText(t(`Home.team.members[${currentMember}].link`)) }}</a
+          >{{
+            defineLinkText(t(`Home.team.members[${currentMember}].link`))
+          }}</a
         >
       </div>
     </div>
@@ -83,7 +107,7 @@ import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const http = /(http(s?)):\/\//i;
@@ -93,14 +117,14 @@ export default defineComponent({
     const currentMember = ref(0);
 
     const defineLink = (link: string) => {
-      link = link.replace('&#64;', '@')
+      link = link.replace("&#64;", "@");
       if (email.test(link)) return `mailto:${link}`;
       else if (!http.test(link)) return `https://${link}`;
       else return link;
     };
 
     const defineLinkText = (link: string) => {
-      link = link.replace('&#64;', '@')
+      link = link.replace("&#64;", "@");
       if (email.test(link)) return link.replace("mailto:", "");
       else if (
         url.test(link) &&

@@ -2,30 +2,29 @@
   <div class="home__footer">
     <span>Inkast 2022</span>
     <span class="footer__love"
-      >{{t('Home.footer.with')}}<img
-        src="@/assets/red_heart.png"
-        alt="heart"
-      />{{t('Home.footer.love')}}</span
+      >{{ t("Home.footer.with")
+      }}<img src="@/assets/red_heart.png" alt="heart" />{{
+        t("Home.footer.love")
+      }}</span
     >
     <a href="" v-html="t('Home.footer.termsAndPolicy')"></a>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     return {
-      t
-    }
+      t,
+    };
   },
-})
+});
 </script>
-
 
 <style lang="scss" scoped>
 .home__footer {
