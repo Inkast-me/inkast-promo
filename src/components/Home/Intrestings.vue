@@ -9,29 +9,41 @@
     <div class="intrestings__wrapper">
       <div class="wrapper__line-fixed" v-for="array in interests" :key="array">
         <div class="wrapper__line">
-          <div 
-            class="wrapper__interest" 
-            v-for="interest in array" 
-            :key="interest" 
+          <div
+            class="wrapper__interest"
+            v-for="interest in array"
+            :key="interest"
           >
-            <img 
-              :src="require(`@/assets/emoji/${t(`Home.intrestings.bubles[${interest}].image`)}.png`)" 
+            <img
+              :src="
+                require(`@/assets/emoji/${t(
+                  `Home.intrestings.bubles[${interest}].image`
+                )}.png`)
+              "
               :alt="t(`Home.intrestings.bubles[${interest}].text`)"
-            >
-            <span v-html="t(`Home.intrestings.bubles[${interest}].text`)"></span>
+            />
+            <span
+              v-html="t(`Home.intrestings.bubles[${interest}].text`)"
+            ></span>
           </div>
         </div>
         <div class="wrapper__line wrapper__interest_doubler">
-          <div 
-            class="wrapper__interest" 
-            v-for="interest in array" 
-            :key="interest" 
+          <div
+            class="wrapper__interest"
+            v-for="interest in array"
+            :key="interest"
           >
-            <img 
-              :src="require(`@/assets/emoji/${t(`Home.intrestings.bubles[${interest}].image`)}.png`)" 
+            <img
+              :src="
+                require(`@/assets/emoji/${t(
+                  `Home.intrestings.bubles[${interest}].image`
+                )}.png`)
+              "
               :alt="t(`Home.intrestings.bubles[${interest}].text`)"
-            >
-            <span v-html="t(`Home.intrestings.bubles[${interest}].text`)"></span>
+            />
+            <span
+              v-html="t(`Home.intrestings.bubles[${interest}].text`)"
+            ></span>
           </div>
         </div>
       </div>
@@ -48,14 +60,29 @@ export default defineComponent({
     const { t } = useI18n();
 
     const interests = ref([
-      [Math.ceil(Math.random()*99), Math.ceil(Math.random()*99), Math.ceil(Math.random()*99), Math.ceil(Math.random()*99)],
-      [Math.ceil(Math.random()*99), Math.ceil(Math.random()*99), Math.ceil(Math.random()*99), Math.ceil(Math.random()*99)],
-      [Math.ceil(Math.random()*99), Math.ceil(Math.random()*99), Math.ceil(Math.random()*99), Math.ceil(Math.random()*99)],
-    ])
+      [
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+      ],
+      [
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+      ],
+      [
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+        Math.ceil(Math.random() * 99),
+      ],
+    ]);
 
     return {
       t,
-      interests
+      interests,
     };
   },
 });
@@ -138,7 +165,7 @@ export default defineComponent({
       gap: 24px;
       flex-wrap: nowrap;
 
-      &:nth-child(2n+1) .wrapper__line {
+      &:nth-child(2n + 1) .wrapper__line {
         animation-direction: reverse;
       }
     }
@@ -178,8 +205,6 @@ export default defineComponent({
       .wrapper__interest_doubler {
         animation-delay: calc($animation-duration / 2);
       }
-
-      
     }
 
     @keyframes lineAnimation {

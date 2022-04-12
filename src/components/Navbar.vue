@@ -84,7 +84,7 @@ import { useRoute } from "vue-router";
 
 export default defineComponent({
   setup() {
-    const route = useRoute()
+    const route = useRoute();
     const openModal = ref(false);
     const { t, availableLocales, locale } = useI18n();
 
@@ -96,14 +96,16 @@ export default defineComponent({
     };
 
     const scrollIntoView = (hash: string) => {
-      document.querySelector(hash)?.scrollIntoView({block: "start", behavior: "smooth"})
-    }
+      document
+        .querySelector(hash)
+        ?.scrollIntoView({ block: "start", behavior: "smooth" });
+    };
 
     return {
       openModal,
       switchLang,
       t,
-      scrollIntoView
+      scrollIntoView,
     };
   },
 });

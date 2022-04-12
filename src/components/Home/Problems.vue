@@ -38,10 +38,7 @@
         </div>
       </div>
       <div class="scroll__wrapper_last">
-        <div
-          class="scroll__wrapper"
-          :data-problem-id="3"
-        >
+        <div class="scroll__wrapper" :data-problem-id="3">
           <div
             class="scroll__title"
             v-html="t(`Home.problems.cards[3].title`)"
@@ -69,7 +66,6 @@
 
         <div class="scroll__void"></div>
       </div>
-      
     </div>
   </section>
 </template>

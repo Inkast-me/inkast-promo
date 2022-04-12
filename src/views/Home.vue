@@ -64,12 +64,14 @@ export default defineComponent({
   },
 
   setup() {
-    const route = useRoute()
+    const route = useRoute();
 
     onMounted(() => {
-      document.querySelector(route.hash)?.scrollIntoView({block: "start", behavior: "smooth"})
-    })
-  }
+      document
+        .querySelector(route.hash)
+        ?.scrollIntoView({ block: "start", behavior: "smooth" });
+    });
+  },
 });
 </script>
 

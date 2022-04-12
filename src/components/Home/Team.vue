@@ -65,9 +65,9 @@
       </div>
       <div class="team__description">
         <span class="member__name">
-          {{ t(`Home.team.members[${currentMember}].name`).split(' ')[0] }}
-          <br>
-          {{ t(`Home.team.members[${currentMember}].name`).split(' ')[1] }}
+          {{ t(`Home.team.members[${currentMember}].name`).split(" ")[0] }}
+          <br />
+          {{ t(`Home.team.members[${currentMember}].name`).split(" ")[1] }}
           <img
             class="member__emoji"
             :src="
