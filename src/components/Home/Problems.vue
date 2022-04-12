@@ -114,7 +114,7 @@ export default defineComponent({
   gap: 40px;
   min-height: 95vh !important;
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     grid: min-content / repeat(2, 1fr);
     height: 76vh;
   }
@@ -131,7 +131,7 @@ export default defineComponent({
     display: flex;
     flex-flow: column;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       height: calc(76vh - 104px);
     }
 
@@ -143,7 +143,7 @@ export default defineComponent({
       color: #ffffff;
       margin: 0;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         font-size: 56px;
       }
     }
@@ -154,7 +154,7 @@ export default defineComponent({
       margin: 0 auto;
       height: 521px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         display: block;
       }
     }
@@ -177,7 +177,7 @@ export default defineComponent({
       align-items: center;
       gap: 24px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         grid:
           "title image" min-content
           "description image" min-content / 1fr auto;
@@ -215,7 +215,7 @@ export default defineComponent({
         display: grid;
         place-items: center;
 
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
           width: 108px;
           height: 120px;
         }
@@ -223,7 +223,7 @@ export default defineComponent({
         img {
           height: 56px;
 
-          @media (min-width: 768px) {
+          @media (min-width: 992px) {
             height: 120px;
           }
         }
@@ -231,7 +231,7 @@ export default defineComponent({
     }
 
     .scroll__wrapper_last {
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         height: calc(76vh + 64px);
         display: flex;
         flex-flow: column;
@@ -255,7 +255,7 @@ export default defineComponent({
         opacity: 0.8;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         display: initial;
       }
     }
@@ -264,7 +264,7 @@ export default defineComponent({
       height: auto;
       display: none;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         display: block;
       }
     }

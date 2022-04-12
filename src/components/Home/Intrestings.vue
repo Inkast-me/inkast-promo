@@ -154,12 +154,8 @@ export default defineComponent({
     padding: 64px 0;
     position: relative;
 
-    &:hover .wrapper__line {
-      animation-play-state: paused;
-    }
-
     .wrapper__line-fixed {
-      height: 88px;
+      height: 50px;
       width: 100%;
       display: flex;
       gap: 24px;
@@ -167,6 +163,10 @@ export default defineComponent({
 
       &:nth-child(2n + 1) .wrapper__line {
         animation-direction: reverse;
+      }
+
+      @media (min-width: 768px) {
+        height: 88px;
       }
     }
 
@@ -178,12 +178,16 @@ export default defineComponent({
       $animation-duration: 30s;
       animation: lineAnimation $animation-duration linear infinite;
 
+      @media (min-width: 768px) {
+        gap: 12px;
+      }
+
       .wrapper__interest {
         white-space: nowrap;
         font-family: "Stratos LC Web";
         font-style: normal;
         font-weight: 400;
-        font-size: 32px;
+        font-size: 18px;
         line-height: 118%;
         font-feature-settings: "pnum" on, "lnum" on;
         color: #ffffff;
@@ -191,14 +195,25 @@ export default defineComponent({
 
         background: #313031;
         border-radius: 1000px;
-        padding: 20px 32px;
+        padding: 8px 12px;
         display: flex;
-        gap: 16px;
+        gap: 8px;
         align-items: center;
 
+        @media (min-width: 768px) {
+          font-size: 32px;
+          padding: 20px 32px;
+          gap: 16px;
+        }
+
         img {
-          height: 48px;
-          width: 48px;
+          height: 30px;
+          width: 30px;
+
+          @media (min-width: 768px) {
+            height: 48px;
+            width: 48px;
+          }
         }
       }
 
