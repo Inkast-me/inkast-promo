@@ -574,5 +574,23 @@
       "love": " from Saint-Petersburg",
       "termsAndPolicy": "Terms &amp;&nbsp;Policies"
     }
+  },
+  "Donate": {
+    "title": "Financial support",
+    "problems": "Have a&nbsp;problem?",
+    "variants": {
+      "viaInternet": {
+        "title": "Wire transfer",
+        "description": "Transfer of&nbsp;funds to&nbsp;the joint account of&nbsp;Alena Samarina and the Inkast Team"
+      },
+      "vk": {
+        "title": "VK Donuts",
+        "description": "Make a&nbsp;monthly donation using&nbsp;VK donuts system"
+      }
+    }
+  },
+  "404": {
+    "description": "Page not found",
+    "main": "Back to&nbsp;Home"
   }
 }

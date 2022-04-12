@@ -4,7 +4,7 @@
     <div class="donate__contents">
       <div class="">
         <div class="donate__heading">
-          <h1>Поддержать проект</h1>
+          <h1 v-html="t('Donate.title')"></h1>
           <div class="donate__heading-donators">
             <svg
               width="26"
@@ -57,14 +57,13 @@
           >
             <img src="@/assets/donate/tinkoff.svg" alt="tinkoff" />
             <div class="donate__links-item__contents">
-              <h3>Через Тинькофф</h3>
+              <h3 v-html="t('Donate.variants.viaInternet.title')"></h3>
               <div>
                 <img
                   src="@/assets/donate/alena_samarina_animoji.png"
                   alt="alena_samarina_animoji"
                 />
-                <p>
-                  На&nbsp;совместный счёт Алены Самариной и&nbsp;команды Inkast
+                <p v-html="t('Donate.variants.viaInternet.description')">
                 </p>
               </div>
             </div>
@@ -76,11 +75,9 @@
           >
             <img src="@/assets/donate/vk.svg" alt="vkdonat" />
             <div class="donate__links-item__contents">
-              <h3>Стать VK Доном</h3>
+              <h3 v-html="t('Donate.variants.vk.title')"></h3>
               <div>
-                <p class="donate__links-item__contents-custom">
-                  Оформите ежемесячное пожертвование через&nbsp;VK donut. Это
-                  поможет нашему развитию
+                <p class="donate__links-item__contents-custom" v-html="t('Donate.variants.vk.description')">
                 </p>
               </div>
             </div>
@@ -91,8 +88,8 @@
         <a
           href="mailto:donation@inkast.me?subject=Проблемы с донатом"
           target="_blank"
-          >Возникли проблемы?</a
-        >
+          v-html="t('Donate.problems')"
+          ></a>
         <div class="donate__footer-social">
           <a href="https://vk.com/inkast_me" target="_blank"
             ><img src="@/assets/vk.png" alt=""
@@ -109,6 +106,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Navbar from "@/components/Navbar.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "Donate",
@@ -116,7 +114,11 @@ export default defineComponent({
     Navbar,
   },
   setup() {
-    console.log("This is donate page");
+    const { t } = useI18n()
+    
+    return {
+      t
+    }
   },
 });
 </script>

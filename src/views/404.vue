@@ -4,19 +4,20 @@
     <div class="error__404">
       <div class="error__404-wrapper">
         <h1>404</h1>
-        <span>Такой страницы не&nbsp;существует</span>
-        <!-- TODO: add link -->
-        <Button>На главную</Button>
+        <span v-html="t('404.description')"></span>
+        <router-link custom to="/" v-slot="{ navigate, href }">
+          <Button :href="href" @click="navigate" v-html="t('404.main')"></Button>
+        </router-link>
       </div>
     </div>
   </section>
-  <!-- TODO: add footer -->
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import Navbar from "@/components/Navbar.vue";
 import Button from "@/components/Button.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "404",
@@ -25,7 +26,11 @@ export default defineComponent({
     Button,
   },
   setup() {
-    console.log("This is 404 page");
+    const { t } = useI18n()
+
+    return {
+      t
+    }
   },
 });
 </script>
