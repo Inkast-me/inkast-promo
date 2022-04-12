@@ -341,6 +341,7 @@ export default defineComponent({
         letter-spacing: -0.05em;
         color: #ffffff;
         margin-bottom: 30px;
+        min-width: 260px;
 
         .member__emoji {
           height: 37px;
