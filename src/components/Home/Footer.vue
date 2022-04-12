@@ -63,6 +63,12 @@ export default defineComponent({
   }
 
   span:first-child {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #ffffff;
     opacity: 0.4;
   }
 
@@ -70,7 +76,6 @@ export default defineComponent({
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    text-align: center;
     letter-spacing: -0.015em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;

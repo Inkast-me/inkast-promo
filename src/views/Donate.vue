@@ -63,8 +63,7 @@
                   src="@/assets/donate/alena_samarina_animoji.png"
                   alt="alena_samarina_animoji"
                 />
-                <p v-html="t('Donate.variants.viaInternet.description')">
-                </p>
+                <p v-html="t('Donate.variants.viaInternet.description')"></p>
               </div>
             </div>
           </a>
@@ -77,8 +76,10 @@
             <div class="donate__links-item__contents">
               <h3 v-html="t('Donate.variants.vk.title')"></h3>
               <div>
-                <p class="donate__links-item__contents-custom" v-html="t('Donate.variants.vk.description')">
-                </p>
+                <p
+                  class="donate__links-item__contents-custom"
+                  v-html="t('Donate.variants.vk.description')"
+                ></p>
               </div>
             </div>
           </a>
@@ -89,7 +90,7 @@
           href="mailto:donation@inkast.me?subject=Проблемы с донатом"
           target="_blank"
           v-html="t('Donate.problems')"
-          ></a>
+        ></a>
         <div class="donate__footer-social">
           <a href="https://vk.com/inkast_me" target="_blank"
             ><img src="@/assets/vk.png" alt=""
@@ -114,11 +115,11 @@ export default defineComponent({
     Navbar,
   },
   setup() {
-    const { t } = useI18n()
-    
+    const { t } = useI18n();
+
     return {
-      t
-    }
+      t,
+    };
   },
 });
 </script>

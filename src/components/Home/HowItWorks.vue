@@ -41,16 +41,17 @@ export default defineComponent({
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #111111;
-    padding-bottom: 40px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #ebebeb;
     font-size: 30px;
 
-    @media (min-width: 992px) {
-      font-size: 120px;
-    }
-
     @media (min-width: 768px) {
       font-size: 64px;
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 120px;
     }
   }
 
@@ -68,14 +69,15 @@ export default defineComponent({
       font-feature-settings: "pnum" on, "lnum" on;
       color: #111111;
       font-size: 22px;
-      margin: 0 0 40px 0;
-
-      @media (min-width: 992px) {
-        margin: 0 80px 40px 0;
-      }
+      margin: 0 0 32px 0;
 
       @media (min-width: 768px) {
         font-size: 40px;
+        margin: 0 0 40px 0;
+      }
+
+      @media (min-width: 992px) {
+        margin: 0 80px 40px 0;
       }
     }
 
@@ -89,7 +91,7 @@ export default defineComponent({
       color: #000000;
       max-width: 460px;
 
-      @media (min-width: 360px) {
+      @media (min-width: 768px) {
         font-size: 20px;
       }
     }

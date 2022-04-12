@@ -50,18 +50,20 @@ export default defineComponent({
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
-    padding-bottom: 40px;
+    padding-bottom: 16px;
     margin-bottom: 37px;
     border-bottom: 1px solid #ffffff33;
     font-size: 30px;
+
+      @media (min-width: 768px) {
+        font-size: 64px;
+        padding-bottom: 40px;
+      }
 
     @media (min-width: 992px) {
       font-size: 120px;
     }
 
-    @media (min-width: 768px) {
-      font-size: 64px;
-    }
   }
 
   .easy__wrapper {

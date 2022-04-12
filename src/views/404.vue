@@ -6,7 +6,11 @@
         <h1>404</h1>
         <span v-html="t('404.description')"></span>
         <router-link custom to="/" v-slot="{ navigate, href }">
-          <Button :href="href" @click="navigate" v-html="t('404.main')"></Button>
+          <Button
+            :href="href"
+            @click="navigate"
+            v-html="t('404.main')"
+          ></Button>
         </router-link>
       </div>
     </div>
@@ -26,11 +30,11 @@ export default defineComponent({
     Button,
   },
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     return {
-      t
-    }
+      t,
+    };
   },
 });
 </script>

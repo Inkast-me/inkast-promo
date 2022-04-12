@@ -67,7 +67,7 @@ export default defineComponent({
     const route = useRoute();
 
     onMounted(() => {
-      document
+      if(route.hash) document
         .querySelector(route.hash)
         ?.scrollIntoView({ block: "start", behavior: "smooth" });
     });
@@ -80,10 +80,14 @@ export default defineComponent({
   width: 100%;
   min-height: 100vh;
   background: #111111;
-  padding: 10vh 16px 64px;
+  padding: 104px 8px 64px;
   position: relative;
   display: grid;
   gap: 32px;
+
+  @media (min-width: 576px) {
+    padding: 104px 16px 64px;
+  }
 
   @media (min-width: 992px) {
     padding: 104px 64px 32px;
@@ -93,7 +97,7 @@ export default defineComponent({
     width: 100%;
     min-height: 76vh;
     border-radius: 24px;
-    padding: 24px 8px;
+    padding: 24px 16px;
 
     @media (min-width: 768px) {
       padding: 48px 40px 64px;

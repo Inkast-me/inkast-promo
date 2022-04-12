@@ -292,7 +292,7 @@
           "text": "admire skating"
         },
         {
-          "image": "hach",
+          "image": "faceinclouds",
           "text": "visit a psychologist together"
         },
         {
@@ -444,22 +444,22 @@
       "cards": [
         {
           "title": "Lack of&nbsp;time",
-          "image": "time.png",
+          "image": "time",
           "description": "If&nbsp;you work hard every day and do&nbsp;not have time for dating, you will find a&nbsp;person with the same pace of&nbsp;life"
         },
         {
           "title": "Talking points",
-          "image": "message.png",
+          "image": "message",
           "description": "The search for topics for a&nbsp;conversation remains in&nbsp;the past, we&nbsp;have already selected the ideal pen pal for you"
         },
         {
           "title": "Loneliness",
-          "image": "loneliness.png",
+          "image": "loneliness",
           "description": "Because of&nbsp;the lack of&nbsp;common interests you can feel lonely even with lots of&nbsp;friends. Our service will help you to&nbsp;find a&nbsp;person with the same traits"
         },
         {
           "title": "Search for friends",
-          "image": "friends.png",
+          "image": "friends",
           "description": "Dating services only provide romantic offers. In&nbsp;contrast, our status systems will immediatly show what a&nbsp;person is&nbsp;looking for. A&nbsp;friend? A&nbsp;loved one? Or&nbsp;both?"
         }
       ],

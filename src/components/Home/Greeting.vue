@@ -94,19 +94,19 @@ export default defineComponent({
 
   h1 {
     font-weight: 400;
-    font-size: 144px;
+    font-size: 48px;
     line-height: 93%;
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     margin: 0;
 
-    @media (max-width: 992px) {
+    @media (min-width: 576px) {
       font-size: 104px;
     }
 
-    @media (max-width: 768px) {
-      font-size: 48px;
+    @media (min-width: 992px) {
+      font-size: 144px;
     }
   }
 

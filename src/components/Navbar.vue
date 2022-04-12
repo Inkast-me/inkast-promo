@@ -145,6 +145,7 @@ export default defineComponent({
       color: #ffffff;
       text-decoration: none;
       transition: color 0.16s ease-in-out;
+      display: inherit;
 
       &:hover,
       &.active {

@@ -6,7 +6,7 @@
         :src="
           require(`@/assets/cards/problems/${t(
             `Home.problems.cards[${currentProblem}].image`
-          )}`)
+          )}.png`) 
         "
         :alt="t(`Home.problems.cards[${currentProblem}].title`)"
       />
@@ -31,7 +31,7 @@
             :src="
               require(`@/assets/cards/problems/${t(
                 `Home.problems.cards[${index - 1}].image`
-              )}`)
+              )}_mini.png`)
             "
             :alt="t(`Home.problems.cards[${index - 1}].title`)"
           />
@@ -52,7 +52,7 @@
               :src="
                 require(`@/assets/cards/problems/${t(
                   `Home.problems.cards[3].image`
-                )}`)
+                )}_mini.png`)
               "
               :alt="t(`Home.problems.cards[3].title`)"
             />
@@ -143,6 +143,10 @@ export default defineComponent({
       color: #ffffff;
       margin: 0;
 
+      @media (min-width: 768px) {
+        font-size: 48px;
+      }
+
       @media (min-width: 992px) {
         font-size: 56px;
       }
@@ -177,7 +181,7 @@ export default defineComponent({
       align-items: center;
       gap: 24px;
 
-      @media (min-width: 992px) {
+      @media (min-width: 768px) {
         grid:
           "title image" min-content
           "description image" min-content / 1fr auto;
@@ -213,9 +217,9 @@ export default defineComponent({
         height: 56px;
         width: 50px;
         display: grid;
-        place-items: center;
+        place-content: center;
 
-        @media (min-width: 992px) {
+        @media (min-width: 768px) {
           width: 108px;
           height: 120px;
         }
@@ -223,7 +227,7 @@ export default defineComponent({
         img {
           height: 56px;
 
-          @media (min-width: 992px) {
+          @media (min-width: 768px) {
             height: 120px;
           }
         }

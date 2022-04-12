@@ -128,12 +128,12 @@ export default defineComponent({
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
 
-    @media (min-width: 992px) {
-      font-size: 120px;
-    }
-
     @media (min-width: 768px) {
       font-size: 90px;
+    }
+
+    @media (min-width: 992px) {
+      font-size: 120px;
     }
   }
 

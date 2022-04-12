@@ -102,8 +102,12 @@ export default defineComponent({
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 18px;
-    padding-bottom: 48px;
+    padding-bottom: 24px;
     border-bottom: 1px solid #ffffff1a;
+
+    @media (min-width: 768px) {
+      padding-bottom: 48px;
+    }
 
     h3 {
       font-size: 30px;
@@ -116,12 +120,12 @@ export default defineComponent({
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
 
-      @media (min-width: 992px) {
-        font-size: 104px;
-      }
-
       @media (min-width: 768px) {
         font-size: 64px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 104px;
       }
     }
 
@@ -133,7 +137,7 @@ export default defineComponent({
 
       font-style: normal;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 140%;
       letter-spacing: -0.06px;
       text-transform: capitalize;
@@ -150,9 +154,13 @@ export default defineComponent({
     display: flex;
     flex-flow: column;
     align-items: center;
-    gap: 32px;
+    gap: 24px;
     padding: 64px 0;
     position: relative;
+
+    @media (min-width: 768px) {
+      gap: 32px;
+    }
 
     .wrapper__line-fixed {
       height: 50px;
