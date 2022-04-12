@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import Navbar from "@/components/Navbar.vue";
 
 import Greeting from "@/components/Home/Greeting.vue";
@@ -43,6 +43,7 @@ import Show from "@/components/Home/Show.vue";
 import Team from "@/components/Home/Team.vue";
 import Follow from "@/components/Home/Follow.vue";
 import Footer from "@/components/Home/Footer.vue";
+import { useRoute } from "vue-router";
 
 export default defineComponent({
   name: "Home",
@@ -61,6 +62,14 @@ export default defineComponent({
     Follow,
     Footer,
   },
+
+  setup() {
+    const route = useRoute()
+
+    onMounted(() => {
+      document.querySelector(route.hash)?.scrollIntoView({block: "start", behavior: "smooth"})
+    })
+  }
 });
 </script>
 

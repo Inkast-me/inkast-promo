@@ -106,9 +106,18 @@ export default defineComponent({
     }
 
     > img {
-      width: 120vh; //70vw
+      width: 120vh;
       height: 70vh;
       height: auto;
+      margin-right: 50%;
+
+      @media (min-width: 360px) {
+        margin-right: 25%;
+      }
+
+      @media (min-width: 768px) {
+        margin-right: 0;
+      }
 
       @media (min-width: 1200px) {
         position: absolute;

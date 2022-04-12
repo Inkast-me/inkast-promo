@@ -14,7 +14,7 @@
     <div class="problems__scroll">
       <div
         class="scroll__wrapper"
-        v-for="index in 4"
+        v-for="index in 3"
         :key="index"
         :data-problem-id="index - 1"
       >
@@ -37,14 +37,39 @@
           />
         </div>
       </div>
-      <Button
-        href="#follow"
-        :class="{ active: currentProblem == 3 }"
-        class="scroll__join"
-        v-html="t('Home.problems.join')"
-      ></Button>
+      <div class="scroll__wrapper_last">
+        <div
+          class="scroll__wrapper"
+          :data-problem-id="3"
+        >
+          <div
+            class="scroll__title"
+            v-html="t(`Home.problems.cards[3].title`)"
+          ></div>
+          <div
+            class="scroll__description"
+            v-html="t(`Home.problems.cards[3].description`)"
+          ></div>
+          <div class="scroll__image">
+            <img
+              :src="
+                require(`@/assets/cards/problems/${t(
+                  `Home.problems.cards[3].image`
+                )}`)
+              "
+              :alt="t(`Home.problems.cards[3].title`)"
+            />
+          </div>
+        </div>
+        <Button
+          href="#follow"
+          class="scroll__join"
+          v-html="t('Home.problems.join')"
+        ></Button>
 
-      <div class="scroll__void"></div>
+        <div class="scroll__void"></div>
+      </div>
+      
     </div>
   </section>
 </template>
@@ -209,6 +234,15 @@ export default defineComponent({
       }
     }
 
+    .scroll__wrapper_last {
+      @media (min-width: 768px) {
+        height: calc(76vh + 64px);
+        display: flex;
+        flex-flow: column;
+        gap: 16px;
+      }
+    }
+
     .scroll__join {
       transition: opacity 0.25s ease-in-out;
       background: #292929 url("../../assets/cards/problems/button.svg");
@@ -231,7 +265,7 @@ export default defineComponent({
     }
 
     .scroll__void {
-      height: calc(76vh - 200px);
+      height: auto;
       display: none;
 
       @media (min-width: 768px) {

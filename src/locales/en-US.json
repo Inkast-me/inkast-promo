@@ -9,7 +9,7 @@
     },
     "greeting": {
       "hello": "Welcome",
-      "inkast": "to Inkast"
+      "inkast": "to&nbsp;Inkast"
     },
     "selection": {
       "title": "Find people according to&nbsp;interests, goals, favorite activities and even by&nbsp;character",
@@ -21,7 +21,409 @@
     },
     "intrestings": {
       "title": "Imagine <br> Both of&nbsp;you...",
-      "additional": "Interests"
+      "additional": "Interests",
+      "bubles": [
+        {
+          "image": "cube",
+          "text": "Into board games"
+        },
+        {
+          "image": "notebook",
+          "text": "code at night"
+        },
+        {
+          "image": "gamepad",
+          "text": "play computer games"
+        },
+        {
+          "image": "instruments",
+          "text": "work flat out"
+        },
+        {
+          "image": "palette",
+          "text": "dream of becoming artists"
+        },
+        {
+          "image": "music",
+          "text": "have similar musical tastes"
+        },
+        {
+          "image": "astrology",
+          "text": "into astrology"
+        },
+        {
+          "image": "anime",
+          "text": "watch anime"
+        },
+        {
+          "image": "run",
+          "text": "enjoy running"
+        },
+        {
+          "image": "freedom",
+          "text": "dream of visiting New York"
+        },
+        {
+          "image": "boom",
+          "text": "mad about Naruto"
+        },
+        {
+          "image": "corgi",
+          "text": "raise a corgi"
+        },
+        {
+          "image": "china",
+          "text": "enjoy Chinese"
+        },
+        {
+          "image": "apple",
+          "text": "invest in Apple"
+        },
+        {
+          "image": "cash",
+          "text": "love the money"
+        },
+        {
+          "image": "needle",
+          "text": "buy patches in Daijebu"
+        },
+        {
+          "image": "detective",
+          "text": "re-watch Sherlock for the New Year"
+        },
+        {
+          "image": "meditation",
+          "text": "meditate"
+        },
+        {
+          "image": "lotus",
+          "text": "do yoga"
+        },
+        {
+          "image": "badminton",
+          "text": "play badminton"
+        },
+        {
+          "image": "abacus",
+          "text": "can’t solve the Navier-Stokes equation"
+        },
+        {
+          "image": "notes",
+          "text": "detest solfeggio"
+        },
+        {
+          "image": "tiktok",
+          "text": "make videos on TikTok"
+        },
+        {
+          "image": "starsky",
+          "text": "try to unravel the mysteries of the Universe"
+        },
+        {
+          "image": "magnifier",
+          "text": "investigate a conspiracy theory"
+        },
+        {
+          "image": "alembic",
+          "text": "study proteomics"
+        },
+        {
+          "image": "icecream",
+          "text": "don’t like sweets"
+        },
+        {
+          "image": "donut",
+          "text": "like sweets"
+        },
+        {
+          "image": "teapot",
+          "text": "drink tea without sugar"
+        },
+        {
+          "image": "potato",
+          "text": "addicted to crisps"
+        },
+        {
+          "image": "chocolate",
+          "text": "buy Snickers by the kilos"
+        },
+        {
+          "image": "leaf",
+          "text": "have a box of medicines at home"
+        },
+        {
+          "image": "popcorn",
+          "text": "get everyone hooked on the «Attack of the Titans» "
+        },
+        {
+          "image": "bag",
+          "text": "like spontaneous trips"
+        },
+        {
+          "image": "bento",
+          "text": "spend last money on rolls"
+        },
+        {
+          "image": "thread",
+          "text": "sew clothes"
+        },
+        {
+          "image": "skull",
+          "text": "do extreme sports"
+        },
+        {
+          "image": "snowboard",
+          "text": "go snowboarding every winter"
+        },
+        {
+          "image": "work",
+          "text": "participate in hackathons"
+        },
+        {
+          "image": "books",
+          "text": "write books"
+        },
+        {
+          "image": "soap",
+          "text": "make soap"
+        },
+        {
+          "image": "tvbox",
+          "text": "watch a depilation videos"
+        },
+        {
+          "image": "skateboard",
+          "text": "ride a skateboard"
+        },
+        {
+          "image": "smile",
+          "text": "dream of doing nothing"
+        },
+        {
+          "image": "friedegg",
+          "text": "study haute cuisine"
+        },
+        {
+          "image": "borido",
+          "text": "love borscht with sour cream"
+        },
+        {
+          "image": "paella",
+          "text": "dream of delicious meal"
+        },
+        {
+          "image": "parachute",
+          "text": "fantasize about skydiving"
+        },
+        {
+          "image": "wolf",
+          "text": "dream about living with a large dog"
+        },
+        {
+          "image": "museum",
+          "text": "enjoy architecture"
+        },
+        {
+          "image": "pickaxe",
+          "text": "delighted with Minecraft"
+        },
+        {
+          "image": "star",
+          "text": "excited about Brawl Stars"
+        },
+        {
+          "image": "pierog",
+          "text": "can eat khinkali and khachapuri daily"
+        },
+        {
+          "image": "kitty",
+          "text": "cat fans"
+        },
+        {
+          "image": "sunrise",
+          "text": "like to walk in sunny weather"
+        },
+        {
+          "image": "subway",
+          "text": "prefer ride the subway"
+        },
+        {
+          "image": "walk",
+          "text": "able to walk 40 km in one day"
+        },
+        {
+          "image": "scooter",
+          "text": "crazy about scooters"
+        },
+        {
+          "image": "incredible",
+          "text": "get through culture shock"
+        },
+        {
+          "image": "box",
+          "text": "have a container with containers"
+        },
+        {
+          "image": "hanafuda",
+          "text": "love to read tarot"
+        },
+        {
+          "image": "theatre",
+          "text": "cannot live without a theater"
+        },
+        {
+          "image": "postlove",
+          "text": "dream of being css to his html"
+        },
+        {
+          "image": "kiss",
+          "text": "know the meaning of \"gamarjoba\""
+        },
+        {
+          "image": "python",
+          "text": "pythonists to the core"
+        },
+        {
+          "image": "c-plus-plus",
+          "text": "detest C++"
+        },
+        {
+          "image": "snowflake",
+          "text": "admire skating"
+        },
+        {
+          "image": "hach",
+          "text": "visit a psychologist together"
+        },
+        {
+          "image": "brain",
+          "text": "go to a psychiatrist together"
+        },
+        {
+          "image": "shower",
+          "text": "enjoy singing in the shower"
+        },
+        {
+          "image": "wine",
+          "text": "prefer premium alcohol"
+        },
+        {
+          "image": "moai",
+          "text": "look for the meaning of life"
+        },
+        {
+          "image": "tea",
+          "text": "drink 6 cups of coffee a-day"
+        },
+        {
+          "image": "note",
+          "text": "experienced BeOn"
+        },
+        {
+          "image": "game",
+          "text": "like role-playing"
+        },
+        {
+          "image": "melody",
+          "text": "were fans of the Glee Cast"
+        },
+        {
+          "image": "tape",
+          "text": "watched almost all the series on Netflix"
+        },
+        {
+          "image": "basketball",
+          "text": "replayed Mass Effect several times"
+        },
+        {
+          "image": "movie",
+          "text": "write movie reviews"
+        },
+        {
+          "image": "desktop",
+          "text": "work as a designer"
+        },
+        {
+          "image": "swap",
+          "text": "manage tasks"
+        },
+        {
+          "image": "city",
+          "text": "addicted to urbanism"
+        },
+        {
+          "image": "van",
+          "text": "ride the cable cars"
+        },
+        {
+          "image": "magister",
+          "text": "university students"
+        },
+        {
+          "image": "shopping",
+          "text": "buy up sugar"
+        },
+        {
+          "image": "finances",
+          "text": "follow trends"
+        },
+        {
+          "image": "chartdecrease",
+          "text": "monitor the NFT market"
+        },
+        {
+          "image": "bitcoin",
+          "text": "trade crypto"
+        },
+        {
+          "image": "hole",
+          "text": "place tiles"
+        },
+        {
+          "image": "taxi",
+          "text": "prefer economy class"
+        },
+        {
+          "image": "headphones",
+          "text": "listen to Oxxxymiron"
+        },
+        {
+          "image": "piano",
+          "text": "do the beats"
+        },
+        {
+          "image": "banana",
+          "text": "love bananas"
+        },
+        {
+          "image": "sun",
+          "text": "wait for summer"
+        },
+        {
+          "image": "car",
+          "text": "remember about the oil change"
+        },
+        {
+          "image": "wheel",
+          "text": "like to pump tires"
+        },
+        {
+          "image": "shoes",
+          "text": "resell sneakers"
+        },
+        {
+          "image": "book",
+          "text": "read Nietzsche"
+        },
+        {
+          "image": "faucet",
+          "text": "can fix the faucet"
+        },
+        {
+          "image": "couch",
+          "text": "like to move furniture"
+        }
+      ]
     },
     "rare": {
       "title": "Only a&nbsp;rare chance could bring you together <br> The time is&nbsp;<span>now</span>",

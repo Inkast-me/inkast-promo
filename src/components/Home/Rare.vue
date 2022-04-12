@@ -64,15 +64,14 @@ export default defineComponent({
     line-height: 111%;
     letter-spacing: -0.05em;
     color: #ffffff;
-    max-width: 940px;
+    max-width: max(400px, min(940px, 60vw));
     margin: 0;
-
-    @media (min-width: 992px) {
-      font-size: 80px;
-    }
 
     @media (min-width: 768px) {
       font-size: 56px;
+    }
+    @media (min-width: 992px) {
+      font-size: 80px;
     }
 
     :deep(span) {

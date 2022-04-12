@@ -84,7 +84,7 @@ export default defineComponent({
   gap: 24px;
   padding-top: 54px;
   margin-bottom: 73px;
-  padding-left: max(5vw, 9.861vh);
+  padding-left: min(5vw, 9.861vh);
   padding-right: 34px;
 
   @media (min-width: 768px) {
@@ -99,7 +99,6 @@ export default defineComponent({
     letter-spacing: -0.025em;
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
-    user-select: none;
     margin: 0;
 
     @media (max-width: 992px) {

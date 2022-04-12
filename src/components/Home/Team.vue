@@ -10,7 +10,7 @@
           class="team__member"
           v-for="index in 8"
           :key="index"
-          @click="currentMember = index - 1"
+          @mouseover="currentMember = index - 1"
         >
           <div class="member__name">
             {{ t(`Home.team.members[${index - 1}].name`).split(" ")[0] }}
@@ -65,7 +65,9 @@
       </div>
       <div class="team__description">
         <span class="member__name">
-          {{ t(`Home.team.members[${currentMember}].name`) }}
+          {{ t(`Home.team.members[${currentMember}].name`).split(' ')[0] }}
+          <br>
+          {{ t(`Home.team.members[${currentMember}].name`).split(' ')[1] }}
           <img
             class="member__emoji"
             :src="
@@ -261,7 +263,7 @@ export default defineComponent({
             width: 24px;
           }
         }
-        // TODO: do smth with br tag in 'description' cuz it haven't any margin in text
+
         .member__post,
         .member__link,
         .member__description,
@@ -338,13 +340,12 @@ export default defineComponent({
         line-height: 111%;
         letter-spacing: -0.05em;
         color: #ffffff;
-        display: flex;
-        gap: 4px;
         margin-bottom: 30px;
 
         .member__emoji {
           height: 37px;
           width: 37px;
+          vertical-align: bottom;
         }
       }
 
