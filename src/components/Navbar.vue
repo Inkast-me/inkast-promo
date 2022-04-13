@@ -8,20 +8,17 @@
       <router-link
         to="/#product"
         class="nav__link"
-        :class="{ active: route.hash == '#product' }"
         v-html="t('Home.nav.product')"
         @click="scrollIntoView('#product')"
       ></router-link>
       <router-link
         to="/#team"
         class="nav__link"
-        :class="{ active: route.hash == '#team' }"
         v-html="t('Home.nav.team')"
         @click="scrollIntoView('#team')"
       ></router-link>
       <router-link
         to="/donate"
-        :class="{ active: route.name == 'Donate' }"
         class="nav__link"
         v-html="t('Home.nav.donate')"
       ></router-link>
@@ -36,7 +33,6 @@
       <router-link
         to="/#follow"
         class="nav__join"
-        :class="{ active: route.hash == '#follow' }"
         v-html="t('Home.nav.join')"
         @click="scrollIntoView('#follow')"
       ></router-link>
@@ -163,11 +159,11 @@ export default defineComponent({
       text-decoration: none;
       transition: color 0.16s ease-in-out;
       display: inherit;
-      color: #ffffff33;
+      color: #ffffff;
 
       &:hover,
       &.active {
-        color: #ffffff;
+        color: #ffffff33;
       }
 
       &.disabled {

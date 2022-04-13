@@ -156,10 +156,14 @@ export default defineComponent({
     img {
       display: none;
       margin: 0 auto;
-      height: 521px;
+      height: 400px;
 
       @media (min-width: 992px) {
         display: block;
+      }
+
+      @media (min-width: 1200px) {
+        height: 520px;
       }
     }
   }
@@ -236,7 +240,7 @@ export default defineComponent({
 
     .scroll__wrapper_last {
       @media (min-width: 992px) {
-        height: calc(76vh + 64px);
+        height: calc(76vh + 120px);
         display: flex;
         flex-flow: column;
         gap: 16px;
