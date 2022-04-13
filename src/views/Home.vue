@@ -67,9 +67,10 @@ export default defineComponent({
     const route = useRoute();
 
     onMounted(() => {
-      if(route.hash) document
-        .querySelector(route.hash)
-        ?.scrollIntoView({ block: "start", behavior: "smooth" });
+      if (route.hash)
+        document
+          .querySelector(route.hash)
+          ?.scrollIntoView({ block: "start", behavior: "smooth" });
     });
   },
 });
@@ -94,6 +95,7 @@ export default defineComponent({
   }
 
   section + section {
+    animation: fromNothingToGreatest 0.2s cubic-bezier(0.4, -0.14, 0.47, 0.89);
     width: 100%;
     min-height: 76vh;
     border-radius: 24px;

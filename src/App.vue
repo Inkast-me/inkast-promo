@@ -24,6 +24,17 @@ export default defineComponent({
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+@keyframes fromNothingToGreatest {
+  0% {
+    transform: scale(0.98) translateY(2%);
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 100;
+    transform: scale(1) translateY(0%);
+  }
+}
+
 *,
 ::after,
 ::before {

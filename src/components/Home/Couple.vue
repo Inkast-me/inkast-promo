@@ -73,12 +73,14 @@ export default defineComponent({
       line-height: 111%;
       letter-spacing: -0.05em;
       color: #000000;
+      margin-right: 0;
 
       @media (min-width: 768px) {
         font-size: 64px;
         margin: 0 0 40px 0;
         max-width: 600px;
         min-width: 500px;
+        margin-right: 82px;
       }
     }
 
@@ -110,6 +112,11 @@ export default defineComponent({
       height: 70vh;
       height: auto;
       margin-right: 50%;
+
+      @media (max-width: 576px) {
+        margin-right: 40%;
+        width: 80vh;
+      }
 
       @media (min-width: 360px) {
         margin-right: 25%;

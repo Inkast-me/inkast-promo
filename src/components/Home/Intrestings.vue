@@ -95,6 +95,7 @@ export default defineComponent({
   flex-flow: column;
   background: #292929;
   overflow: hidden;
+  min-height: auto !important;
 
   .intrestings__text-wrapper {
     display: flex;

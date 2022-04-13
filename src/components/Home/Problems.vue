@@ -6,7 +6,7 @@
         :src="
           require(`@/assets/cards/problems/${t(
             `Home.problems.cards[${currentProblem}].image`
-          )}.png`) 
+          )}.png`)
         "
         :alt="t(`Home.problems.cards[${currentProblem}].title`)"
       />

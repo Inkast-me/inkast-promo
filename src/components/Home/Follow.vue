@@ -197,6 +197,9 @@ export default defineComponent({
         font-size: 20px;
       }
     }
+    input:last-child {
+      text-transform: none;
+    }
 
     span {
       margin-bottom: 40px;

@@ -126,6 +126,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .donate {
+  animation: fromNothingToGreatest 0.2s cubic-bezier(0.4, -0.14, 0.47, 0.89);
   width: 100%;
   min-height: 100vh;
   background: #111111;

@@ -55,15 +55,14 @@ export default defineComponent({
     border-bottom: 1px solid #ffffff33;
     font-size: 30px;
 
-      @media (min-width: 768px) {
-        font-size: 64px;
-        padding-bottom: 40px;
-      }
+    @media (min-width: 768px) {
+      font-size: 64px;
+      padding-bottom: 40px;
+    }
 
     @media (min-width: 992px) {
       font-size: 120px;
     }
-
   }
 
   .easy__wrapper {
