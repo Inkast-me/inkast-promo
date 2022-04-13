@@ -59,25 +59,17 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
 
+    const numberOfInterestsInLine = 5;
+
+    const nums = new Set();
+    while (nums.size !== numberOfInterestsInLine * 3) {
+      nums.add(Math.floor(Math.random() * 99));
+    }
+
     const interests = ref([
-      [
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-      ],
-      [
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-      ],
-      [
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-        Math.ceil(Math.random() * 99),
-      ],
+      [...nums].slice(0, numberOfInterestsInLine),
+      [...nums].slice(numberOfInterestsInLine, numberOfInterestsInLine * 2),
+      [...nums].slice(numberOfInterestsInLine * 2, numberOfInterestsInLine * 3),
     ]);
 
     return {
@@ -183,8 +175,8 @@ export default defineComponent({
       display: flex;
       gap: 24px;
       flex-wrap: nowrap;
-      transform: translateX(0);
-      $animation-duration: 30s;
+      transform-origin: right;
+      $animation-duration: 50s;
       animation: lineAnimation $animation-duration linear infinite;
 
       @media (min-width: 768px) {
@@ -233,7 +225,7 @@ export default defineComponent({
 
     @keyframes lineAnimation {
       from {
-        transform: translateX(0);
+        transform: translateX(24px);
       }
       to {
         transform: translateX(-100%);

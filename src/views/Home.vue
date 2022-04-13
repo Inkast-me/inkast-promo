@@ -67,10 +67,14 @@ export default defineComponent({
     const route = useRoute();
 
     onMounted(() => {
-      if (route.hash)
-        document
-          .querySelector(route.hash)
-          ?.scrollIntoView({ block: "start", behavior: "smooth" });
+      if (route.hash) {
+        const element = document.querySelector(route.hash);
+        if (element) {
+          const y = element?.getBoundingClientRect().top + window.scrollY - 48;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }
     });
   },
 });

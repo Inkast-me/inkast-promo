@@ -3,15 +3,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, watchEffect } from "vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
     const { locale } = useI18n();
-    const language = navigator.language;
+    const lang =
+      localStorage.getItem("inkast:selectedLanguage") || navigator.language;
+    if (/^[a-z][a-z]-[A-Z][A-Z]/.test(lang)) {
+      locale.value = lang;
+    }
 
-    locale.value = language;
+    watchEffect(() => {
+      localStorage.setItem("inkast:selectedLanguage", locale.value);
+    });
   },
 });
 </script>

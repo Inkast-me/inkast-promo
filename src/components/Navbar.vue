@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav__wrapper">
+  <nav class="nav__wrapper" :class="{ nav__wrapper_modal: openModal }">
     <router-link to="/" class="nav__logo">
       <img :src="require('@/assets/logo.svg')" alt="InKast" />
     </router-link>
@@ -8,17 +8,20 @@
       <router-link
         to="/#product"
         class="nav__link"
+        :class="{ active: route.hash == '#product' }"
         v-html="t('Home.nav.product')"
         @click="scrollIntoView('#product')"
       ></router-link>
       <router-link
         to="/#team"
         class="nav__link"
+        :class="{ active: route.hash == '#team' }"
         v-html="t('Home.nav.team')"
         @click="scrollIntoView('#team')"
       ></router-link>
       <router-link
         to="/donate"
+        :class="{ active: route.name == 'Donate' }"
         class="nav__link"
         v-html="t('Home.nav.donate')"
       ></router-link>
@@ -33,6 +36,7 @@
       <router-link
         to="/#follow"
         class="nav__join"
+        :class="{ active: route.hash == '#follow' }"
         v-html="t('Home.nav.join')"
         @click="scrollIntoView('#follow')"
       ></router-link>
@@ -47,26 +51,26 @@
 
   <Transition name="modal">
     <div v-if="openModal" class="modal">
-      <div @click="openModal = !openModal" class="modal__close">Close</div>
-
       <router-link
         to="/#product"
         class="nav__link"
+        :class="{ active: route.hash == '#product' }"
         v-html="t('Home.nav.product')"
         @click="scrollIntoView('#product')"
       ></router-link>
       <router-link
         to="/#team"
         class="nav__link"
+        :class="{ active: route.hash == '#team' }"
         v-html="t('Home.nav.team')"
         @click="scrollIntoView('#team')"
       ></router-link>
-
-      <div
-        class="nav__language"
-        @click="switchLang"
-        v-html="t('Home.nav.language')"
-      ></div>
+      <router-link
+        to="/donate"
+        class="nav__link"
+        :class="{ active: route.name == 'Donate' }"
+        v-html="t('Home.nav.donate')"
+      ></router-link>
       <router-link
         to="/#follow"
         class="nav__join"
@@ -87,6 +91,7 @@ export default defineComponent({
     const route = useRoute();
     const openModal = ref(false);
     const { t, availableLocales, locale } = useI18n();
+    const yOffset = -24;
 
     const switchLang = () => {
       locale.value =
@@ -96,9 +101,14 @@ export default defineComponent({
     };
 
     const scrollIntoView = (hash: string) => {
-      document
-        .querySelector(hash)
-        ?.scrollIntoView({ block: "start", behavior: "smooth" });
+      openModal.value = false;
+      const element = document.querySelector(hash);
+      if (element) {
+        const y =
+          element?.getBoundingClientRect().top + window.scrollY + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     };
 
     return {
@@ -106,6 +116,7 @@ export default defineComponent({
       switchLang,
       t,
       scrollIntoView,
+      route,
     };
   },
 });
@@ -122,6 +133,11 @@ export default defineComponent({
   grid: min-content / auto 1fr auto;
   gap: 32px;
   z-index: 1001;
+
+  &.nav__wrapper_modal {
+    position: fixed;
+    background: #111111;
+  }
 
   .nav__logo {
     height: 64px;
@@ -142,18 +158,18 @@ export default defineComponent({
       line-height: 24px;
       letter-spacing: -0.015em;
       font-feature-settings: "pnum" on, "lnum" on;
-      color: #ffffff;
       text-decoration: none;
       transition: color 0.16s ease-in-out;
       display: inherit;
+      color: #ffffff33;
 
       &:hover,
       &.active {
-        color: #414141;
+        color: #ffffff;
       }
 
       &.disabled {
-        color: #414141;
+        color: #ffffff33;
       }
     }
 
@@ -177,7 +193,7 @@ export default defineComponent({
     .nav__language {
       height: 40px;
       width: 40px;
-      display: none;
+      display: grid;
       place-items: center;
 
       font-weight: 400;
@@ -187,10 +203,6 @@ export default defineComponent({
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
       cursor: pointer;
-
-      @media (min-width: 768px) {
-        display: grid;
-      }
     }
 
     .nav__join {
@@ -237,23 +249,18 @@ export default defineComponent({
   width: 100%;
   height: 100vh;
   background: #111111;
-  padding: 24px;
-  display: grid;
-  gap: 24px;
-  z-index: 1001;
-
-  .modal__close {
-    color: #ffffff;
-    justify-self: flex-end;
-  }
+  padding: 128px 24px 24px;
+  display: flex;
+  flex-flow: column;
+  gap: 44px;
+  z-index: 1000;
 
   .nav__link {
     font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 64px;
+    line-height: 91%;
     letter-spacing: -0.015em;
-    font-feature-settings: "pnum" on, "lnum" on;
-    color: #ffffff;
+    color: #ffffff33;
     text-decoration: none;
 
     &:hover,
@@ -264,32 +271,23 @@ export default defineComponent({
     &.disabled {
       color: #ffffff33;
     }
-  }
 
-  .nav__language {
-    height: 40px;
-    width: 40px;
-    display: grid;
-    place-items: center;
-
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.015em;
-    font-feature-settings: "pnum" on, "lnum" on;
-    color: #ffffff;
-    cursor: pointer;
-    transition: color 0.16s ease-in-out;
-  }
-
-  .nav__language:hover {
-    color: #414141;
+    &:nth-child(3)::after {
+      content: "";
+      display: inline-block;
+      margin-bottom: calc(0.9em - 16px);
+      width: 16px;
+      height: 16px;
+      background: #f6526b;
+      border-radius: 100%;
+    }
   }
 
   .nav__join {
+    margin-top: auto;
     background-color: #292929;
     border-radius: 8px;
-    padding: 12px;
+    padding: 24px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
@@ -300,6 +298,7 @@ export default defineComponent({
     border: none;
     cursor: pointer;
     transition: background-color 0.16s ease-in-out;
+    text-decoration: none;
 
     &:hover {
       background-color: #343434;

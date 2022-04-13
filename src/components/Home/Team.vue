@@ -231,8 +231,9 @@ export default defineComponent({
 
       @media (min-width: 768px) {
         gap: 20px 16px;
-        grid-template-columns: repeat(4, minmax(150px, 1fr));
+        grid-template-columns: repeat(4, minmax(150px, 220px));
         grid-template-rows: repeat(2, minmax(180px, min-content));
+        justify-content: flex-start;
       }
 
       .team__member {
@@ -293,8 +294,9 @@ export default defineComponent({
           transition: background-color 0.25s ease-in-out;
 
           img {
-            height: 100%;
+            // height: 100%;
             width: 100%;
+            max-width: 180px;
           }
         }
 

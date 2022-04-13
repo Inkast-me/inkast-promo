@@ -132,7 +132,7 @@ export default defineComponent({
       font-size: 90px;
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 1200px) {
       font-size: 120px;
     }
   }
