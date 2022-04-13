@@ -43,7 +43,7 @@
       <img
         @click="openModal = !openModal"
         class="nav__burger"
-        :src="require('@/assets/burger.svg')"
+        :src="require(`@/assets/${ openModal ? 'close': 'burger' }.svg`)"
         alt="Изначально, наш проект назывался МетаСеть:)"
       />
     </div>
