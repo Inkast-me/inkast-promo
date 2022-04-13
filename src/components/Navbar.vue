@@ -247,7 +247,7 @@ export default defineComponent({
   width: 100%;
   height: 100vh;
   background: #111111;
-  padding: 128px 24px 24px;
+  padding: 156px 24px 24px;
   display: flex;
   flex-flow: column;
   gap: 44px;
@@ -255,7 +255,7 @@ export default defineComponent({
 
   .nav__link {
     font-weight: 400;
-    font-size: 64px;
+    font-size: 56px;
     line-height: 91%;
     letter-spacing: -0.015em;
     color: #ffffff33;
