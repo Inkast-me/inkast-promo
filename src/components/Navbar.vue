@@ -39,7 +39,7 @@
       <img
         @click="openModal = !openModal"
         class="nav__burger"
-        :src="require(`@/assets/${ openModal ? 'close': 'burger' }.svg`)"
+        :src="require(`@/assets/${openModal ? 'close' : 'burger'}.svg`)"
         alt="Изначально, наш проект назывался МетаСеть:)"
       />
     </div>
@@ -94,7 +94,7 @@ export default defineComponent({
         locale.value == availableLocales[0]
           ? availableLocales[1]
           : availableLocales[0];
-          
+
       localStorage.setItem("inkast:selectedLanguage", locale.value);
     };
 
