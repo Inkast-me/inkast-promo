@@ -98,6 +98,8 @@ export default defineComponent({
         locale.value == availableLocales[0]
           ? availableLocales[1]
           : availableLocales[0];
+          
+      localStorage.setItem("inkast:selectedLanguage", locale.value);
     };
 
     const scrollIntoView = (hash: string) => {

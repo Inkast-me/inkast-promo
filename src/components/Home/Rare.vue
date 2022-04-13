@@ -127,14 +127,16 @@ export default defineComponent({
       line-height: 1.25;
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
-      max-width: 430px;
+      max-width: 230px;
 
       @media (min-width: 992px) {
         font-size: 32px;
+        max-width: 430px;
       }
 
       @media (min-width: 768px) {
         font-size: 24px;
+        max-width: 340px;
       }
     }
   }

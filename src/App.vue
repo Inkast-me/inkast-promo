@@ -14,10 +14,6 @@ export default defineComponent({
     if (/^[a-z][a-z]-[A-Z][A-Z]/.test(lang)) {
       locale.value = lang;
     }
-
-    watchEffect(() => {
-      localStorage.setItem("inkast:selectedLanguage", locale.value);
-    });
   },
 });
 </script>
