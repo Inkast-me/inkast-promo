@@ -10,7 +10,7 @@
           class="team__member"
           v-for="index in 8"
           :key="index"
-          @mouseover="currentMember = index - 1"
+          @click="currentMember = index - 1"
         >
           <div class="member__name">
             {{ t(`Home.team.members[${index - 1}].name`).split(" ")[0] }}
