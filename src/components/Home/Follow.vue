@@ -86,8 +86,10 @@ export default defineComponent({
 
     const email = ref('')
 
+    const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+
     const sendForm = () => {
-      if (name.value && email.value)
+      if (name.value && emailRegExp.test(email.value))
       fetch(`https://docs.google.com/forms/u/1/d/e/1FAIpQLScaPQfvMJqkB4p12RR1onHLBRwGrbll_lNTu9wV5xwbwMtMbQ/formResponse?entry.539076579=${name.value}&entry.914223913=${email.value}`, {
         method: 'POST',
         headers: {
@@ -97,6 +99,8 @@ export default defineComponent({
         },
         mode: 'no-cors',
       })
+
+      else alert('Введи блин нормально данные')
     }
 
     return {
