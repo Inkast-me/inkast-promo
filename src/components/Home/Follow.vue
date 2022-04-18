@@ -91,9 +91,11 @@ export default defineComponent({
       fetch(`https://docs.google.com/forms/u/1/d/e/1FAIpQLScaPQfvMJqkB4p12RR1onHLBRwGrbll_lNTu9wV5xwbwMtMbQ/formResponse?entry.539076579=${name.value}&entry.914223913=${email.value}`, {
         method: 'POST',
         headers: {
+          'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/x-www-form-urlencoded',
           'Cookie': 'COMPASS=spreadsheet_forms=CjIACWuJVzU1sJTacddRq5SM9CACMitz9xWXKATRQLw1Wzrj49RmKV-ZxRrysSmwvfUj9BCsivWSBho0AAlriVfOOunhsummzTJ4ZTlpHLo-BsYZrFQla7OUPyJAyrp81aRFCztjMJwGFYMdZlQMUQ==; S=spreadsheet_forms=ZF33kMAs1WLtT2JiH7UsUdRzjKZAa2aAsx25xGXlgZ4; NID=511=feD-h3mgZn61fZR_HbYGlE-YZ-aEMqXt5vhZQ6WIXcwBsB1evHnUvzjZC_B3XUwtJdfoke5hxqjJd71n_yJNGo4iZDAZ-kOg9jp_BwULNyz3Sphqljtc3bIB7W3nP4LqrOGC0sPr3J3mJfEdmoxI7Mcscs0LWNUwS_2LHt3cOa4'
         },
+        mode: 'no-cors',
       })
     }
 
