@@ -175,26 +175,27 @@ export default defineComponent({
         font-size: 64px;
       }
 
-      &:after {
-        position: absolute;
-        content: "+3";
-        font-family: "Inter", serif;
-        font-weight: 500;
-        font-size: 10px;
-        line-height: 140%;
-        letter-spacing: -0.06px;
-        text-transform: capitalize;
-        color: #ffffff;
-        opacity: 0.4;
-        padding: 4px 8px;
-        border-radius: 24px;
-        border: 1px solid #383838;
+      // &:after {
+      //   position: absolute;
+      //   white-space: nowrap;
+      //   content: "+3";
+      //   font-family: "Inter", serif;
+      //   font-weight: 500;
+      //   font-size: 10px;
+      //   line-height: 140%;
+      //   letter-spacing: -0.06px;
+      //   text-transform: capitalize;
+      //   color: #ffffff;
+      //   opacity: 0.4;
+      //   padding: 4px 8px;
+      //   border-radius: 24px;
+      //   border: 1px solid #383838;
 
-        @media (min-width: 768px) {
-          font-size: 20px;
-          padding: 8px 16px;
-        }
-      }
+      //   @media (min-width: 768px) {
+      //     font-size: 20px;
+      //     padding: 8px 16px;
+      //   }
+      // }
     }
 
     span {

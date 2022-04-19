@@ -108,7 +108,7 @@ export default defineComponent({
       font-family: "Stratos LC Web";
       font-style: normal;
       font-weight: 400;
-      line-height: 95%;
+      line-height: 100%;
       letter-spacing: -0.025em;
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
@@ -118,7 +118,7 @@ export default defineComponent({
       }
 
       @media (min-width: 992px) {
-        font-size: 104px;
+        font-size: 96px;
       }
     }
 
@@ -193,6 +193,7 @@ export default defineComponent({
         font-feature-settings: "pnum" on, "lnum" on;
         color: #ffffff;
         position: relative;
+        padding: 16px 24px;
 
         background: #313031;
         border-radius: 1000px;
@@ -202,7 +203,7 @@ export default defineComponent({
         align-items: center;
 
         @media (min-width: 768px) {
-          font-size: 32px;
+          font-size: 28px;
           padding: 20px 32px;
           gap: 16px;
         }

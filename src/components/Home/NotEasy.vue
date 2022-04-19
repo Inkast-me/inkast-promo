@@ -61,7 +61,7 @@ export default defineComponent({
     }
 
     @media (min-width: 992px) {
-      font-size: 120px;
+      font-size: 96px;
     }
   }
 
@@ -79,7 +79,7 @@ export default defineComponent({
       max-width: 700px;
 
       @media (min-width: 768px) {
-        font-size: 40px;
+        font-size: 32px;
       }
     }
 
