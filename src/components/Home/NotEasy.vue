@@ -37,6 +37,7 @@ export default defineComponent({
   // display: flex;
   // flex-flow: column;
   // justify-content: space-between;
+  position: relative;
   background: #c04cf6 url("../../assets/cards/easy/background.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,7 +69,6 @@ export default defineComponent({
   .easy__wrapper {
     display: grid;
     gap: 40px;
-    position: relative;
 
     .easy__title {
       font-weight: 400;
@@ -108,7 +108,7 @@ export default defineComponent({
         height: 340px;
         width: auto;
         position: absolute;
-        bottom: -140px;
+        bottom: 0px;
         right: -90px;
       }
     }

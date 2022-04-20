@@ -238,6 +238,10 @@ export default defineComponent({
         justify-content: flex-start;
       }
 
+      @media (min-width: 1680px) {
+        flex: 1 1 20%;
+      }
+
       .team__member {
         display: grid;
         gap: 8px;

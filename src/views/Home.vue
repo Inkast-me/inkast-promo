@@ -93,11 +93,11 @@ export default defineComponent({
   margin: 0 auto;
 
   @media (min-width: 576px) {
-    padding: 104px 16px 64px;
+    padding: 144px 16px 64px;
   }
 
   @media (min-width: 992px) {
-    padding: 104px 64px 32px;
+    padding: 144px 64px 32px;
   }
 
   section + section {

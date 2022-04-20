@@ -1,5 +1,5 @@
 <template>
-  <section class="home__selection" id="product">
+  <section class="home__selection">
     <h3 v-html="t('Home.selection.title')"></h3>
     <Button href="#follow" v-html="t('Home.selection.join')"></Button>
   </section>

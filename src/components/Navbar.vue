@@ -1,47 +1,52 @@
 <template>
-  <nav class="nav__wrapper" :class="{ nav__wrapper_modal: openModal }">
-    <router-link to="/" class="nav__logo">
-      <img :src="require('@/assets/logo.svg')" alt="InKast" />
-    </router-link>
-
-    <div class="nav__links-wrapper">
-      <router-link
-        to="/#product"
-        class="nav__link"
-        v-html="t('Home.nav.product')"
-        @click="scrollIntoView('#product')"
-      ></router-link>
-      <router-link
-        to="/#team"
-        class="nav__link"
-        v-html="t('Home.nav.team')"
-        @click="scrollIntoView('#team')"
-      ></router-link>
-      <router-link
-        to="/donate"
-        class="nav__link"
-        v-html="t('Home.nav.donate')"
-      ></router-link>
-    </div>
-
-    <div class="nav__additional">
-      <div
-        class="nav__language"
-        @click="switchLang"
-        v-html="t('Home.nav.language')"
-      ></div>
-      <router-link
-        to="/#follow"
-        class="nav__join"
-        v-html="t('Home.nav.join')"
-        @click="scrollIntoView('#follow')"
-      ></router-link>
-      <img
-        @click="openModal = !openModal"
-        class="nav__burger"
-        :src="require(`@/assets/${openModal ? 'close' : 'burger'}.svg`)"
-        alt="Изначально, наш проект назывался МетаСеть:)"
-      />
+  <nav
+    class="nav__wrapper"
+    :class="{ nav__wrapper_modal: openModal }"
+    ref="header"
+    @mouseenter="mouseEnterHandler"
+  >
+    <div class="content__wrapper">
+      <router-link to="/" class="nav__logo">
+        <img :src="require('@/assets/logo.svg')" alt="InKast" />
+      </router-link>
+      <div class="nav__links-wrapper">
+        <router-link
+          to="/#product"
+          class="nav__link"
+          v-html="t('Home.nav.product')"
+          @click="scrollIntoView('#product')"
+        ></router-link>
+        <router-link
+          to="/#team"
+          class="nav__link"
+          v-html="t('Home.nav.team')"
+          @click="scrollIntoView('#team')"
+        ></router-link>
+        <router-link
+          to="/donate"
+          class="nav__link"
+          v-html="t('Home.nav.donate')"
+        ></router-link>
+      </div>
+      <div class="nav__additional">
+        <div
+          class="nav__language"
+          @click="switchLang"
+          v-html="t('Home.nav.language')"
+        ></div>
+        <router-link
+          to="/#follow"
+          class="nav__join"
+          v-html="t('Home.nav.join')"
+          @click="scrollIntoView('#follow')"
+        ></router-link>
+        <img
+          @click="openModal = !openModal"
+          class="nav__burger"
+          :src="require(`@/assets/${openModal ? 'close' : 'burger'}.svg`)"
+          alt="Изначально, наш проект назывался МетаСеть:)"
+        />
+      </div>
     </div>
   </nav>
 
@@ -78,7 +83,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, onMounted, onUnmounted, Ref, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 
@@ -88,6 +93,40 @@ export default defineComponent({
     const openModal = ref(false);
     const { t, availableLocales, locale } = useI18n();
     const yOffset = -24;
+
+    const lastScroll = ref(0);
+    const defaultOffset = 100;
+    const header: Ref<null | HTMLElement> = ref(null);
+
+    const mouseEnterHandler = () => {
+      if (header.value) {
+        header.value.classList.remove("hide");
+        if (window.pageYOffset >= window.screen.height) {
+          setTimeout(function () {
+            header.value!.classList.add("hide");
+          }, 5000);
+        }
+      }
+    };
+    const scrollHandler = () => {
+      if (header.value) {
+        const containHide = header.value.classList.contains("hide");
+        const scrollPosition =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (
+          scrollPosition > lastScroll.value &&
+          !containHide &&
+          scrollPosition > defaultOffset
+        ) {
+          //scroll down
+          header.value.classList.add("hide");
+        } else if (scrollPosition < lastScroll.value && containHide) {
+          //scroll up
+          header.value.classList.remove("hide");
+        }
+        lastScroll.value = scrollPosition;
+      }
+    };
 
     const switchLang = () => {
       locale.value =
@@ -109,12 +148,22 @@ export default defineComponent({
       }
     };
 
+    onMounted(() => {
+      document.addEventListener("scroll", scrollHandler);
+    });
+
+    onUnmounted(() => {
+      document.removeEventListener("scroll", scrollHandler);
+    });
+
     return {
       openModal,
       switchLang,
       t,
       scrollIntoView,
       route,
+      header,
+      mouseEnterHandler,
     };
   },
 });
@@ -122,15 +171,24 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .nav__wrapper {
-  position: absolute;
-  top: 40px;
+  position: fixed;
+  top: 0;
   width: 100%;
-  padding: 0 6vw;
-  display: grid;
-  place-items: center flex-start;
-  grid: min-content / auto 1fr auto;
-  gap: 32px;
   z-index: 1001;
+
+  .content__wrapper {
+    padding: 16px 6vw;
+    display: grid;
+    place-items: center flex-start;
+    grid: min-content / auto 1fr auto;
+    gap: 32px;
+    background: #111;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &.hide .content__wrapper {
+    transform: translateY(-100%);
+  }
 
   &.nav__wrapper_modal {
     position: fixed;

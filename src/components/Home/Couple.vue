@@ -1,5 +1,5 @@
 <template>
-  <section class="home__couple">
+  <section class="home__couple" id="product">
     <div class="couple__text-wrapper">
       <h3 v-html="t('Home.couple.title')"></h3>
       <span v-html="t('Home.couple.additional')"></span>
