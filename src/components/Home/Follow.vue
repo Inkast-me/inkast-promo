@@ -94,6 +94,10 @@
       v-html="t('Home.follow.join')"
       @click="sendForm"
     ></Button>
+
+    <transition name="modal">
+      <FollowPopup v-if="successModal" @close="successModal = false"/>
+    </transition>
   </section>
 </template>
 
@@ -101,11 +105,13 @@
 import { defineComponent, ref } from "vue";
 
 import Button from "@/components/Button.vue";
+import FollowPopup from "@/components/Home/FollowPopup.vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   components: {
     Button,
+    FollowPopup
   },
   setup() {
     const { t } = useI18n();
@@ -148,7 +154,8 @@ export default defineComponent({
       email,
       sendForm,
       nameError,
-      emailError
+      emailError,
+      successModal
     };
   },
 });
@@ -293,6 +300,7 @@ export default defineComponent({
         letter-spacing: -0.06px;
         text-transform: capitalize;
         color: #292929;
+        width: 100%;
   
         @media (min-width: 768px) {
           padding: 24px;
@@ -327,5 +335,15 @@ export default defineComponent({
       justify-self: flex-start;
     }
   }
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
 }
 </style>

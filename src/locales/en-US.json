@@ -569,6 +569,10 @@
         "email": "E-mail",
         "emailError": "Incorrect email, try again"
       },
+      "popup": {
+        "title": "Thank you for subscribing to&nbsp;updates",
+        "description": "We&nbsp;promise not to&nbsp;spam and only keep up&nbsp;to&nbsp;date with current events"
+      },
       "join": "Join"
     },
     "footer": {
