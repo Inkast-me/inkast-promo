@@ -1,27 +1,27 @@
 <template>
   <Navbar />
   <div class="home">
-    <Greeting v-scroll:1 />
+    <Greeting v-scroll:1 class="home__card"/>
 
-    <Selection v-scroll:2 />
+    <Selection v-scroll:2 class="home__card"/>
 
-    <Couple v-scroll:3 />
+    <Couple v-scroll:3 class="home__card"/>
 
-    <Intrestings v-scroll:4 />
+    <Intrestings v-scroll:4 class="home__card"/>
 
-    <Rare v-scroll:5 />
+    <Rare v-scroll:5 class="home__card"/>
 
-    <HowItWorks v-scroll:6 />
+    <HowItWorks v-scroll:6 class="home__card"/>
 
-    <NotEasy v-scroll:7 />
+    <NotEasy v-scroll:7 class="home__card"/>
 
-    <Problems v-scroll:8 />
+    <Problems />
 
-    <Show v-scroll:9 />
+    <Show />
 
-    <Team v-scroll:10 />
+    <Team />
 
-    <Follow v-scroll:11 />
+    <Follow />
 
     <Footer />
   </div>
@@ -88,11 +88,12 @@ export default defineComponent({
   padding: 104px 8px 64px;
   position: relative;
   display: grid;
+  align-content: flex-end;
   gap: 32px;
   max-width: 1920px;
   margin: 0 auto;
   overflow-x: hidden;
-  height: calc( 12 * 76vh + 11 * 32px );
+  height: calc( 12 * 76vh + 11 * 64px );
 
   @media (min-width: 576px) {
     padding: 104px 16px 64px;
@@ -108,19 +109,22 @@ export default defineComponent({
     min-height: 76vh;
     border-radius: 24px;
     padding: 24px 16px;
+    align-self: flex-end;
+    z-index: 1;
 
     @media (min-width: 768px) {
       padding: 48px 40px 64px;
     }
   }
 
-  section {
+  .home__card {
     transition: opacity .5s linear, transform .1s linear;
     transform-origin: top center;
     position: fixed;
     top: var(--translateY, 0);
     transform: scale(var(--scale, 1));
     width: calc(100vw - 128px)!important;
+    z-index: 0;
   }
 }
 </style>

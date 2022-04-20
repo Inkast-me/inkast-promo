@@ -69,7 +69,7 @@ export default defineComponent({
   display: flex;
   flex-flow: column;
   gap: 32px;
-  background: #292929;
+  background: #111;
 
   .show__header {
     font-weight: 400;
