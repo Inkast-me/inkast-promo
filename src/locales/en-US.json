@@ -565,7 +565,9 @@
       "additional": "Subscribe for updates so&nbsp;you do&nbsp;not miss the launch",
       "inputs": {
         "name": "Name",
-        "email": "E-mail"
+        "nameError": "Enter a name again, please",
+        "email": "E-mail",
+        "emailError": "Incorrect email, try again"
       },
       "join": "Join"
     },

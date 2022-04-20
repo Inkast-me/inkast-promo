@@ -62,10 +62,38 @@
     </div>
     <div class="follow__form-wrapper">
       <span v-html="t('Home.follow.additional')"></span>
-      <input type="text" name="name" :placeholder="t('Home.follow.inputs.name')" v-model="name" />
-      <input type="email" name="email" :placeholder="t('Home.follow.inputs.email')" v-model="email" />
+      <span
+        class="follow__input"
+        :class="{error: nameError}"
+        :data-error="t('Home.follow.inputs.nameError')"
+      >
+        <input
+          type="text"
+          name="name"
+          :placeholder="t('Home.follow.inputs.name')"
+          v-model="name"
+          @click="nameError = false"
+        />
+      </span>
+      <span
+        class="follow__input"
+        :class="{error: emailError}"
+        :data-error="t('Home.follow.inputs.emailError')"
+      >
+        <input
+          type="email"
+          name="email"
+          :placeholder="t('Home.follow.inputs.email')"
+          v-model="email"
+          @click="emailError = false"
+        />
+      </span>
     </div>
-    <Button class="follow__join" v-html="t('Home.follow.join')" @click="sendForm"></Button>
+    <Button
+      class="follow__join"
+      v-html="t('Home.follow.join')"
+      @click="sendForm"
+    ></Button>
   </section>
 </template>
 
@@ -82,32 +110,45 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
 
-    const name = ref('')
+    const name = ref("");
+    const nameError = ref(false)
 
-    const email = ref('')
+    const email = ref("");
+    const emailError = ref(false)
 
-    const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+    const successModal = ref(false)
+
+    const emailRegExp =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
     const sendForm = () => {
       if (name.value && emailRegExp.test(email.value))
-      fetch(`https://docs.google.com/forms/u/1/d/e/1FAIpQLScaPQfvMJqkB4p12RR1onHLBRwGrbll_lNTu9wV5xwbwMtMbQ/formResponse?entry.539076579=${name.value}&entry.914223913=${email.value}`, {
-        method: 'POST',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Cookie': 'COMPASS=spreadsheet_forms=CjIACWuJVzU1sJTacddRq5SM9CACMitz9xWXKATRQLw1Wzrj49RmKV-ZxRrysSmwvfUj9BCsivWSBho0AAlriVfOOunhsummzTJ4ZTlpHLo-BsYZrFQla7OUPyJAyrp81aRFCztjMJwGFYMdZlQMUQ==; S=spreadsheet_forms=ZF33kMAs1WLtT2JiH7UsUdRzjKZAa2aAsx25xGXlgZ4; NID=511=feD-h3mgZn61fZR_HbYGlE-YZ-aEMqXt5vhZQ6WIXcwBsB1evHnUvzjZC_B3XUwtJdfoke5hxqjJd71n_yJNGo4iZDAZ-kOg9jp_BwULNyz3Sphqljtc3bIB7W3nP4LqrOGC0sPr3J3mJfEdmoxI7Mcscs0LWNUwS_2LHt3cOa4'
-        },
-        mode: 'no-cors',
-      })
-
-      else alert('Введи блин нормально данные')
-    }
+        fetch(
+          `https://docs.google.com/forms/u/1/d/e/1FAIpQLScaPQfvMJqkB4p12RR1onHLBRwGrbll_lNTu9wV5xwbwMtMbQ/formResponse?entry.539076579=${name.value}&entry.914223913=${email.value}`,
+          {
+            method: "POST",
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+              "Content-Type": "application/x-www-form-urlencoded",
+              Cookie:
+                "COMPASS=spreadsheet_forms=CjIACWuJVzU1sJTacddRq5SM9CACMitz9xWXKATRQLw1Wzrj49RmKV-ZxRrysSmwvfUj9BCsivWSBho0AAlriVfOOunhsummzTJ4ZTlpHLo-BsYZrFQla7OUPyJAyrp81aRFCztjMJwGFYMdZlQMUQ==; S=spreadsheet_forms=ZF33kMAs1WLtT2JiH7UsUdRzjKZAa2aAsx25xGXlgZ4; NID=511=feD-h3mgZn61fZR_HbYGlE-YZ-aEMqXt5vhZQ6WIXcwBsB1evHnUvzjZC_B3XUwtJdfoke5hxqjJd71n_yJNGo4iZDAZ-kOg9jp_BwULNyz3Sphqljtc3bIB7W3nP4LqrOGC0sPr3J3mJfEdmoxI7Mcscs0LWNUwS_2LHt3cOa4",
+            },
+            mode: "no-cors",
+          }
+        ).then(() => {
+          successModal.value = true;
+        });
+      else if (!name.value) nameError.value = true
+      else if (!emailRegExp.test(email.value)) emailError.value = true
+    };
 
     return {
       t,
       name,
       email,
-      sendForm
+      sendForm,
+      nameError,
+      emailError
     };
   },
 });
@@ -202,25 +243,64 @@ export default defineComponent({
       margin-top: 32px;
     }
 
-    input {
-      font-family: "Inter", sans-serif;
-      margin-bottom: 24px;
-      padding: 12px;
-      border-radius: 12px;
-      border: none;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 15px;
-      line-height: 140%;
-      letter-spacing: -0.06px;
-      text-transform: capitalize;
-      color: #292929;
+    .follow__input {
+        margin-bottom: 24px;
 
-      @media (min-width: 768px) {
-        padding: 24px;
-        font-size: 20px;
+
+      &.error {
+        margin-bottom: 48px;
+
+        input {
+          padding-left: 58px;
+        }
+          position: relative;
+  
+          &::after {
+            content: attr(data-error);
+            left: 24px;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 140%;
+            letter-spacing: -0.06px;
+            color: #FFFFFF;
+            position: absolute;
+            bottom: -30px;
+          }
+  
+          &::before {
+            content: "";
+            height: 24px;
+            width: 24px;
+            background-image: url('../../assets/error.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      
+      input {
+        font-family: "Inter", sans-serif;
+        padding: 12px;
+        border-radius: 12px;
+        border: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 140%;
+        letter-spacing: -0.06px;
+        text-transform: capitalize;
+        color: #292929;
+  
+        @media (min-width: 768px) {
+          padding: 24px;
+          font-size: 20px;
+        }
       }
     }
+
     input:last-child {
       text-transform: none;
     }

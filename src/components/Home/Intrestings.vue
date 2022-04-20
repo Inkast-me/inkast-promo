@@ -59,7 +59,7 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
 
-    const numberOfInterestsInLine = 5;
+    const numberOfInterestsInLine = 10;
 
     const nums = new Set();
     while (nums.size !== numberOfInterestsInLine * 3) {
@@ -176,7 +176,7 @@ export default defineComponent({
       gap: 24px;
       flex-wrap: nowrap;
       transform-origin: right;
-      $animation-duration: 50s;
+      $animation-duration: 100s;
       animation: lineAnimation $animation-duration linear infinite;
 
       @media (min-width: 768px) {

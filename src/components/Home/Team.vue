@@ -10,6 +10,7 @@
           class="team__member"
           v-for="index in 8"
           :key="index"
+          :class="{ active: currentMember == index - 1 }"
           @mouseover="currentMember = index - 1"
         >
           <div class="member__name">
@@ -312,6 +313,12 @@ export default defineComponent({
             cursor: pointer;
 
             &:hover {
+              background: var(--background, #111111);
+            }
+          }
+
+          &.active {
+            .member__avatar {
               background: var(--background, #111111);
             }
           }

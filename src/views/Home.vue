@@ -89,6 +89,8 @@ export default defineComponent({
   position: relative;
   display: grid;
   gap: 32px;
+  max-width: 1920px;
+  margin: 0 auto;
 
   @media (min-width: 576px) {
     padding: 104px 16px 64px;
