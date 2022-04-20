@@ -144,8 +144,10 @@ export default defineComponent({
         ).then(() => {
           successModal.value = true;
         });
-      else if (!name.value) nameError.value = true
-      else if (!emailRegExp.test(email.value)) emailError.value = true
+      else {
+        if (!name.value) nameError.value = true
+        if (!emailRegExp.test(email.value)) emailError.value = true
+      }
     };
 
     return {
