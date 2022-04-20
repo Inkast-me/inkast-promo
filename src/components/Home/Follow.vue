@@ -64,7 +64,7 @@
       <span v-html="t('Home.follow.additional')"></span>
       <span
         class="follow__input"
-        :class="{error: nameError}"
+        :class="{ error: nameError }"
         :data-error="t('Home.follow.inputs.nameError')"
       >
         <input
@@ -77,7 +77,7 @@
       </span>
       <span
         class="follow__input"
-        :class="{error: emailError}"
+        :class="{ error: emailError }"
         :data-error="t('Home.follow.inputs.emailError')"
       >
         <input
@@ -96,7 +96,7 @@
     ></Button>
 
     <transition name="modal">
-      <FollowPopup v-if="successModal" @close="successModal = false"/>
+      <FollowPopup v-if="successModal" @close="successModal = false" />
     </transition>
   </section>
 </template>
@@ -111,18 +111,18 @@ import { useI18n } from "vue-i18n";
 export default defineComponent({
   components: {
     Button,
-    FollowPopup
+    FollowPopup,
   },
   setup() {
     const { t } = useI18n();
 
     const name = ref("");
-    const nameError = ref(false)
+    const nameError = ref(false);
 
     const email = ref("");
-    const emailError = ref(false)
+    const emailError = ref(false);
 
-    const successModal = ref(false)
+    const successModal = ref(false);
 
     const emailRegExp =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
@@ -145,8 +145,8 @@ export default defineComponent({
           successModal.value = true;
         });
       else {
-        if (!name.value) nameError.value = true
-        if (!emailRegExp.test(email.value)) emailError.value = true
+        if (!name.value) nameError.value = true;
+        if (!emailRegExp.test(email.value)) emailError.value = true;
       }
     };
 
@@ -157,7 +157,7 @@ export default defineComponent({
       sendForm,
       nameError,
       emailError,
-      successModal
+      successModal,
     };
   },
 });
@@ -253,8 +253,7 @@ export default defineComponent({
     }
 
     .follow__input {
-        margin-bottom: 24px;
-
+      margin-bottom: 24px;
 
       &.error {
         margin-bottom: 48px;
@@ -262,34 +261,34 @@ export default defineComponent({
         input {
           padding-left: 58px;
         }
-          position: relative;
-  
-          &::after {
-            content: attr(data-error);
-            left: 24px;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 140%;
-            letter-spacing: -0.06px;
-            color: #FFFFFF;
-            position: absolute;
-            bottom: -30px;
-          }
-  
-          &::before {
-            content: "";
-            height: 24px;
-            width: 24px;
-            background-image: url('../../assets/error.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            left: 24px;
-            top: 50%;
-            transform: translateY(-50%);
-          }
+        position: relative;
+
+        &::after {
+          content: attr(data-error);
+          left: 24px;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 140%;
+          letter-spacing: -0.06px;
+          color: #ffffff;
+          position: absolute;
+          bottom: -30px;
         }
-      
+
+        &::before {
+          content: "";
+          height: 24px;
+          width: 24px;
+          background-image: url("../../assets/error.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: absolute;
+          left: 24px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
       input {
         font-family: "Inter", sans-serif;
         padding: 12px;
@@ -303,7 +302,7 @@ export default defineComponent({
         text-transform: capitalize;
         color: #292929;
         width: 100%;
-  
+
         @media (min-width: 768px) {
           padding: 24px;
           font-size: 20px;
@@ -341,7 +340,7 @@ export default defineComponent({
 
 .modal-enter-active,
 .modal-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .modal-enter-from,

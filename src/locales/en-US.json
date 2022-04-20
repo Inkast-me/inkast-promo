@@ -565,12 +565,12 @@
       "additional": "Subscribe for updates so&nbsp;you do&nbsp;not miss the launch",
       "inputs": {
         "name": "Name",
-        "nameError": "Enter a name again, please",
+        "nameError": "Enter the name again, please",
         "email": "E-mail",
         "emailError": "Incorrect email, try again"
       },
       "popup": {
-        "title": "Thank you for subscribing to&nbsp;updates",
+        "title": "Thank you for subscribing",
         "description": "We&nbsp;promise not to&nbsp;spam and only keep up&nbsp;to&nbsp;date with current events"
       },
       "join": "Join"

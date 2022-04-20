@@ -2,16 +2,22 @@
   <div class="popupWrapper" @click="() => $emit('close')">
     <div class="popup">
       <button @click="$emit('close')">
-        <img :src="require('@/assets/close.svg')" class="close__btn" alt="Close">
+        <img
+          :src="require('@/assets/close.svg')"
+          class="close__btn"
+          alt="Close"
+        />
       </button>
 
       <h2 v-html="t('Home.follow.popup.title')"></h2>
 
       <div class="popup__wrapper">
-        <img :src="require(`@/assets/team/avatars/${randomMember}.png`)" :alt="randomMember">
+        <img
+          :src="require(`@/assets/team/avatars/${randomMember}.png`)"
+          :alt="randomMember"
+        />
         <p v-html="t('Home.follow.popup.description')"></p>
       </div>
-      
     </div>
   </div>
 </template>
@@ -21,17 +27,25 @@ import { defineComponent } from "vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
-
   setup() {
     const { t } = useI18n();
 
-    const team = ['Alena', 'Alexander', 'Anna', 'Dmitry', 'Fedor', 'Natalia', 'Platon', 'Ulyana']
+    const team = [
+      "Alena",
+      "Alexander",
+      "Anna",
+      "Dmitry",
+      "Fedor",
+      "Natalia",
+      "Platon",
+      "Ulyana",
+    ];
 
-    const randomMember = team[Math.floor(Math.random() * team.length)]
+    const randomMember = team[Math.floor(Math.random() * team.length)];
 
     return {
       t,
-      randomMember
+      randomMember,
     };
   },
 });
@@ -45,7 +59,7 @@ export default defineComponent({
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #111111;
+  background-color: rgba(0, 0, 0, 0.8);
   display: grid;
   place-items: center;
   padding: 1rem;
@@ -66,24 +80,25 @@ export default defineComponent({
   }
 
   h2 {
-    font-family: 'Stratos LC Web';
+    font-family: "Stratos LC Web";
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
     line-height: 111%;
     letter-spacing: -0.05em;
-    color: #FFFFFF;
+    color: #ffffff;
+    margin-top: 0;
     margin-bottom: 20px;
   }
 
   p {
-    font-family: 'Stratos LC Web';
+    font-family: "Stratos LC Web";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 30px;
     letter-spacing: -0.015em;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff66;
   }
 
@@ -106,7 +121,8 @@ export default defineComponent({
   .close__btn {
     height: 18px;
     width: 18px;
-    transition: all .15s ease-in;
+    transition: all 0.15s ease-in;
+    opacity: 0.6;
 
     &:hover {
       opacity: 0.8;
