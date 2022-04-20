@@ -60,15 +60,16 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.home section {
-  min-height: auto !important;
-  margin-bottom: 32px;
-}
+// .home section {
+//   min-height: auto !important;
+//   margin-bottom: 32px;
+// }
 
 .home__show {
   display: flex;
   flex-flow: column;
   gap: 32px;
+  background: #292929;
 
   .show__header {
     font-weight: 400;

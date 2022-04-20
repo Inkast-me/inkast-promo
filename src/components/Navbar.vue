@@ -122,15 +122,16 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .nav__wrapper {
-  position: absolute;
-  top: 40px;
+  position: fixed;
+  top: 0px;
   width: 100%;
-  padding: 0 6vw;
+  padding: 40px 6vw 40px;
   display: grid;
   place-items: center flex-start;
   grid: min-content / auto 1fr auto;
   gap: 32px;
   z-index: 1001;
+  background: #111111;
 
   &.nav__wrapper_modal {
     position: fixed;

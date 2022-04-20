@@ -1,27 +1,27 @@
 <template>
   <Navbar />
   <div class="home">
-    <Greeting />
+    <Greeting v-scroll:1 />
 
-    <Selection />
+    <Selection v-scroll:2 />
 
-    <Couple />
+    <Couple v-scroll:3 />
 
-    <Intrestings />
+    <Intrestings v-scroll:4 />
 
-    <Rare />
+    <Rare v-scroll:5 />
 
-    <HowItWorks />
+    <HowItWorks v-scroll:6 />
 
-    <NotEasy />
+    <NotEasy v-scroll:7 />
 
-    <Problems />
+    <Problems v-scroll:8 />
 
-    <Show />
+    <Show v-scroll:9 />
 
-    <Team />
+    <Team v-scroll:10 />
 
-    <Follow />
+    <Follow v-scroll:11 />
 
     <Footer />
   </div>
@@ -91,6 +91,8 @@ export default defineComponent({
   gap: 32px;
   max-width: 1920px;
   margin: 0 auto;
+  overflow-x: hidden;
+  height: calc( 12 * 76vh + 11 * 32px );
 
   @media (min-width: 576px) {
     padding: 104px 16px 64px;
@@ -110,6 +112,15 @@ export default defineComponent({
     @media (min-width: 768px) {
       padding: 48px 40px 64px;
     }
+  }
+
+  section {
+    transition: opacity .5s linear, transform .1s linear;
+    transform-origin: top center;
+    position: fixed;
+    top: var(--translateY, 0);
+    transform: scale(var(--scale, 1));
+    width: calc(100vw - 128px)!important;
   }
 }
 </style>

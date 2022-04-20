@@ -28,6 +28,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home__footer {
+  align-self: flex-end;
   color: #ffffff;
   text-align: center;
   display: grid;
