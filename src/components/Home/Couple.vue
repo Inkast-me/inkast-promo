@@ -108,8 +108,7 @@ export default defineComponent({
     }
 
     > img {
-      width: 120vh;
-      height: 70vh;
+      width: max(1000px, 120vh);
       height: auto;
       margin-right: 50%;
 

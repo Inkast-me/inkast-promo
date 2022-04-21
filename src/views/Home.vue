@@ -103,7 +103,7 @@ export default defineComponent({
   section + section {
     animation: fromNothingToGreatest 0.2s cubic-bezier(0.4, -0.14, 0.47, 0.89);
     width: 100%;
-    min-height: 76vh;
+    min-height: min(76vh, 550px);
     border-radius: 24px;
     padding: 24px 16px;
 
