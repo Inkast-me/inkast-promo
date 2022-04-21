@@ -20,6 +20,12 @@ const routes: Array<RouteRecordRaw> = [
       import(/* webpackChunkName: "donate" */ "../views/Donate.vue"),
   },
   {
+    path: "/privacy",
+    name: "Privacy",
+    component: () =>
+      import(/* webpackChunkName: "donate" */ "../views/Privacy.vue"),
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "404",
     component: () => import("@/views/404.vue"),

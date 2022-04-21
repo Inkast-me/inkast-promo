@@ -1,10 +1,12 @@
 <template>
   <section class="home__greeting">
-    <h1>
-      <span v-html="t('Home.greeting.hello')"></span> <br />
-      <span v-html="t('Home.greeting.inkast')"></span>
-    </h1>
-
+    <div class="greetings__ifno">
+      <h1>
+        <span v-html="t('Home.greeting.hello')"></span> <br />
+        <span v-html="t('Home.greeting.inkast')"></span>
+      </h1>
+      <span class="slogan">Cоциальная сеть для поиска соулмейта</span>
+    </div>
     <div class="greeting__socials">
       <a href="https://vk.com/inkast_me" class="greeting__vk" target="_blank">
         <svg
@@ -100,6 +102,7 @@ export default defineComponent({
     font-feature-settings: "pnum" on, "lnum" on;
     color: #ffffff;
     margin: 0;
+    margin-bottom: 18px;
 
     @media (min-width: 576px) {
       font-size: 104px;
@@ -127,6 +130,18 @@ export default defineComponent({
   .greeting__tg img {
     height: 64px;
     width: 64px;
+  }
+
+  .slogan {
+    opacity: 0.4;
+    padding-left: 8px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: -0.015em;
+    font-feature-settings: "pnum" on, "lnum" on;
   }
 }
 </style>
