@@ -569,7 +569,8 @@
         "nameError": "Введите имя",
         "email": "Почта",
         "emailError": "Некорректный адрес почты, повторите попытку",
-        "confPolicy": "Я&nbsp;согласен&nbsp;с<a href='/privacy' target='_blank'>политикой конфиденциальности</a>"
+        "confPolicy": "Я&nbsp;согласен&nbsp;с <a href='/privacy' target='_blank'>политикой&nbsp;конфиденциальности</a>",
+        "confError": ""
       },
       "popup": {
         "title": "Спасибо за&nbsp;подписку на&nbsp;обновления",

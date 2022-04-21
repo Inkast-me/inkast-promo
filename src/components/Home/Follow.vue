@@ -89,14 +89,20 @@
         />
 
       </span>
-      <Checkbox 
-        v-model="confAgree"
-        :label="t('Home.follow.inputs.confPolicy')"
-      ></Checkbox>
+
+      <span
+        class="follow__input checkbox"
+        :class="{ error: confError }"
+        :data-error="t('Home.follow.inputs.confError')"
+      >
+        <Checkbox 
+          v-model="confAgree"
+          :label="t('Home.follow.inputs.confPolicy')"
+        ></Checkbox>
+      </span>
     </div>
     <Button
       class="follow__join"
-      :class="{disabled: !name || !email || !confAgree}"
       v-html="t('Home.follow.join')"
       @click="sendForm"
     ></Button>
@@ -131,6 +137,7 @@ export default defineComponent({
     const emailError = ref(false);
 
     const confAgree = ref(false)
+    const confError = ref(false)
 
     const successModal = ref(false);
 
@@ -138,7 +145,7 @@ export default defineComponent({
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
     const sendForm = () => {
-      if (name.value && emailRegExp.test(email.value))
+      if (name.value && emailRegExp.test(email.value) && confAgree.value)
         fetch(
           `https://docs.google.com/forms/u/1/d/e/1FAIpQLScaPQfvMJqkB4p12RR1onHLBRwGrbll_lNTu9wV5xwbwMtMbQ/formResponse?entry.539076579=${name.value}&entry.914223913=${email.value}`,
           {
@@ -156,6 +163,7 @@ export default defineComponent({
         });
       else {
         if (!name.value) nameError.value = true;
+        if (!confAgree.value) confError.value = true;
         if (!emailRegExp.test(email.value)) emailError.value = true;
       }
     };
@@ -168,7 +176,8 @@ export default defineComponent({
       nameError,
       emailError,
       successModal,
-      confAgree
+      confAgree,
+      confError
     };
   },
 });
@@ -268,11 +277,13 @@ export default defineComponent({
 
       &.error {
         margin-bottom: 48px;
+        position: relative;
 
-        input {
+        > * {
           padding-left: 58px;
         }
-        position: relative;
+
+        
 
         &::after {
           content: attr(data-error);
@@ -297,6 +308,16 @@ export default defineComponent({
           left: 24px;
           top: 50%;
           transform: translateY(-50%);
+        }
+
+        &.checkbox {
+          > * {
+            padding-left: 32px;
+          }
+          
+          &::before {
+            left: 0;
+          }
         }
       }
 
@@ -333,7 +354,7 @@ export default defineComponent({
       line-height: 114%;
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
-      max-width: 537px;
+      max-width: 560px;
 
       @media (min-width: 768px) {
         font-size: 28px;

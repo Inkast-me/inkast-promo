@@ -105,7 +105,6 @@
     color: #FFFFFF;
 
     :deep(a) {
-      margin-left: .25rem;
       color: #FFFFFF;
       text-decoration: underline;
     }
