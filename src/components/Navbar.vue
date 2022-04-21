@@ -27,6 +27,12 @@
           class="nav__link"
           v-html="t('Home.nav.donate')"
         ></router-link>
+        <a
+          href="mailto:info@inkast.me"
+          class="nav__link"
+          target="_blank"
+          v-html="t('Home.nav.support')"
+        ></a>
       </div>
       <div class="nav__additional">
         <div
@@ -72,6 +78,12 @@
         :class="{ active: route.name == 'Donate' }"
         v-html="t('Home.nav.donate')"
       ></router-link>
+      <a
+          href="mailto:info@inkast.me"
+          class="nav__link"
+          target="_blank"
+          v-html="t('Home.nav.support')"
+        ></a>
       <router-link
         to="/#follow"
         class="nav__join"
