@@ -568,7 +568,8 @@
         "name": "Name",
         "nameError": "Enter the name again, please",
         "email": "E-mail",
-        "emailError": "Incorrect email, try again"
+        "emailError": "Incorrect email, try again",
+        "confPolicy": "I&nbsp;agree with the<a href='/privacy' target='_blank'>privacy policy</a>"
       },
       "popup": {
         "title": "Thank you for subscribing",

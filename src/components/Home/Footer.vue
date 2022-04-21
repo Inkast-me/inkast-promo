@@ -7,7 +7,7 @@
         t("Home.footer.love")
       }}</span
     >
-    <a href="" v-html="t('Home.footer.termsAndPolicy')"></a>
+    <router-link to="/privacy" v-html="t('Home.footer.termsAndPolicy')"></router-link>
   </div>
 </template>
 

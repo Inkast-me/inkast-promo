@@ -87,10 +87,16 @@
           v-model="email"
           @click="emailError = false"
         />
+
       </span>
+      <Checkbox 
+        v-model="confAgree"
+        :label="t('Home.follow.inputs.confPolicy')"
+      ></Checkbox>
     </div>
     <Button
       class="follow__join"
+      :class="{disabled: !name || !email || !confAgree}"
       v-html="t('Home.follow.join')"
       @click="sendForm"
     ></Button>
@@ -105,6 +111,7 @@
 import { defineComponent, ref } from "vue";
 
 import Button from "@/components/Button.vue";
+import Checkbox from "@/components/Checkbox.vue";
 import FollowPopup from "@/components/Home/FollowPopup.vue";
 import { useI18n } from "vue-i18n";
 
@@ -112,6 +119,7 @@ export default defineComponent({
   components: {
     Button,
     FollowPopup,
+    Checkbox
   },
   setup() {
     const { t } = useI18n();
@@ -121,6 +129,8 @@ export default defineComponent({
 
     const email = ref("");
     const emailError = ref(false);
+
+    const confAgree = ref(false)
 
     const successModal = ref(false);
 
@@ -158,6 +168,7 @@ export default defineComponent({
       nameError,
       emailError,
       successModal,
+      confAgree
     };
   },
 });
@@ -331,6 +342,11 @@ export default defineComponent({
   }
   .follow__join {
     grid-area: join;
+
+    &.disabled {
+      pointer-events: none;
+      opacity: .8;
+    }
 
     @media (min-width: 768px) {
       justify-self: flex-start;
