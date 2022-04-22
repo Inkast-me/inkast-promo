@@ -197,7 +197,7 @@ export default defineComponent({
     background: #111;
     transition: transform 0.2s ease-in-out;
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       gap: 32px;
     }
   }

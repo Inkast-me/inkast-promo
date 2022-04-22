@@ -624,7 +624,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Home/Footer.vue";
 
@@ -634,6 +634,15 @@ export default defineComponent({
     Navbar,
     Footer,
   },
+
+  setup() {
+    onMounted(() => {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+    })
+  }
 });
 </script>
 

@@ -16,8 +16,8 @@ export default defineComponent({
     }
 
     watchEffect(() => {
-      document.title = t('title');
-    })
+      document.title = t("title");
+    });
   },
 });
 </script>

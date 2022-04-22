@@ -94,11 +94,9 @@
         <a
           class="member__link"
           target="_blank"
-          :href="defineLink(t(`Home.team.members[${currentMember}].link`))"
-          >{{
-            defineLinkText(t(`Home.team.members[${currentMember}].link`))
-          }}</a
-        >
+          href="mailto:info@inkast.me"
+          v-html="t(`Home.team.members[${currentMember}].link`)"
+        ></a>
       </div>
     </div>
   </section>
@@ -134,8 +132,7 @@ export default defineComponent({
         !link.replace("https://", "").replace("http://", "").includes("/")
       )
         return link.replace("https://", "").replace("http://", "");
-      //else return "@" + link.slice(link.lastIndexOf("/") + 1, link.length);
-      else return link.slice(link.lastIndexOf("/") + 1, link.length);
+      else return "@" + link.slice(link.lastIndexOf("/") + 1, link.length);
     };
 
     return {
