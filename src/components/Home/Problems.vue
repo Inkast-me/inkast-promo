@@ -51,8 +51,6 @@ export default defineComponent({
     const { t } = useI18n();
 
     const currentProblem = ref(0);
-    // TODO: Add behavior on hover.
-    // When a pointer is hovering over a problem message — change a big img like in a message
     const scrollHandler = (event: Event) => {
       document.querySelectorAll("[data-problem-id]").forEach((item) => {
         const el = event.target as HTMLElement;

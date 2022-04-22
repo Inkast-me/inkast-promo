@@ -7,7 +7,10 @@
         t("Home.footer.love")
       }}</span
     >
-    <router-link to="/privacy" v-html="t('Home.footer.termsAndPolicy')"></router-link>
+    <router-link
+      to="/privacy"
+      v-html="t('Home.footer.termsAndPolicy')"
+    ></router-link>
   </div>
 </template>
 
@@ -27,7 +30,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-
 @keyframes apperingText {
   0% {
     opacity: 0;
@@ -37,7 +39,7 @@ export default defineComponent({
   }
 }
 .home__footer {
-  animation: apperingText .2s ease-out;
+  animation: apperingText 0.2s ease-out;
   color: #ffffff;
   text-align: center;
   display: grid;

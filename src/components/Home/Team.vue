@@ -134,7 +134,8 @@ export default defineComponent({
         !link.replace("https://", "").replace("http://", "").includes("/")
       )
         return link.replace("https://", "").replace("http://", "");
-      else return "@" + link.slice(link.lastIndexOf("/") + 1, link.length);
+      //else return "@" + link.slice(link.lastIndexOf("/") + 1, link.length);
+      else return link.slice(link.lastIndexOf("/") + 1, link.length);
     };
 
     return {

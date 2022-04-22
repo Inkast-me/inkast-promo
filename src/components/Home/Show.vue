@@ -98,7 +98,6 @@ export default defineComponent({
       background-size: cover;
     }
 
-    // TODO: fix a background trouble.
     .show__button:hover {
       opacity: 0.9;
     }

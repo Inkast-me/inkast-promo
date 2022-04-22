@@ -87,7 +87,6 @@
           v-model="email"
           @click="emailError = false"
         />
-
       </span>
 
       <span
@@ -95,7 +94,7 @@
         :class="{ error: confError }"
         :data-error="t('Home.follow.inputs.confError')"
       >
-        <Checkbox 
+        <Checkbox
           v-model="confAgree"
           :label="t('Home.follow.inputs.confPolicy')"
         ></Checkbox>
@@ -125,7 +124,7 @@ export default defineComponent({
   components: {
     Button,
     FollowPopup,
-    Checkbox
+    Checkbox,
   },
   setup() {
     const { t } = useI18n();
@@ -136,8 +135,8 @@ export default defineComponent({
     const email = ref("");
     const emailError = ref(false);
 
-    const confAgree = ref(false)
-    const confError = ref(false)
+    const confAgree = ref(false);
+    const confError = ref(false);
 
     const successModal = ref(false);
 
@@ -177,7 +176,7 @@ export default defineComponent({
       emailError,
       successModal,
       confAgree,
-      confError
+      confError,
     };
   },
 });
@@ -283,18 +282,20 @@ export default defineComponent({
           padding-left: 58px;
         }
 
-        
-
         &::after {
           content: attr(data-error);
           left: 24px;
           font-weight: 400;
-          font-size: 17px;
+          font-size: 13px;
           line-height: 140%;
           letter-spacing: -0.06px;
           color: #ffffff;
           position: absolute;
           bottom: -30px;
+
+          @media (min-width: 768px) {
+            font-size: 17px;
+          }
         }
 
         &::before {
@@ -314,7 +315,7 @@ export default defineComponent({
           > * {
             padding-left: 32px;
           }
-          
+
           &::before {
             left: 0;
           }
@@ -366,7 +367,7 @@ export default defineComponent({
 
     &.disabled {
       pointer-events: none;
-      opacity: .8;
+      opacity: 0.8;
     }
 
     @media (min-width: 768px) {

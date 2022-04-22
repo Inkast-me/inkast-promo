@@ -10,7 +10,8 @@
     },
     "greeting": {
       "hello": "Welcome",
-      "inkast": "to&nbsp;Inkast"
+      "inkast": "to&nbsp;Inkast",
+      "slogan": "Find your soulmate"
     },
     "selection": {
       "title": "Find people according to&nbsp;interests, goals, favorite activities and even by&nbsp;character",
@@ -483,7 +484,7 @@
         "description":
           "Carried out projects for Mars, Danone, Nexign, Schlumberger, Gazprom Neft, Severstal and Rosatom <br><br>Multiple winner of&nbsp;case championships and hackathons",
         "employmentExp": "Work experience: 4&nbsp;years",
-        "link": "info&#64;inkast.me"
+        "link": "Contact us: info&#64;inkast.me"
       },
       {
         "avatar": "Alexander.png",
@@ -494,7 +495,7 @@
         "description":
           "Carried out projects for Yandex, VK, Gazprom, Skyeng and X5&nbsp;Group <br><br> Winner of&nbsp;the HSE Olympiad in&nbsp;the field of&nbsp;design and multiple winner of&nbsp;hackathons",
         "employmentExp": "Work experience: 4&nbsp;years",
-        "link": "info&#64;inkast.me"
+        "link": "Contact us: info&#64;inkast.me"
       },
       {
         "avatar": "Fedor.png",
@@ -505,7 +506,7 @@
         "description":
           "Carried out projects for the Central Bank, Rosatom, ParSeq, OneCell and BIOCAD <br><br> Unemployed, but earns",
         "employmentExp": "Work experience: 2&nbsp;years",
-        "link": "info&#64;inkast.me"
+        "link": "Contact us: info&#64;inkast.me"
       },
       {
         "avatar": "Platon.png",
@@ -515,7 +516,7 @@
         "preferredColor": "C7C789",
         "description": "Just a cool guy",
         "employmentExp": "Work experience: 3&nbsp;years",
-        "link": "info&#64;inkast.me"
+        "link": "Contact us: info&#64;inkast.me"
       },
       {
         "avatar": "Natalia.png",
@@ -524,9 +525,9 @@
         "post": "Backend developer",
         "preferredColor": "E0C49E",
         "description":
-          "Backend developer at&nbsp;Arrival. Built a&nbsp;racing car in&nbsp;the electrics department.<br><br>The recipient of the UMNIK grant. Winner of hackathons and case championships.",
+          "Backend developer at&nbsp;Arrival. Built a&nbsp;racing car in&nbsp;the electrics department.<br><br>The recipient of the UMNIK grant. Winner of hackathons and case championships",
         "employmentExp": "Work experience: 3&nbsp;years",
-        "link": "info&#64;inkast.me"
+        "link": "Contact us: info&#64;inkast.me"
       },
       {
         "avatar": "Ulyana.png",
@@ -536,7 +537,7 @@
         "preferredColor": "E6F7A2",
         "description": "Code on&nbsp;Kotlin",
         "employmentExp": "Work experience: 1&nbsp;year",
-        "link": "info&#64;inkast.me"
+        "link": "Contact us: info&#64;inkast.me"
       },
       {
         "avatar": "Dmitry.png",
@@ -546,7 +547,7 @@
         "preferredColor": "F8DFBE",
         "description": "Developer in&nbsp;Sixhands",
         "employmentExp": "Work experience: 2&nbsp;years",
-        "link": "info&#64;inkast.me"
+        "link": "Contact us: info&#64;inkast.me"
       },
       {
         "avatar": "Anna.png",
@@ -557,7 +558,7 @@
         "description":
           "Carry out projects in&nbsp;the field of&nbsp;neurotechnology <br><br> Know how our brain works and what people need",
         "employmentExp": "Work experience: 3&nbsp;years",
-        "link": "info&#64;inkast.me"
+        "link": "Contact us: info&#64;inkast.me"
       }
     ]
     },
@@ -569,7 +570,7 @@
         "nameError": "Enter the name again, please",
         "email": "E-mail",
         "emailError": "Incorrect email, try again",
-        "confPolicy": "I&nbsp;agree with the<a href='/privacy' target='_blank'>privacy policy</a>",
+        "confPolicy": "I&nbsp;agree with the<a href='/privacy' target='_blank'> privacy policy</a>",
         "confError": ""
       },
       "popup": {

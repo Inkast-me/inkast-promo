@@ -96,20 +96,21 @@ export default defineComponent({
         font-size: 22px;
       }
     }
-    // TODO: make it like in a design with the same height and bottom: 40px from an edge of a card
-    // also upload a 2x PNG instead of svg
     .easy__illustration {
       align-self: flex-end;
       width: 100%;
       margin-left: -20px;
-      // height: 170px;
 
       @media (min-width: 768px) {
-        height: 340px;
+        height: 240px;
         width: auto;
         position: absolute;
         bottom: 0px;
         right: -90px;
+      }
+
+      @media (min-width: 992px) {
+        height: 340px;
       }
     }
   }

@@ -79,11 +79,11 @@
         v-html="t('Home.nav.donate')"
       ></router-link>
       <a
-          href="mailto:info@inkast.me"
-          class="nav__link"
-          target="_blank"
-          v-html="t('Home.nav.support')"
-        ></a>
+        href="mailto:info@inkast.me"
+        class="nav__link"
+        target="_blank"
+        v-html="t('Home.nav.support')"
+      ></a>
       <router-link
         to="/#follow"
         class="nav__join"
@@ -193,9 +193,13 @@ export default defineComponent({
     display: grid;
     place-items: center flex-start;
     grid: min-content / auto 1fr auto;
-    gap: 32px;
+    gap: 4px;
     background: #111;
     transition: transform 0.2s ease-in-out;
+
+    @media (min-width: 992px) {
+      gap: 32px;
+    }
   }
 
   &.hide .content__wrapper {

@@ -5,7 +5,7 @@
         <span v-html="t('Home.greeting.hello')"></span> <br />
         <span v-html="t('Home.greeting.inkast')"></span>
       </h1>
-      <span class="slogan">Cоциальная сеть для поиска соулмейта</span>
+      <span v-html="t('Home.greeting.slogan')" class="slogan"></span>
     </div>
     <div class="greeting__socials">
       <a href="https://vk.com/inkast_me" class="greeting__vk" target="_blank">
@@ -85,13 +85,14 @@ export default defineComponent({
   justify-content: space-between;
   gap: 24px;
   padding-top: 54px;
-  margin-bottom: 73px;
+  margin-bottom: 56px;
   padding-left: min(5vw, 9.861vh);
   padding-right: 34px;
 
   @media (min-width: 768px) {
     align-items: flex-end;
     flex-flow: row;
+    margin-bottom: 72px;
   }
 
   h1 {
@@ -134,14 +135,21 @@ export default defineComponent({
 
   .slogan {
     opacity: 0.4;
-    padding-left: 8px;
+    padding-left: 0;
     color: #fff;
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 20px;
     letter-spacing: -0.015em;
     font-feature-settings: "pnum" on, "lnum" on;
+    display: block;
+    max-width: 320px;
+
+    @media (min-width: 576px) {
+      padding-left: 8px;
+      font-size: 28px;
+      max-width: none;
+    }
   }
 }
 </style>
