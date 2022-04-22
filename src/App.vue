@@ -8,12 +8,16 @@ import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
-    const { locale } = useI18n();
+    const { locale, t } = useI18n();
     const lang =
       localStorage.getItem("inkast:selectedLanguage") || navigator.language;
     if (/^[a-z][a-z]-[A-Z][A-Z]/.test(lang)) {
       locale.value = lang;
     }
+
+    watchEffect(() => {
+      document.title = t('title');
+    })
   },
 });
 </script>
