@@ -197,7 +197,7 @@ export default defineComponent({
     background: #111;
     transition: transform 0.2s ease-in-out;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       gap: 32px;
     }
   }
@@ -220,7 +220,7 @@ export default defineComponent({
     display: none;
     gap: 48px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: flex;
     }
 
@@ -295,7 +295,7 @@ export default defineComponent({
       transition: background-color 0.16s ease-in-out;
       text-decoration: none;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         display: initial;
       }
 
@@ -309,7 +309,7 @@ export default defineComponent({
       cursor: pointer;
       margin-right: auto;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         display: none;
       }
     }
