@@ -48,7 +48,7 @@ export default defineComponent({
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  background: #292929 url("../../assets/cards/rare.svg");
+  background: #292929 url("../../assets/cards/rare.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;

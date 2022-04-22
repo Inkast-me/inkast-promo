@@ -64,7 +64,7 @@ export default defineComponent({
   border-radius: 24px;
   min-height: calc(100vh - 200px);
 
-  background: #d172fd url("../assets/cards/404.svg");
+  background: #d172fd url("../assets/cards/404.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

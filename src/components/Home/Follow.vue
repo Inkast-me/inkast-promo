@@ -184,7 +184,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home__follow {
-  background: #d172fd url("../../assets/cards/follow.svg");
+  background: #d172fd url("../../assets/cards/follow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right;

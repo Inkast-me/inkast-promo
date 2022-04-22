@@ -10,7 +10,7 @@
       ></div>
       <img
         class="easy__illustration"
-        :src="require('@/assets/cards/easy/illustration.svg')"
+        :src="require('@/assets/cards/easy/illustration.png')"
         alt="Me"
       />
     </div>
@@ -38,7 +38,7 @@ export default defineComponent({
   // flex-flow: column;
   // justify-content: space-between;
   position: relative;
-  background: #c04cf6 url("../../assets/cards/easy/background.svg");
+  background: #c04cf6 url("../../assets/cards/easy/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
