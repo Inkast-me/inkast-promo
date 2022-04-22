@@ -632,7 +632,7 @@ export default defineComponent({
   name: "Privacy",
   components: {
     Navbar,
-    Footer
+    Footer,
   },
 });
 </script>

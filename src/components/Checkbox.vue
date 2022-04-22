@@ -106,12 +106,12 @@ export default defineComponent({
     :deep(a) {
       color: #ffffff;
       text-decoration: none !important;
-      border-bottom: 1px solid rgba(255, 255, 255, .2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       text-decoration: underline;
-      transition: border-bottom .2s ease-in-out;
+      transition: border-bottom 0.2s ease-in-out;
 
       &:hover {
-        border-bottom: 1px solid rgba(255, 255, 255, .6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
       }
     }
   }
