@@ -3,7 +3,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, watchEffect } from "vue";
+import { defineComponent, onMounted, watchEffect } from "vue";
+import { event } from "vue-gtag";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
@@ -18,6 +19,10 @@ export default defineComponent({
     watchEffect(() => {
       document.title = t("title");
     });
+
+    onMounted(() => {
+      event('Visit')
+    })
   },
 });
 </script>
