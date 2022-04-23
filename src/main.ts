@@ -10,5 +10,5 @@ createApp(App)
   .use(i18n)
   .use(store)
   .use(router)
-  .use(VueGtag, { config: { id: "UA-226936827-1" } })
+  .use(VueGtag, { config: { id: "UA-226862624-1" } })
   .mount("#app");
