@@ -4,22 +4,34 @@
     <div class="algorithm__wrapper">
       <div class="algorithm__step" data-step="1">
         <p v-html="t('Home.algorithm.step-1')"></p>
-        <img :src="require('@/assets/cards/algorithm/step-1.png')" alt="Step 1">
+        <img
+          :src="require('@/assets/cards/algorithm/step-1.png')"
+          alt="Step 1"
+        />
       </div>
       <div class="algorithm__step" data-step="2">
         <p v-html="t('Home.algorithm.step-2')"></p>
-        <img :src="require('@/assets/cards/algorithm/step-2.png')" alt="Step 2">
+        <img
+          :src="require('@/assets/cards/algorithm/step-2.png')"
+          alt="Step 2"
+        />
       </div>
       <div class="algorithm__step" data-step="3">
         <div class="algorithm__match" data-match="80">
           <span class="match__title">Match!</span>
           <span class="match__value">80%</span>
-          <img :src="require('@/assets/cards/algorithm/match-80.png')" alt="Match 80%">
+          <img
+            :src="require('@/assets/cards/algorithm/match-80.png')"
+            alt="Match 80%"
+          />
         </div>
         <div class="algorithm__match" data-match="73">
           <span class="match__title">Match!</span>
           <span class="match__value">73%</span>
-          <img :src="require('@/assets/cards/algorithm/match-73.png')" alt="Match 73%">
+          <img
+            :src="require('@/assets/cards/algorithm/match-73.png')"
+            alt="Match 73%"
+          />
         </div>
 
         <p class="match__description" v-html="t('Home.algorithm.step-3')"></p>
@@ -29,33 +41,38 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
-    const { t } = useI18n()
+    const { t } = useI18n();
 
     return {
-      t
-    }
+      t,
+    };
   },
-})
+});
 </script>
 
 <style lang="scss" scoped>
 .algorithm {
-  background: #213278;
+  // background: #213278;
   display: flex;
   flex-flow: column;
   gap: 32px;
+  position: relative;
+  background: #213278 url("../../assets/cards/algorithm/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 
   .algorithm__title {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 91%;
     letter-spacing: -0.05em;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0;
 
     @media (min-width: 768px) {
@@ -82,7 +99,7 @@ export default defineComponent({
       content: "";
       height: 170px;
       width: 120px;
-      background-image: url('../../assets/cards/algorithm/before.png'); //guy
+      background-image: url("../../assets/cards/algorithm/before.png"); //guy
       background-size: cover;
       position: absolute;
       display: none;
@@ -102,17 +119,16 @@ export default defineComponent({
         left: 0;
         right: auto;
       }
-
     }
     &::after {
       content: "";
       height: 76px;
       width: 79px;
-      background-image: url('../../assets/cards/algorithm/after.png'); //arrow
+      background-image: url("../../assets/cards/algorithm/after.png"); //arrow
       background-size: cover;
       position: absolute;
       top: 105px;
-      left: 101px;
+      left: 102px;
       display: none;
 
       @media (min-width: 1400px) {
@@ -123,14 +139,14 @@ export default defineComponent({
     .algorithm__step {
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 16px;
-      padding: 32px 76px 32px 24px;
+      padding: 32px 32px 32px 24px;
 
       font-weight: 400;
-      font-size: 8px;
+      font-size: 16px;
       line-height: 140%;
       letter-spacing: -0.015em;
-      font-feature-settings: 'pnum' on, 'lnum' on;
-      color: #FFFFFF;
+      font-feature-settings: "pnum" on, "lnum" on;
+      color: #ffffff;
       position: relative;
 
       @media (min-width: 768px) {
@@ -139,12 +155,13 @@ export default defineComponent({
 
       @media (min-width: 1024px) {
         font-size: 20px;
+        padding: 32px 76px 32px 24px;
       }
 
       &::before {
         content: attr(data-step);
-        height: 17px;
-        width: 17px;
+        height: 32px;
+        width: 32px;
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 100px;
 
@@ -155,7 +172,7 @@ export default defineComponent({
         top: 6px;
         right: 6px;
 
-        font-family: 'Inter';
+        font-family: "Inter";
         letter-spacing: -0.06px;
         text-transform: capitalize;
 
@@ -164,6 +181,13 @@ export default defineComponent({
           width: 44px;
           top: 16px;
           right: 16px;
+        }
+      }
+
+      p {
+        line-height: 1.2;
+        @media (min-width: 576px) {
+          font-size: 22px;
         }
       }
 
@@ -207,8 +231,9 @@ export default defineComponent({
           font-weight: 400;
           line-height: 95%;
           letter-spacing: -0.025em;
-          font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: "pnum" on, "lnum" on;
           width: 100%;
+          margin-right: 16px;
 
           @media (min-width: 768px) {
             font-size: 48px;
@@ -217,6 +242,7 @@ export default defineComponent({
 
           @media (min-width: 992px) {
             max-width: 400px;
+            margin-right: 0;
           }
 
           .match__title {
@@ -224,27 +250,26 @@ export default defineComponent({
           }
 
           .match__value {
-            color: #FFFFFF;
+            color: #ffffff;
           }
 
           img {
             height: 48px;
             width: 40px;
             margin-left: auto;
-            
+
             @media (min-width: 992px) {
               height: 112px;
               width: 91px;
             }
-
           }
 
           &[data-match="80"] {
-            color: #AEDF7C;
+            color: #aedf7c;
           }
 
           &[data-match="73"] {
-            color: #B78FF8;
+            color: #b78ff8;
           }
         }
 

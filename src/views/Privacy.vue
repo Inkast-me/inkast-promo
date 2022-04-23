@@ -638,11 +638,11 @@ export default defineComponent({
   setup() {
     onMounted(() => {
       window.scrollTo({
-          top: 0,
-          behavior: "smooth"
+        top: 0,
+        behavior: "smooth",
       });
-    })
-  }
+    });
+  },
 });
 </script>
 

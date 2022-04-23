@@ -15,9 +15,9 @@
 
     <NotEasy />
 
-    <Algorithm/>
+    <Algorithm />
 
-    <Next/>
+    <Next />
 
     <Problems />
 
@@ -68,7 +68,7 @@ export default defineComponent({
     Team,
     Follow,
     Footer,
-    Next
+    Next,
   },
 
   setup() {
