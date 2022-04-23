@@ -72,7 +72,7 @@ export default defineComponent({
       line-height: 140%;
       letter-spacing: -0.06px;
       color: #ffffff;
-      max-width: 460px;
+      max-width: 560px;
 
       @media (min-width: 576px) {
         margin-top: 18px;
