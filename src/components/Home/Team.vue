@@ -59,9 +59,9 @@
           <a
             class="member__link"
             target="_blank"
-            :href="defineLink(t(`Home.team.members[${index - 1}].link`))"
-            >{{ defineLinkText(t(`Home.team.members[${index - 1}].link`)) }}</a
-          >
+            href="mailto:info@inkast.me"
+            v-html="t(`Home.team.members[${currentMember}].link`)"
+          ></a>
         </div>
       </div>
       <div class="team__description">
