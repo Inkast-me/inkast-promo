@@ -243,6 +243,7 @@ export default defineComponent({
           @media (min-width: 768px) {
             font-size: 48px;
             padding: 24px;
+            margin-right: 48px;
           }
 
           @media (min-width: 1200px) {
@@ -260,12 +261,12 @@ export default defineComponent({
 
           img {
             height: 48px;
-            width: 40px;
+            width: 48px;
             margin-left: auto;
 
             @media (min-width: 992px) {
-              height: 112px;
-              width: 91px;
+              height: 90px;
+              width: 90px;
             }
           }
 
