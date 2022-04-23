@@ -442,6 +442,17 @@
       "additional": "We&nbsp;have created our own machine learning algorithms that allow you to&nbsp;project your digital twin into the Web. These &laquo;metacopies&raquo; have certain preferences and character.",
       "description": "Digital twins are compared by&nbsp;additional algorithms. As&nbsp;a&nbsp;result, the most fitting people are matched to&nbsp;you."
     },
+    "algorithm": {
+      "title": "Работа aboba",
+      "step-1": "Создание цифровой копии человека на&nbsp;основе его метаданных. <br> <br> Каждая копия обладает вашими интересами и&nbsp;характером",
+      "step-2": "Алгоритмы машинного обучения сопоставляют цифровые портреты разных людей друг другу, образуя матрицу наилучших комбинаций по&nbsp;интересам и&nbsp;характеру",
+      "step-3": "Наш сервис показывает вам список людей-соулмейтов"
+    },
+    "next": {
+      "title": "Что aboba?",
+      "description": "Соулмейт&nbsp;&mdash; это человек, который по&nbsp;духу подходит именно вам. Это особенный для вас человек, с&nbsp;которым образовывается крепкая связь. Такой человек может быть для вас: лучшим другом, возлюбленным, парнёром, самым интерсным собеседником. <br> <br>Ваша крепкая связь будет обусловлена множеством совпадающих интересов, вглядов на&nbsp;жизнь, одинаковому мировоззрению. Если с&nbsp;большинством людей ваши пути по&nbsp;жизни могут расходится, то&nbsp;с&nbsp;соулмейтом вы&nbsp;дивгаетесь по&nbsp;жизни рядом. Именно поэтому такая связь для людей является одной из&nbsp;самых больших ценностей.",
+      "image": "en"
+    },
     "problems": {
       "title": "We&nbsp;provide an&nbsp;opportunity to&nbsp;solve current problems",
       "cards": [
