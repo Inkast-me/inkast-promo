@@ -21,8 +21,8 @@ export default defineComponent({
     });
 
     onMounted(() => {
-      event('Visit')
-    })
+      event("Visit");
+    });
   },
 });
 </script>

@@ -119,8 +119,8 @@ export default defineComponent({
     const { t } = useI18n();
 
     onMounted(() => {
-      event('enter Donate')
-    })
+      event("enter Donate");
+    });
 
     return {
       t,
