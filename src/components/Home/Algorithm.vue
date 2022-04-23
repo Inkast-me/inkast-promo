@@ -34,7 +34,9 @@
           />
         </div>
 
-        <p class="match__description" v-html="t('Home.algorithm.step-3')"></p>
+        <div class="match__description-wrapper">
+          <p class="match__description" v-html="t('Home.algorithm.step-3')"></p>
+        </div>
       </div>
     </div>
   </section>
@@ -87,12 +89,16 @@ export default defineComponent({
   .algorithm__wrapper {
     display: grid;
     grid: min-content / 1fr;
+    grid-auto-columns: 1fr;
     gap: 20px;
     position: relative;
 
+    @media (min-width: 992px) {
+      grid: min-content / repeat(2, minmax(400px, 1fr));
+    }
+
     @media (min-width: 1400px) {
       padding-left: 180px;
-      grid: min-content / repeat(2, minmax(400px, 1fr));
     }
 
     &::before {
@@ -139,7 +145,7 @@ export default defineComponent({
     .algorithm__step {
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 16px;
-      padding: 32px 32px 32px 24px;
+      padding: 32px 76px 32px 24px;
 
       font-weight: 400;
       font-size: 16px;
@@ -155,7 +161,6 @@ export default defineComponent({
 
       @media (min-width: 1024px) {
         font-size: 20px;
-        padding: 32px 76px 32px 24px;
       }
 
       &::before {
@@ -240,7 +245,7 @@ export default defineComponent({
             padding: 24px;
           }
 
-          @media (min-width: 992px) {
+          @media (min-width: 1200px) {
             max-width: 400px;
             margin-right: 0;
           }
@@ -273,9 +278,12 @@ export default defineComponent({
           }
         }
 
-        .match__description {
+        .match__description-wrapper {
           flex: 1 1 100%;
-          max-width: 400px;
+
+          .match__description {
+            max-width: 400px;
+          }
         }
       }
     }
