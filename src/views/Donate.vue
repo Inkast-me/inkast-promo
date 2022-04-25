@@ -51,6 +51,7 @@
         </div>
         <div class="donate__links">
           <a
+            @click.stop="event('Clicked Tinkoff')"
             href="https://www.tinkoff.ru/rm/samarina.alena19/LoAhG2156/"
             class="donate__links-item"
             target="_blank"
@@ -68,6 +69,7 @@
             </div>
           </a>
           <a
+            @click.stop="event('Clicked VK')"
             href="https://vk.com/inkast_me?source=description&w=donut_payment-212269763"
             class="donate__links-item"
             target="_blank"
@@ -87,6 +89,7 @@
       </div>
       <div class="donate__footer">
         <a
+          @click.stop="event('Clicked Problems')"
           href="mailto:donation@inkast.me?subject=Проблемы с донатом"
           target="_blank"
           v-html="t('Donate.problems')"
@@ -124,6 +127,7 @@ export default defineComponent({
 
     return {
       t,
+      event
     };
   },
 });
