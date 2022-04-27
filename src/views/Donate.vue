@@ -127,7 +127,7 @@ export default defineComponent({
 
     return {
       t,
-      event
+      event,
     };
   },
 });
