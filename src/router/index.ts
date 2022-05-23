@@ -26,6 +26,14 @@ const routes: Array<RouteRecordRaw> = [
       import(/* webpackChunkName: "donate" */ "../views/Privacy.vue"),
   },
   {
+    path: "/anketa",
+    name: "Anketa",
+    beforeEnter: (to, from, next) => {
+      window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScdUJJNbC9WQl70gW3A-qiqClzAYypYWdboHyM6vER7tsK6Eg/viewform?usp=sf_link'
+    },
+    component: () => import("@/views/404.vue"),
+  },
+  {
     path: "/:pathMatch(.*)*",
     name: "404",
     component: () => import("@/views/404.vue"),
