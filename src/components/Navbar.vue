@@ -23,6 +23,11 @@
           @click="scrollIntoView('#team')"
         ></router-link>
         <router-link
+          to="/invest"
+          class="nav__link"
+          v-html="t('Home.nav.invest')"
+        ></router-link>
+        <router-link
           to="/donate"
           class="nav__link"
           v-html="t('Home.nav.donate')"
@@ -71,6 +76,12 @@
         :class="{ active: route.hash == '#team' }"
         v-html="t('Home.nav.team')"
         @click="scrollIntoView('#team')"
+      ></router-link>
+      <router-link
+        to="/invest"
+        class="nav__link"
+        :class="{ active: route.name == 'Invest' }"
+        v-html="t('Home.nav.invest')"
       ></router-link>
       <router-link
         to="/donate"
@@ -245,7 +256,7 @@ export default defineComponent({
       }
     }
 
-    .nav__link:nth-child(3)::after {
+    .nav__link:nth-child(4)::after {
       content: "";
       display: inline-block;
       margin-bottom: 12px;
@@ -344,7 +355,7 @@ export default defineComponent({
       color: #ffffff33;
     }
 
-    &:nth-child(3)::after {
+    &:nth-child(4)::after {
       content: "";
       display: inline-block;
       margin-bottom: calc(0.9em - 16px);
