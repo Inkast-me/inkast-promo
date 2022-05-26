@@ -23,13 +23,22 @@ const routes: Array<RouteRecordRaw> = [
     path: "/privacy",
     name: "Privacy",
     component: () =>
-      import(/* webpackChunkName: "donate" */ "../views/Privacy.vue"),
+      import(/* webpackChunkName: "privacy" */ "../views/Privacy.vue"),
   },
   {
     path: "/anketa",
     name: "Anketa",
     beforeEnter: (to, from, next) => {
-      window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLScdUJJNbC9WQl70gW3A-qiqClzAYypYWdboHyM6vER7tsK6Eg/viewform?usp=sf_link'
+      window.location.href =
+        "https://docs.google.com/forms/d/e/1FAIpQLScdUJJNbC9WQl70gW3A-qiqClzAYypYWdboHyM6vER7tsK6Eg/viewform?usp=sf_link";
+    },
+    component: () => import("@/views/404.vue"),
+  },
+  {
+    path: "/invest",
+    name: "Invest",
+    beforeEnter: (to, from, next) => {
+      window.location.href = "../assets/investors-presentation.pdf";
     },
     component: () => import("@/views/404.vue"),
   },
