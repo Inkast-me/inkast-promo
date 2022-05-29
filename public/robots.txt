@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: https://inkast.me/invest
 Sitemap: https://inkast.me/sitemap.xml
