@@ -78,9 +78,9 @@
           alt=""
         />
       </div>
-      <div class="scroll__indicator">
+      <!-- <div class="scroll__indicator">
         <img src="@/assets/invest/arrow_right.svg" alt="scroll right" />
-      </div>
+      </div> -->
       <div class="invest__footnote" v-html="t('Investors.mvp.footnote')"></div>
     </section>
     <section class="invest__conclusions">
@@ -701,6 +701,14 @@ h2::after {
 @media (max-height: 720px) {
   .invest {
     background: #000 !important;
+  }
+  .invest__country {
+    .dmap {
+      display: none;
+    }
+    .mmap {
+      display: none;
+    }
   }
 }
 
