@@ -91,11 +91,20 @@ export default defineComponent({
     Navbar,
   },
   setup() {
+    // TODO: fix position
+    onMounted(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+
     const { t } = useI18n();
 
     return {
       t,
     };
+    
   },
 });
 </script>
