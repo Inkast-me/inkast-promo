@@ -576,9 +576,13 @@ h2::after {
 @media (max-width: 576px) {
   .invest {
     padding: 0 16px;
+    background: #000 !important;
   }
 
   .invest__hero {
+    min-height: unset;
+    margin-top: 24vh;
+
     h1 {
       font-size: 180px;
       line-height: 1.2;
