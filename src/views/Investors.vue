@@ -6,7 +6,7 @@
       <div class="invest__hero-line">
         <div class="invest__hero-stuff">
           <div class="stuff">
-            <img src="@/assets/invest/alena.png" alt="" />
+            <img src="@/assets/invest/alena.png" alt="Alena" />
             <div class="stuff-info">
               <a
                 href="https://t.me/alencombo"
@@ -17,7 +17,7 @@
             </div>
           </div>
           <div class="stuff">
-            <img src="@/assets/invest/fedor.png" alt="" />
+            <img src="@/assets/invest/fedor.png" alt="Fedor" />
             <div class="stuff-info">
               <a
                 href="https://t.me/padobrik"
@@ -28,7 +28,7 @@
             </div>
           </div>
           <div class="stuff">
-            <img src="@/assets/invest/alexander.png" alt="" />
+            <img src="@/assets/invest/alexander.png" alt="Alexander" />
             <div class="stuff-info">
               <a
                 href="https://t.me/greeneboy"
@@ -220,7 +220,6 @@ nav {
     width: 116px;
     height: auto;
   }
-  
 }
 
 .invest__hero-line::after {
@@ -364,25 +363,24 @@ h2::after {
 .invest__mvp-map {
   overflow-x: scroll;
   position: relative;
-
-  
 }
-  .invest__mvp-map::-webkit-scrollbar {
-    height: 8px;
-  }
 
-  .invest__mvp-map::-webkit-scrollbar-track {
-    background: transparent; 
-  }
+.invest__mvp-map::-webkit-scrollbar {
+  height: 8px;
+}
 
-  .invest__mvp-map::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 100px;
-  }
+.invest__mvp-map::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  .invest__mvp-map::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
+.invest__mvp-map::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+}
+
+.invest__mvp-map::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
 
 .invest__hidden-aria {
   position: absolute;
