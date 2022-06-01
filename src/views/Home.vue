@@ -92,7 +92,7 @@ export default defineComponent({
 .home {
   width: 100%;
   min-height: 100vh;
-  background: #111111;
+  background: #000;
   padding: 104px 8px 64px;
   position: relative;
   display: grid;

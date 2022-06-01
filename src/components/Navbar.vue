@@ -205,7 +205,7 @@ export default defineComponent({
     place-items: center flex-start;
     grid: min-content / auto 1fr auto;
     gap: 4px;
-    background: #111;
+    background: #000;
     transition: transform 0.2s ease-in-out;
 
     @media (min-width: 992px) {
@@ -219,7 +219,7 @@ export default defineComponent({
 
   &.nav__wrapper_modal {
     position: fixed;
-    background: #111111;
+    background: #000;
   }
 
   .nav__logo {
@@ -245,6 +245,7 @@ export default defineComponent({
       transition: color 0.16s ease-in-out;
       display: inherit;
       color: #ffffff;
+      position: relative;
 
       &:hover,
       &.active {
@@ -254,6 +255,15 @@ export default defineComponent({
       &.disabled {
         color: #ffffff33;
       }
+    }
+
+    .nav__link:nth-child(3)::after {
+      position: absolute;
+      content: "";
+      background: url("../assets/invest/star.svg") no-repeat;
+      right: -16px;
+      width: 13.1px;
+      height: 13.1px;
     }
 
     .nav__link:nth-child(4)::after {
@@ -331,7 +341,7 @@ export default defineComponent({
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: #111111;
+  background: #000;
   padding: 156px 24px 24px;
   display: flex;
   flex-flow: column;

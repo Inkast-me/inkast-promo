@@ -37,6 +37,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/invest",
     name: "Invest",
+    component: () =>
+      import(/* webpackChunkName: "donate" */ "../views/Investors.vue"),
+  },
+  {
+    path: "/invest__presentation",
+    name: "InvestPresentation",
     beforeEnter: (to, from, next) => {
       window.location.href = "../assets/investors-presentation.pdf";
     },

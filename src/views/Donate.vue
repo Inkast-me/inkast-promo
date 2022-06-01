@@ -138,7 +138,7 @@ export default defineComponent({
   animation: fromNothingToGreatest 0.2s cubic-bezier(0.4, -0.14, 0.47, 0.89);
   width: 100%;
   min-height: 100vh;
-  background: #111111;
+  background: #000;
   color: #fff;
   padding: 132px 64px 32px;
   position: relative;
@@ -266,7 +266,6 @@ export default defineComponent({
     margin: 0 0 12px 0;
     font-weight: 400;
     font-size: 40px;
-    line-height: 50px;
     letter-spacing: -0.02em;
     font-feature-settings: "pnum" on, "lnum" on;
 
