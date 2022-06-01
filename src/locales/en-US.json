@@ -618,9 +618,9 @@
   },
   "Investors": {
     "hero": {
-      "CEO": "Alena S.",
-      "CFO": "Fedor K.",
-      "COO": "Alexander G.",
+      "CEO": "Alena Samarina",
+      "CFO": "Fedor Kabachenko",
+      "COO": "Alexander Greene",
       "contacts": "Contact us"
     },
     "rootcase": {
@@ -631,15 +631,15 @@
     },
     "mvp": {
       "mvpmap": {
-        "image": "ru"
+        "image": "en"
       },
-      "footnote": "Часть функций является конфиденциальными и&nbsp;в&nbsp;списках не&nbsp;указываются",
+      "footnote": "Some of&nbsp;the functions are confidentional and are not specified here",
       "legenda01": "MVP",
-      "legenda02": "Улучшить после MVP"
+      "legenda02": "Improve after MVP"
     },
     "conclusions": {
-      "title": "Выводы",
-      "description": "Наш сервис не&nbsp;только поможет большинству людей найти свою половинку, друга или собеседника с&nbsp;похожими интересами, но&nbsp;и&nbsp;затронет решение проблем национального уровня: уменьшит количество разводов в&nbsp;стране, увеличит рождаемость, уменьшит количество суицидов, прием наркотических веществ и&nbsp;поможет снизить заболеваемость психическими расстройствами"
+      "title": "Conclusions",
+      "description": "Inkast is&nbsp;a&nbsp;service that has no&nbsp;analogues in&nbsp;the market. It&nbsp;helps the users:<ul><li>find their soulmate, friend or&nbsp;conversationalist with similar interests</li><li>solve challenges of&nbsp;relationships of&nbsp;our time</li></ul>"
     }
   }
 }

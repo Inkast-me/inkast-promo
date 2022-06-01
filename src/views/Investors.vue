@@ -8,26 +8,40 @@
           <div class="stuff">
             <img src="@/assets/invest/alena.png" alt="" />
             <div class="stuff-info">
-              <a href="https://t.me/alencombo" v-html="t('Investors.hero.CEO')" target="_blank"></a>
+              <a
+                href="https://t.me/alencombo"
+                v-html="t('Investors.hero.CEO')"
+                target="_blank"
+              ></a>
               <span>CEO</span>
             </div>
           </div>
           <div class="stuff">
             <img src="@/assets/invest/fedor.png" alt="" />
             <div class="stuff-info">
-              <a href="https://t.me/padobrik" v-html="t('Investors.hero.CFO')" target="_blank"></a>
+              <a
+                href="https://t.me/padobrik"
+                v-html="t('Investors.hero.CFO')"
+                target="_blank"
+              ></a>
               <span>CFO</span>
             </div>
           </div>
           <div class="stuff">
             <img src="@/assets/invest/alexander.png" alt="" />
             <div class="stuff-info">
-              <a href="https://t.me/greeneboy" v-html="t('Investors.hero.COO')" target="_blank"></a>
+              <a
+                href="https://t.me/greeneboy"
+                v-html="t('Investors.hero.COO')"
+                target="_blank"
+              ></a>
               <span>COO</span>
             </div>
           </div>
           <div class="invest-us">
-            <a href="mailto:invest@inkast.me?subject=invest">invest@inkast.me</a>
+            <a href="mailto:invest@inkast.me?subject=invest"
+              >invest@inkast.me</a
+            >
             <span v-html="t('Investors.hero.contacts')"></span>
           </div>
         </div>
@@ -104,7 +118,6 @@ export default defineComponent({
     return {
       t,
     };
-    
   },
 });
 </script>
@@ -115,7 +128,6 @@ export default defineComponent({
   background: #000;
   padding: 0 64px;
   position: relative;
-  max-width: 1920px;
   margin: 0 auto;
   color: #fff;
 
@@ -174,7 +186,7 @@ nav {
   // TODO: Upload Graphik LCG font
   font-family: "Graphik LCG";
   font-style: normal;
-  font-size: 30.4146px;
+  font-size: 26px;
   align-items: center;
 
   a {
@@ -199,6 +211,18 @@ nav {
   }
 }
 
+@media (min-width: 1700px) {
+  .invest__hero-line {
+    font-size: 30px;
+  }
+
+  .stuff img {
+    width: 116px;
+    height: auto;
+  }
+  
+}
+
 .invest__hero-line::after {
   content: "";
   display: block;
@@ -213,7 +237,7 @@ nav {
   display: flex;
   flex-flow: wrap row;
   align-items: center;
-  gap: 64px;
+  gap: 32px;
 }
 
 .stuff {
@@ -222,7 +246,7 @@ nav {
   align-items: center;
 
   img {
-    width: 116px;
+    width: 96px;
     height: auto;
     padding-right: 24px;
   }
@@ -251,6 +275,12 @@ nav {
 
   a {
     width: fit-content;
+  }
+}
+
+@media (max-width: 1240px) {
+  .invest-us {
+    margin-left: 0;
   }
 }
 
@@ -372,9 +402,9 @@ h2::after {
   }
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
+// ::-webkit-scrollbar {
+//   display: none;
+// }
 
 .invest__footnote {
   font-family: "Graphik LCG";
@@ -510,7 +540,7 @@ h2::after {
     background-repeat: no-repeat;
     background-size: 100%;
   }
-  
+
   .invest__hero {
     h1::after {
       margin: 0 0 24px 0;
@@ -520,6 +550,7 @@ h2::after {
 
   .invest__hero-stuff {
     column-gap: 0;
+    column-gap: 32px;
     row-gap: 32px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
