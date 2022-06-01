@@ -362,9 +362,27 @@ h2::after {
 }
 
 .invest__mvp-map {
-  overflow-x: auto;
+  overflow-x: scroll;
   position: relative;
+
+  
 }
+  .invest__mvp-map::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .invest__mvp-map::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+
+  .invest__mvp-map::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+  }
+
+  .invest__mvp-map::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
 
 .invest__hidden-aria {
   position: absolute;
