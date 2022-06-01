@@ -698,6 +698,12 @@ h2::after {
   }
 }
 
+@media (max-height: 720px) {
+  .invest {
+    background: #000 !important;
+  }
+}
+
 @media (max-height: 667px) {
   .invest {
     background: #000 url("../assets/invest/smhands.svg");
@@ -705,4 +711,5 @@ h2::after {
     background-size: 100%;
   }
 }
+
 </style>
