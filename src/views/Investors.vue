@@ -8,26 +8,26 @@
           <div class="stuff">
             <img src="@/assets/invest/alena.png" alt="" />
             <div class="stuff-info">
-              <a href="" v-html="t('Investors.hero.CEO')"></a>
+              <a href="https://t.me/alencombo" v-html="t('Investors.hero.CEO')" target="_blank"></a>
               <span>CEO</span>
             </div>
           </div>
           <div class="stuff">
             <img src="@/assets/invest/fedor.png" alt="" />
             <div class="stuff-info">
-              <a href="" v-html="t('Investors.hero.CFO')"></a>
+              <a href="https://t.me/padobrik" v-html="t('Investors.hero.CFO')" target="_blank"></a>
               <span>CFO</span>
             </div>
           </div>
           <div class="stuff">
             <img src="@/assets/invest/alexander.png" alt="" />
             <div class="stuff-info">
-              <a href="" v-html="t('Investors.hero.COO')"></a>
+              <a href="https://t.me/greeneboy" v-html="t('Investors.hero.COO')" target="_blank"></a>
               <span>COO</span>
             </div>
           </div>
           <div class="invest-us">
-            <a href="">invest@inkast.me</a>
+            <a href="mailto:invest@inkast.me?subject=invest">invest@inkast.me</a>
             <span v-html="t('Investors.hero.contacts')"></span>
           </div>
         </div>
@@ -65,7 +65,7 @@
         />
       </div>
       <div class="scroll__indicator">
-        <img src="@/assets/invest/arrow_right.svg" alt="" />
+        <img src="@/assets/invest/arrow_right.svg" alt="scroll right" />
       </div>
       <div class="invest__footnote" v-html="t('Investors.mvp.footnote')"></div>
     </section>
@@ -74,8 +74,8 @@
       <p v-html="t('Investors.conclusions.description')"></p>
     </section>
     <div class="invest__country">
-      <img class="dmap" src="@/assets/invest/worldwide.png" alt="" />
-      <img class="mmap" src="@/assets/invest/mapp.png" alt="" />
+      <img class="dmap" src="@/assets/invest/worldwide.png" alt="worldwide" />
+      <img class="mmap" src="@/assets/invest/mapp.png" alt="worldwide mobile" />
     </div>
   </div>
 </template>
@@ -622,6 +622,7 @@ h2::after {
   .invest {
     background: #000 url("../assets/invest/mhands.svg");
     background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   .mmap {
