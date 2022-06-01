@@ -505,6 +505,19 @@ h2::after {
 }
 
 @media (max-width: 768px) {
+  .invest {
+    background: #000 url("../assets/invest/smhands.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  
+  .invest__hero {
+    h1::after {
+      margin: 0 0 24px 0;
+      line-height: 1;
+    }
+  }
+
   .invest__hero-stuff {
     column-gap: 0;
     row-gap: 32px;
@@ -636,7 +649,9 @@ h2::after {
 
 @media (max-height: 667px) {
   .invest {
-    background: #000;
+    background: #000 url("../assets/invest/smhands.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
 </style>

@@ -365,6 +365,16 @@ export default defineComponent({
       color: #ffffff33;
     }
 
+    &:nth-child(3)::after {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      background: url("../assets/invest/star.svg") no-repeat;
+      background-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
+
     &:nth-child(4)::after {
       content: "";
       display: inline-block;
