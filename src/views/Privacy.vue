@@ -653,7 +653,7 @@ export default defineComponent({
 
   width: 100%;
   min-height: 100vh;
-  background: #111111;
+  background: #000;
   padding: 144px 6vw 64px;
   position: relative;
   max-width: 1280px;
