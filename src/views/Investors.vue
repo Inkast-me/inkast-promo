@@ -54,7 +54,7 @@
         <div class="root-case__details">
           <p v-html="t('Investors.rootcase.text')"></p>
           <router-link
-            :to="'/invest_' + locale == 'en-US' ? 'en' : 'ru'"
+            :to="language_link"
             class="invest__presentation"
             v-html="t('Investors.rootcase.button')"
           >
@@ -95,7 +95,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
+import { computed, defineComponent, onMounted } from "vue";
 import Navbar from "@/components/Navbar.vue";
 import { useI18n } from "vue-i18n";
 
@@ -115,9 +115,12 @@ export default defineComponent({
 
     const { t, locale } = useI18n();
 
+    const language_link = computed(() => `/invest_${locale.value == 'en-US' ? 'en' : 'ru'}`)
+
     return {
       t,
-      locale
+      locale,
+      language_link
     };
   },
 });
