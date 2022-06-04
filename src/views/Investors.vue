@@ -54,7 +54,7 @@
         <div class="root-case__details">
           <p v-html="t('Investors.rootcase.text')"></p>
           <router-link
-            to="/invest__presentation"
+            to="/invest_ru"
             class="invest__presentation"
             v-html="t('Investors.rootcase.button')"
           >
@@ -719,5 +719,4 @@ h2::after {
     background-size: 100%;
   }
 }
-
 </style>
