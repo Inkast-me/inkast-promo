@@ -54,7 +54,7 @@
         <div class="root-case__details">
           <p v-html="t('Investors.rootcase.text')"></p>
           <router-link
-            to="/invest_ru"
+            :to="'/invest_' + locale == 'en-US' ? 'en' : 'ru'"
             class="invest__presentation"
             v-html="t('Investors.rootcase.button')"
           >
@@ -113,10 +113,11 @@ export default defineComponent({
       });
     });
 
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
 
     return {
       t,
+      locale
     };
   },
 });
