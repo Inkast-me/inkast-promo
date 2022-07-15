@@ -105,7 +105,6 @@ export default defineComponent({
     Navbar,
   },
   setup() {
-    // TODO: fix position
     onMounted(() => {
       window.scrollTo({
         top: 0,
@@ -115,12 +114,14 @@ export default defineComponent({
 
     const { t, locale } = useI18n();
 
-    const language_link = computed(() => `/invest_${locale.value == 'en-US' ? 'en' : 'ru'}`)
+    const language_link = computed(
+      () => `/invest_${locale.value == "en-US" ? "en" : "ru"}`
+    );
 
     return {
       t,
       locale,
-      language_link
+      language_link,
     };
   },
 });
