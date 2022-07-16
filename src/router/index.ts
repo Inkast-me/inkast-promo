@@ -63,7 +63,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/introduce",
-    name: "Invest",
+    name: "Introduce",
     component: () =>
       import(/* webpackChunkName: "donate" */ "../views/Introduce.vue"),
   },
