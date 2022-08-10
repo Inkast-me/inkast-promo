@@ -103,7 +103,7 @@ export default defineComponent({
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
-    font-size: 48px;
+    font-size: 18px;
     line-height: 120%;
     letter-spacing: -0.025em;
     color: rgba(#ffffff, 0.6);
@@ -112,6 +112,10 @@ export default defineComponent({
     mark {
       background-color: transparent;
       color: rgba(#ffffff, 1);
+    }
+
+    @media (min-width: 768px) {
+      font-size: 48px;
     }
   }
 
