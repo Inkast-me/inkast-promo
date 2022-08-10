@@ -38,6 +38,11 @@
           target="_blank"
           v-html="t('Home.nav.support')"
         ></a>
+        <router-link
+          to="/survey"
+          class="nav__link"
+          v-html="t('routes.Survey')"
+        ></router-link>
       </div>
       <div class="nav__additional">
         <div
@@ -95,6 +100,11 @@
         target="_blank"
         v-html="t('Home.nav.support')"
       ></a>
+      <router-link
+          to="/survey"
+          class="nav__link"
+          v-html="t('routes.Survey')"
+        ></router-link>
       <router-link
         to="/#follow"
         class="nav__join"
@@ -347,6 +357,7 @@ export default defineComponent({
   flex-flow: column;
   gap: 44px;
   z-index: 1000;
+  overflow: auto;
 
   .nav__link {
     font-weight: 400;

@@ -10,9 +10,17 @@
         <img :src="require('@/assets/logo.svg')" alt="InKast" />
       </router-link>
       <div class="nav__links-wrapper">
-        <router-link class="nav__link" to="/survey">
+        <router-link class="nav__link"
+        :to="{
+          name: $route.name != 'Survey' ? 'Survey' : 'Home'
+        }">
           <img :src="require('@/assets/survey/chevron.svg')" alt="Chevron" />
-          <span>{{ t("routes.Home") }}</span>
+          <span>{{ 
+          $route.name != 'Survey' ?
+          t('routes.Survey')
+          :
+          t("routes.Home")
+          }}</span>
         </router-link>
       </div>
       <div
