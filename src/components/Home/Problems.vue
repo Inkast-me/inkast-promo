@@ -14,9 +14,10 @@
     <div class="problems__scroll">
       <div
         class="scroll__wrapper"
-        v-for="index in 3"
+        v-for="index in 4"
         :key="index"
         :data-problem-id="index - 1"
+        @mouseover="currentProblem = index - 1"
       >
         <div
           class="scroll__title"
@@ -37,54 +38,19 @@
           />
         </div>
       </div>
-      <div class="scroll__wrapper_last">
-        <div class="scroll__wrapper" :data-problem-id="3">
-          <div
-            class="scroll__title"
-            v-html="t(`Home.problems.cards[3].title`)"
-          ></div>
-          <div
-            class="scroll__description"
-            v-html="t(`Home.problems.cards[3].description`)"
-          ></div>
-          <div class="scroll__image">
-            <img
-              :src="
-                require(`@/assets/cards/problems/${t(
-                  `Home.problems.cards[3].image`
-                )}_mini.png`)
-              "
-              :alt="t(`Home.problems.cards[3].title`)"
-            />
-          </div>
-        </div>
-        <Button
-          href="#follow"
-          class="scroll__join"
-          v-html="t('Home.problems.join')"
-        ></Button>
-
-        <div class="scroll__void"></div>
-      </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, ref } from "vue";
-import Button from "@/components/Button.vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
-  components: {
-    Button,
-  },
-
   setup() {
     const { t } = useI18n();
 
     const currentProblem = ref(0);
-
     const scrollHandler = (event: Event) => {
       document.querySelectorAll("[data-problem-id]").forEach((item) => {
         const el = event.target as HTMLElement;
@@ -112,11 +78,9 @@ export default defineComponent({
   overflow-y: auto;
   position: relative;
   gap: 40px;
-  min-height: 95vh !important;
 
   @media (min-width: 992px) {
     grid: min-content / repeat(2, 1fr);
-    height: 76vh;
   }
 
   &::-webkit-scrollbar {
@@ -152,7 +116,6 @@ export default defineComponent({
       }
     }
 
-    // TODO: fix size of big img like in a design. Also, fix a margin of imgs
     img {
       display: none;
       margin: 0 auto;

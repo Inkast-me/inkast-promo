@@ -51,6 +51,7 @@
         </div>
         <div class="donate__links">
           <a
+            @click.stop="event('Clicked Tinkoff')"
             href="https://www.tinkoff.ru/rm/samarina.alena19/LoAhG2156/"
             class="donate__links-item"
             target="_blank"
@@ -68,6 +69,7 @@
             </div>
           </a>
           <a
+            @click.stop="event('Clicked VK')"
             href="https://vk.com/inkast_me?source=description&w=donut_payment-212269763"
             class="donate__links-item"
             target="_blank"
@@ -87,6 +89,7 @@
       </div>
       <div class="donate__footer">
         <a
+          @click.stop="event('Clicked Problems')"
           href="mailto:donation@inkast.me?subject=Проблемы с донатом"
           target="_blank"
           v-html="t('Donate.problems')"
@@ -105,9 +108,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import Navbar from "@/components/Navbar.vue";
 import { useI18n } from "vue-i18n";
+import { event } from "vue-gtag";
 
 export default defineComponent({
   name: "Donate",
@@ -117,8 +121,13 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
 
+    onMounted(() => {
+      event("enter Donate");
+    });
+
     return {
       t,
+      event,
     };
   },
 });
@@ -129,7 +138,7 @@ export default defineComponent({
   animation: fromNothingToGreatest 0.2s cubic-bezier(0.4, -0.14, 0.47, 0.89);
   width: 100%;
   min-height: 100vh;
-  background: #111111;
+  background: #000;
   color: #fff;
   padding: 132px 64px 32px;
   position: relative;
@@ -257,7 +266,6 @@ export default defineComponent({
     margin: 0 0 12px 0;
     font-weight: 400;
     font-size: 40px;
-    line-height: 50px;
     letter-spacing: -0.02em;
     font-feature-settings: "pnum" on, "lnum" on;
 

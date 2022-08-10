@@ -60,16 +60,15 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-// .home section {
-//   min-height: auto !important;
-//   margin-bottom: 32px;
-// }
+.home section {
+  min-height: auto !important;
+  margin-bottom: 32px;
+}
 
 .home__show {
   display: flex;
   flex-flow: column;
   gap: 32px;
-  background: #111;
 
   .show__header {
     font-weight: 400;
@@ -99,7 +98,6 @@ export default defineComponent({
       background-size: cover;
     }
 
-    // TODO: fix a background trouble.
     .show__button:hover {
       opacity: 0.9;
     }

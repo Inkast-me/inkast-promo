@@ -59,9 +59,9 @@
           <a
             class="member__link"
             target="_blank"
-            :href="defineLink(t(`Home.team.members[${index - 1}].link`))"
-            >{{ defineLinkText(t(`Home.team.members[${index - 1}].link`)) }}</a
-          >
+            href="mailto:info@inkast.me"
+            v-html="t(`Home.team.members[${currentMember}].link`)"
+          ></a>
         </div>
       </div>
       <div class="team__description">
@@ -94,11 +94,9 @@
         <a
           class="member__link"
           target="_blank"
-          :href="defineLink(t(`Home.team.members[${currentMember}].link`))"
-          >{{
-            defineLinkText(t(`Home.team.members[${currentMember}].link`))
-          }}</a
-        >
+          href="mailto:info@inkast.me"
+          v-html="t(`Home.team.members[${currentMember}].link`)"
+        ></a>
       </div>
     </div>
   </section>
@@ -236,6 +234,10 @@ export default defineComponent({
         grid-template-columns: repeat(4, minmax(150px, 220px));
         grid-template-rows: repeat(2, minmax(180px, min-content));
         justify-content: flex-start;
+      }
+
+      @media (min-width: 1680px) {
+        flex: 1 1 20%;
       }
 
       .team__member {

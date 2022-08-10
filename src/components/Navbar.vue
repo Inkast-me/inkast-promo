@@ -1,47 +1,63 @@
 <template>
-  <nav class="nav__wrapper" :class="{ nav__wrapper_modal: openModal }">
-    <router-link to="/" class="nav__logo">
-      <img :src="require('@/assets/logo.svg')" alt="InKast" />
-    </router-link>
-
-    <div class="nav__links-wrapper">
-      <router-link
-        to="/#product"
-        class="nav__link"
-        v-html="t('Home.nav.product')"
-        @click="scrollIntoView('#product')"
-      ></router-link>
-      <router-link
-        to="/#team"
-        class="nav__link"
-        v-html="t('Home.nav.team')"
-        @click="scrollIntoView('#team')"
-      ></router-link>
-      <router-link
-        to="/donate"
-        class="nav__link"
-        v-html="t('Home.nav.donate')"
-      ></router-link>
-    </div>
-
-    <div class="nav__additional">
-      <div
-        class="nav__language"
-        @click="switchLang"
-        v-html="t('Home.nav.language')"
-      ></div>
-      <router-link
-        to="/#follow"
-        class="nav__join"
-        v-html="t('Home.nav.join')"
-        @click="scrollIntoView('#follow')"
-      ></router-link>
-      <img
-        @click="openModal = !openModal"
-        class="nav__burger"
-        :src="require(`@/assets/${openModal ? 'close' : 'burger'}.svg`)"
-        alt="Изначально, наш проект назывался МетаСеть:)"
-      />
+  <nav
+    class="nav__wrapper"
+    :class="{ nav__wrapper_modal: openModal }"
+    ref="header"
+    @mouseenter="mouseEnterHandler"
+  >
+    <div class="content__wrapper">
+      <router-link to="/" class="nav__logo">
+        <img :src="require('@/assets/logo.svg')" alt="InKast" />
+      </router-link>
+      <div class="nav__links-wrapper">
+        <router-link
+          to="/#product"
+          class="nav__link"
+          v-html="t('Home.nav.product')"
+          @click="scrollIntoView('#product')"
+        ></router-link>
+        <router-link
+          to="/#team"
+          class="nav__link"
+          v-html="t('Home.nav.team')"
+          @click="scrollIntoView('#team')"
+        ></router-link>
+        <router-link
+          to="/invest"
+          class="nav__link"
+          v-html="t('Home.nav.invest')"
+        ></router-link>
+        <router-link
+          to="/donate"
+          class="nav__link"
+          v-html="t('Home.nav.donate')"
+        ></router-link>
+        <a
+          href="mailto:info@inkast.me"
+          class="nav__link"
+          target="_blank"
+          v-html="t('Home.nav.support')"
+        ></a>
+      </div>
+      <div class="nav__additional">
+        <div
+          class="nav__language"
+          @click="switchLang"
+          v-html="t('Home.nav.language')"
+        ></div>
+        <router-link
+          to="/#follow"
+          class="nav__join"
+          v-html="t('Home.nav.join')"
+          @click="scrollIntoView('#follow')"
+        ></router-link>
+        <img
+          @click="openModal = !openModal"
+          class="nav__burger"
+          :src="require(`@/assets/${openModal ? 'close' : 'burger'}.svg`)"
+          alt="Изначально, наш проект назывался МетаСеть:)"
+        />
+      </div>
     </div>
   </nav>
 
@@ -62,11 +78,23 @@
         @click="scrollIntoView('#team')"
       ></router-link>
       <router-link
+        to="/invest"
+        class="nav__link"
+        :class="{ active: route.name == 'Invest' }"
+        v-html="t('Home.nav.invest')"
+      ></router-link>
+      <router-link
         to="/donate"
         class="nav__link"
         :class="{ active: route.name == 'Donate' }"
         v-html="t('Home.nav.donate')"
       ></router-link>
+      <a
+        href="mailto:info@inkast.me"
+        class="nav__link"
+        target="_blank"
+        v-html="t('Home.nav.support')"
+      ></a>
       <router-link
         to="/#follow"
         class="nav__join"
@@ -78,7 +106,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, onMounted, onUnmounted, Ref, ref } from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
 
@@ -88,6 +116,40 @@ export default defineComponent({
     const openModal = ref(false);
     const { t, availableLocales, locale } = useI18n();
     const yOffset = -24;
+
+    const lastScroll = ref(0);
+    const defaultOffset = 100;
+    const header: Ref<null | HTMLElement> = ref(null);
+
+    const mouseEnterHandler = () => {
+      if (header.value) {
+        header.value.classList.remove("hide");
+        if (window.pageYOffset >= window.screen.height) {
+          setTimeout(function () {
+            header.value!.classList.add("hide");
+          }, 5000);
+        }
+      }
+    };
+    const scrollHandler = () => {
+      if (header.value) {
+        const containHide = header.value.classList.contains("hide");
+        const scrollPosition =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (
+          scrollPosition > lastScroll.value &&
+          !containHide &&
+          scrollPosition > defaultOffset
+        ) {
+          //scroll down
+          header.value.classList.add("hide");
+        } else if (scrollPosition < lastScroll.value && containHide) {
+          //scroll up
+          header.value.classList.remove("hide");
+        }
+        lastScroll.value = scrollPosition;
+      }
+    };
 
     const switchLang = () => {
       locale.value =
@@ -109,12 +171,22 @@ export default defineComponent({
       }
     };
 
+    onMounted(() => {
+      document.addEventListener("scroll", scrollHandler);
+    });
+
+    onUnmounted(() => {
+      document.removeEventListener("scroll", scrollHandler);
+    });
+
     return {
       openModal,
       switchLang,
       t,
       scrollIntoView,
       route,
+      header,
+      mouseEnterHandler,
     };
   },
 });
@@ -123,19 +195,31 @@ export default defineComponent({
 <style lang="scss" scoped>
 .nav__wrapper {
   position: fixed;
-  top: 0px;
+  top: 0;
   width: 100%;
-  padding: 40px 6vw 40px;
-  display: grid;
-  place-items: center flex-start;
-  grid: min-content / auto 1fr auto;
-  gap: 32px;
   z-index: 1001;
-  background: #111111;
+
+  .content__wrapper {
+    padding: 16px 6vw;
+    display: grid;
+    place-items: center flex-start;
+    grid: min-content / auto 1fr auto;
+    gap: 4px;
+    background: #000;
+    transition: transform 0.2s ease-in-out;
+
+    @media (min-width: 992px) {
+      gap: 32px;
+    }
+  }
+
+  &.hide .content__wrapper {
+    transform: translateY(-100%);
+  }
 
   &.nav__wrapper_modal {
     position: fixed;
-    background: #111111;
+    background: #000;
   }
 
   .nav__logo {
@@ -147,7 +231,7 @@ export default defineComponent({
     display: none;
     gap: 48px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       display: flex;
     }
 
@@ -161,6 +245,7 @@ export default defineComponent({
       transition: color 0.16s ease-in-out;
       display: inherit;
       color: #ffffff;
+      position: relative;
 
       &:hover,
       &.active {
@@ -173,6 +258,15 @@ export default defineComponent({
     }
 
     .nav__link:nth-child(3)::after {
+      position: absolute;
+      content: "";
+      background: url("../assets/invest/star.svg") no-repeat;
+      right: -16px;
+      width: 13.1px;
+      height: 13.1px;
+    }
+
+    .nav__link:nth-child(4)::after {
       content: "";
       display: inline-block;
       margin-bottom: 12px;
@@ -222,7 +316,7 @@ export default defineComponent({
       transition: background-color 0.16s ease-in-out;
       text-decoration: none;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         display: initial;
       }
 
@@ -236,7 +330,7 @@ export default defineComponent({
       cursor: pointer;
       margin-right: auto;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         display: none;
       }
     }
@@ -247,7 +341,7 @@ export default defineComponent({
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: #111111;
+  background: #000;
   padding: 156px 24px 24px;
   display: flex;
   flex-flow: column;
@@ -272,6 +366,16 @@ export default defineComponent({
     }
 
     &:nth-child(3)::after {
+      position: absolute;
+      display: inline-block;
+      content: "";
+      background: url("../assets/invest/star.svg") no-repeat;
+      background-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:nth-child(4)::after {
       content: "";
       display: inline-block;
       margin-bottom: calc(0.9em - 16px);

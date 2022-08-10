@@ -10,7 +10,7 @@
       ></div>
       <img
         class="easy__illustration"
-        :src="require('@/assets/cards/easy/illustration.svg')"
+        :src="require('@/assets/cards/easy/illustration.png')"
         alt="Me"
       />
     </div>
@@ -37,7 +37,8 @@ export default defineComponent({
   // display: flex;
   // flex-flow: column;
   // justify-content: space-between;
-  background: #c04cf6 url("../../assets/cards/easy/background.svg");
+  position: relative;
+  background: #c04cf6 url("../../assets/cards/easy/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -68,7 +69,6 @@ export default defineComponent({
   .easy__wrapper {
     display: grid;
     gap: 40px;
-    position: relative;
 
     .easy__title {
       font-weight: 400;
@@ -96,20 +96,21 @@ export default defineComponent({
         font-size: 22px;
       }
     }
-    // TODO: make it like in a design with the same height and bottom: 40px from an edge of a card
-    // also upload a 2x PNG instead of svg
     .easy__illustration {
       align-self: flex-end;
       width: 100%;
       margin-left: -20px;
-      // height: 170px;
 
       @media (min-width: 768px) {
-        height: 340px;
+        height: 240px;
         width: auto;
         position: absolute;
-        bottom: -140px;
+        bottom: 0px;
         right: -90px;
+      }
+
+      @media (min-width: 992px) {
+        height: 340px;
       }
     }
   }

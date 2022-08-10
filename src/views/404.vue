@@ -44,7 +44,7 @@ export default defineComponent({
   animation: fromNothingToGreatest 0.2s cubic-bezier(0.4, -0.14, 0.47, 0.89);
   width: 100%;
   min-height: 100vh;
-  background: #111111;
+  background: #000;
   color: #fff;
   padding: 132px 64px 32px;
   position: relative;
@@ -64,7 +64,7 @@ export default defineComponent({
   border-radius: 24px;
   min-height: calc(100vh - 200px);
 
-  background: #d172fd url("../assets/cards/404.svg");
+  background: #d172fd url("../assets/cards/404.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

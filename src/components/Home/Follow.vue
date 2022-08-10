@@ -64,7 +64,7 @@
       <span v-html="t('Home.follow.additional')"></span>
       <span
         class="follow__input"
-        :class="{error: nameError}"
+        :class="{ error: nameError }"
         :data-error="t('Home.follow.inputs.nameError')"
       >
         <input
@@ -77,7 +77,7 @@
       </span>
       <span
         class="follow__input"
-        :class="{error: emailError}"
+        :class="{ error: emailError }"
         :data-error="t('Home.follow.inputs.emailError')"
       >
         <input
@@ -88,6 +88,17 @@
           @click="emailError = false"
         />
       </span>
+
+      <span
+        class="follow__input checkbox"
+        :class="{ error: confError }"
+        :data-error="t('Home.follow.inputs.confError')"
+      >
+        <Checkbox
+          v-model="confAgree"
+          :label="t('Home.follow.inputs.confPolicy')"
+        ></Checkbox>
+      </span>
     </div>
     <Button
       class="follow__join"
@@ -96,7 +107,7 @@
     ></Button>
 
     <transition name="modal">
-      <FollowPopup v-if="successModal" @close="successModal = false"/>
+      <FollowPopup v-if="successModal" @close="successModal = false" />
     </transition>
   </section>
 </template>
@@ -105,30 +116,35 @@
 import { defineComponent, ref } from "vue";
 
 import Button from "@/components/Button.vue";
+import Checkbox from "@/components/Checkbox.vue";
 import FollowPopup from "@/components/Home/FollowPopup.vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   components: {
     Button,
-    FollowPopup
+    FollowPopup,
+    Checkbox,
   },
   setup() {
     const { t } = useI18n();
 
     const name = ref("");
-    const nameError = ref(false)
+    const nameError = ref(false);
 
     const email = ref("");
-    const emailError = ref(false)
+    const emailError = ref(false);
 
-    const successModal = ref(false)
+    const confAgree = ref(false);
+    const confError = ref(false);
+
+    const successModal = ref(false);
 
     const emailRegExp =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
     const sendForm = () => {
-      if (name.value && emailRegExp.test(email.value))
+      if (name.value && emailRegExp.test(email.value) && confAgree.value)
         fetch(
           `https://docs.google.com/forms/u/1/d/e/1FAIpQLScaPQfvMJqkB4p12RR1onHLBRwGrbll_lNTu9wV5xwbwMtMbQ/formResponse?entry.539076579=${name.value}&entry.914223913=${email.value}`,
           {
@@ -145,8 +161,9 @@ export default defineComponent({
           successModal.value = true;
         });
       else {
-        if (!name.value) nameError.value = true
-        if (!emailRegExp.test(email.value)) emailError.value = true
+        if (!name.value) nameError.value = true;
+        if (!confAgree.value) confError.value = true;
+        if (!emailRegExp.test(email.value)) emailError.value = true;
       }
     };
 
@@ -157,7 +174,9 @@ export default defineComponent({
       sendForm,
       nameError,
       emailError,
-      successModal
+      successModal,
+      confAgree,
+      confError,
     };
   },
 });
@@ -165,7 +184,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home__follow {
-  background: #d172fd url("../../assets/cards/follow.svg");
+  background: #d172fd url("../../assets/cards/follow.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right;
@@ -253,43 +272,56 @@ export default defineComponent({
     }
 
     .follow__input {
-        margin-bottom: 24px;
-
+      margin-bottom: 24px;
 
       &.error {
         margin-bottom: 48px;
+        position: relative;
 
-        input {
+        > * {
           padding-left: 58px;
         }
-          position: relative;
-  
-          &::after {
-            content: attr(data-error);
-            left: 24px;
-            font-weight: 400;
+
+        &::after {
+          content: attr(data-error);
+          left: 24px;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 140%;
+          letter-spacing: -0.06px;
+          color: #ffffff;
+          position: absolute;
+          bottom: -30px;
+
+          @media (min-width: 768px) {
             font-size: 17px;
-            line-height: 140%;
-            letter-spacing: -0.06px;
-            color: #FFFFFF;
-            position: absolute;
-            bottom: -30px;
-          }
-  
-          &::before {
-            content: "";
-            height: 24px;
-            width: 24px;
-            background-image: url('../../assets/error.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            left: 24px;
-            top: 50%;
-            transform: translateY(-50%);
           }
         }
-      
+
+        &::before {
+          content: "";
+          height: 24px;
+          width: 24px;
+          background-image: url("../../assets/error.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: absolute;
+          left: 24px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &.checkbox {
+          > * {
+            padding-left: 32px;
+          }
+
+          &::before {
+            left: 0;
+          }
+        }
+      }
+
       input {
         font-family: "Inter", sans-serif;
         padding: 12px;
@@ -303,7 +335,7 @@ export default defineComponent({
         text-transform: capitalize;
         color: #292929;
         width: 100%;
-  
+
         @media (min-width: 768px) {
           padding: 24px;
           font-size: 20px;
@@ -323,7 +355,7 @@ export default defineComponent({
       line-height: 114%;
       font-feature-settings: "pnum" on, "lnum" on;
       color: #ffffff;
-      max-width: 537px;
+      max-width: 560px;
 
       @media (min-width: 768px) {
         font-size: 28px;
@@ -333,6 +365,11 @@ export default defineComponent({
   .follow__join {
     grid-area: join;
 
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
     @media (min-width: 768px) {
       justify-self: flex-start;
     }
@@ -341,7 +378,7 @@ export default defineComponent({
 
 .modal-enter-active,
 .modal-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .modal-enter-from,

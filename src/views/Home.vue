@@ -1,19 +1,23 @@
 <template>
   <Navbar />
   <div class="home">
-    <Greeting v-scroll:1 class="home__card"/>
+    <Greeting />
 
-    <Selection v-scroll:2 class="home__card"/>
+    <Selection />
 
-    <Couple v-scroll:3 class="home__card"/>
+    <Couple />
 
-    <Intrestings v-scroll:4 class="home__card"/>
+    <Intrestings />
 
-    <Rare v-scroll:5 class="home__card"/>
+    <Rare />
 
-    <HowItWorks v-scroll:6 class="home__card"/>
+    <HowItWorks />
 
-    <NotEasy v-scroll:7 class="home__card"/>
+    <NotEasy />
+
+    <Algorithm />
+
+    <Next />
 
     <Problems />
 
@@ -38,6 +42,8 @@ import Intrestings from "@/components/Home/Intrestings.vue";
 import Rare from "@/components/Home/Rare.vue";
 import HowItWorks from "@/components/Home/HowItWorks.vue";
 import NotEasy from "@/components/Home/NotEasy.vue";
+import Algorithm from "@/components/Home/Algorithm.vue";
+import Next from "@/components/Home/Next.vue";
 import Problems from "@/components/Home/Problems.vue";
 import Show from "@/components/Home/Show.vue";
 import Team from "@/components/Home/Team.vue";
@@ -56,11 +62,13 @@ export default defineComponent({
     Rare,
     HowItWorks,
     NotEasy,
+    Algorithm,
     Problems,
     Show,
     Team,
     Follow,
     Footer,
+    Next,
   },
 
   setup() {
@@ -84,47 +92,37 @@ export default defineComponent({
 .home {
   width: 100%;
   min-height: 100vh;
-  background: #111111;
+  background: #000;
   padding: 104px 8px 64px;
   position: relative;
   display: grid;
-  align-content: flex-end;
   gap: 32px;
   max-width: 1920px;
   margin: 0 auto;
-  overflow-x: hidden;
-  height: calc( 12 * 76vh + 11 * 64px );
 
   @media (min-width: 576px) {
-    padding: 104px 16px 64px;
+    padding: 144px 16px 64px;
   }
 
   @media (min-width: 992px) {
-    padding: 104px 64px 32px;
+    padding: 144px 64px 32px;
   }
 
   section + section {
     animation: fromNothingToGreatest 0.2s cubic-bezier(0.4, -0.14, 0.47, 0.89);
     width: 100%;
-    min-height: 76vh;
+    // min-height: min(76vh, 550px);
+    min-height: 550px;
     border-radius: 24px;
     padding: 24px 16px;
-    align-self: flex-end;
-    z-index: 1;
+
+    @media (min-width: 576px) {
+      min-height: 76vh;
+    }
 
     @media (min-width: 768px) {
       padding: 48px 40px 64px;
     }
-  }
-
-  .home__card {
-    transition: opacity .5s linear, transform .1s linear;
-    transform-origin: top center;
-    position: fixed;
-    top: var(--translateY, 0);
-    transform: scale(var(--scale, 1));
-    width: calc(100vw - 128px)!important;
-    z-index: 0;
   }
 }
 </style>
