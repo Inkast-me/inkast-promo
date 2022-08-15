@@ -66,31 +66,31 @@ const routes: Array<RouteRecordRaw> = [
     path: "/survey",
     name: "Survey",
     component: () =>
-      import(/* webpackChunkName: "donate" */ "@/views/Survey.vue"),
+      import(/* webpackChunkName: "donate" */ "@/views/Survey/Survey.vue"),
   },
   {
     path: "/personality",
     name: "Personality",
     component: () =>
-      import(/* webpackChunkName: "donate" */ "@/views/Personality.vue"),
+      import(/* webpackChunkName: "donate" */ "@/views/Survey/Personality.vue"),
   },
   {
     path: "/personality-correction",
     name: "Personality Correction",
     component: () =>
-      import(/* webpackChunkName: "donate" */ "@/views/Correction.vue"),
+      import(/* webpackChunkName: "donate" */ "@/views/Survey/Correction.vue"),
   },
   {
     path: "/compability",
     name: "Compability",
     component: () =>
-      import(/* webpackChunkName: "donate" */ "@/views/Compability.vue"),
+      import(/* webpackChunkName: "donate" */ "@/views/Survey/Compability.vue"),
   },
   {
     path: "/interests",
     name: "Interests",
     component: () =>
-      import(/* webpackChunkName: "donate" */ "@/views/Interests.vue"),
+      import(/* webpackChunkName: "donate" */ "@/views/Survey/Interests.vue"),
   },
   {
     path: "/privacy",

@@ -15,6 +15,12 @@
       <p>{{ activePage }}/{{ totalPages }}</p>
     </div>
 
+    <div class="footer__progress" v-if="typeof progress == 'number'">
+      <progress :value="progress" max="100"></progress>
+
+      <p>{{progress}}%</p>
+    </div>
+
     <div class="footer__buttons-wrapper">
       <template v-if="totalPages">
         <Button
@@ -24,6 +30,9 @@
           >Назад</Button
         >
         <Button
+          :class="{
+            disabled: disabled,
+          }"
           data-variant="primary"
           v-if="activePage < totalPages"
           @click="$emit('forward')"
@@ -35,6 +44,7 @@
         v-if="activePage == totalPages"
         :class="{
           'button__w-100--mobile': !totalPages,
+          disabled: disabled,
         }"
         @click="$emit('submit')"
         >Завершить</Button
@@ -58,6 +68,14 @@ export default defineComponent({
     activePage: {
       type: Number,
       default: 0,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
+    progress: {
+      type: Number,
+      default: null,
     },
   },
   components: {
@@ -127,6 +145,41 @@ footer {
       line-height: 120.6%;
       letter-spacing: -0.015em;
       color: #ffffff;
+    }
+  }
+
+  .footer__progress {
+    padding: 0 21px 17px;
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+
+    progress {
+      -webkit-appearance: none;
+      appearance: none;
+
+      width: 180px;
+      height: 12px;
+
+      &::-webkit-progress-bar {
+        background: #1C1C1C;
+        border-radius: 86.6418px;
+      }
+
+      &::-webkit-progress-value {
+        transform: all .2s ease-in-out;
+        background-color: #CC5FFF;
+        border-radius: 86.6418px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 120.6%;
+      letter-spacing: -0.015em;
+      color: #FFFFFF;
+      margin: 0;
     }
   }
 

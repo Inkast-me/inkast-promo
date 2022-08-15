@@ -73,7 +73,10 @@ export default defineComponent({
       isPersonalityNotFilled: computed(
         () => pers_type.value.filter((v) => !v).length
       ),
-      isCompabilityNotFilled: true,
+      isCompabilityNotFilled: computed(
+        () =>
+          !(store.state["describes"].length && store.state["qualities"].length)
+      ),
     };
   },
 });
@@ -149,7 +152,6 @@ export default defineComponent({
 
       &.locked {
         pointer-events: none;
-        // cursor: no-drop;/
 
         &::after {
           content: "";
@@ -183,7 +185,7 @@ export default defineComponent({
 
           width: 32px;
           height: 44px;
-          background-image: url("../assets/survey/lock.svg");
+          background-image: url("../../assets/survey/lock.svg");
           background-size: contain;
           background-repeat: no-repeat;
           z-index: 2;

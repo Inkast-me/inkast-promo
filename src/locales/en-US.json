@@ -641,5 +641,104 @@
       "title": "Conclusions",
       "description": "Inkast is&nbsp;a&nbsp;service that has no&nbsp;analogues in&nbsp;the market. It&nbsp;helps the users:<ul><li>find their soulmate, friend or&nbsp;conversationalist with similar interests</li><li>solve challenges of&nbsp;relationships of&nbsp;our time</li></ul>"
     }
+  },
+  "routes": {
+    "Home": "Home",
+    "Survey": "Survey",
+    "Personality": "Personality",
+    "Personality Correction": "Personality Correct",
+    "Compability": "Compability",
+    "Interests": "Interests"
+  },
+  "Survey": {
+    "Personality": [
+      {
+        "n/s": {
+          "left": "Обращаю внимание <br> на детали eng",
+          "right": "Мыслю глобально eng"
+        },
+        "t/f": {
+          "left": "Доверяю разуму eng",
+          "right": "Прислушиваюсь к сердцу eng"
+        },
+        "p/j": {
+          "left": "Строю планы eng",
+          "right": "Действую спонтанно eng"
+        },
+        "e/i": {
+          "left": "Предпочитаю говорить eng",
+          "right": "Предпочитаю слушать eng"
+        }
+      },
+      {
+        "n/s": {
+          "left": "Не люблю перемены eng",
+          "right": "Открыт новому eng"
+        },
+        "t/f": {
+          "left": "Реалист eng",
+          "right": "Мечтатель eng"
+        },
+        "p/j": {
+          "left": "Делаю всё сразу eng",
+          "right": "Откладываю на потом eng"
+        },
+        "e/i": {
+          "left": "Делюсь своими эмоциями eng",
+          "right": "Держу чувства в себе eng"
+        }
+      },
+      {
+        "n/s": {
+          "left": "Сосредоточен на настоящем eng",
+          "right": "Устремлен в будущее eng"
+        },
+        "t/f": {
+          "left": "Руководствуюсь логикой eng",
+          "right": "Движим эмоциями eng"
+        },
+        "p/j": {
+          "left": "Придерживаюсь плана eng",
+          "right": "Действую по ситуации eng"
+        },
+        "e/i": {
+          "left": "Предпочитаю большие компании eng",
+          "right": "Люблю побыть один eng"
+        }
+      },
+      {
+        "n/s": {
+          "left": "Мыслю конкретно eng",
+          "right": "Мыслю абстрактно eng"
+        },
+        "t/f": {
+          "left": "Важнее справедливость eng",
+          "right": "Важнее эмоциональный <br> покой eng"
+        },
+        "p/j": {
+          "left": "Минимизирую риски eng",
+          "right": "Не озабочен <br>последствиями eng"
+        },
+        "e/i": {
+          "left": "Сначала говорю,<br> потом думаю eng",
+          "right": "Сначала думаю,<br>потом говорю eng"
+        }
+      }
+    ],
+    "Personality Correction": {
+      "e": "Пессимизм eng",
+      "i": "Оптимизм eng",
+      "n": "Логика eng",
+      "s": "Интуиция eng",
+      "t": "Разум eng",
+      "f": "Чувства eng",
+      "p": "Планирование eng",
+      "j": "Спонтанность eng"
+    },
+    "Compability": {
+      "at_least": "Выберите хотя бы {n} качества eng",
+      "describes_title": "Как бы Вы себя охарактеризовали? eng",
+      "qualities_title": "Отличительные черты eng"
+    }
   }
 }

@@ -101,10 +101,10 @@
         v-html="t('Home.nav.support')"
       ></a>
       <router-link
-          to="/survey"
-          class="nav__link"
-          v-html="t('routes.Survey')"
-        ></router-link>
+        to="/survey"
+        class="nav__link"
+        v-html="t('routes.Survey')"
+      ></router-link>
       <router-link
         to="/#follow"
         class="nav__join"

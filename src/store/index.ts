@@ -6,6 +6,12 @@ interface Personality {
   "p/j": number[];
   "e/i": number[];
 }
+
+const toggle = (arr: any[], item: any) => {
+  if (arr.includes(item)) return arr.filter((i) => i !== item);
+  else return [...arr, item];
+};
+
 export default createStore({
   state: {
     personality: {
@@ -21,6 +27,11 @@ export default createStore({
       "p/j": "",
       "e/i": "",
     },
+
+    describes: <string[]>[],
+    interest_sections: <string[]>[],
+    interests: <string[]>[],
+    qualities: <string[]>[],
   },
 
   mutations: {
@@ -29,6 +40,18 @@ export default createStore({
     },
     changePersType(context, { key, value }) {
       context.pers_type[key as keyof Personality] = value;
+    },
+    toggleDescribes(context, { value }) {
+      context.describes = toggle(context.describes, value);
+    },
+    changeInterestSections(context, { value }) {
+      context.interest_sections = value;
+    },
+    toggleInterests(context, { value }) {
+      context.interests = toggle(context.interests, value);
+    },
+    toggleQualities(context, { value }) {
+      context.qualities = toggle(context.qualities, value);
     },
   },
   actions: {
@@ -58,3 +81,7 @@ export default createStore({
   },
   modules: {},
 });
+
+export {
+  toggle
+}

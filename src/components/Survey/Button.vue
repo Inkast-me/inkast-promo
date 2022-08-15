@@ -39,5 +39,10 @@
   &:hover {
     opacity: 0.8;
   }
+
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
 }
 </style>
