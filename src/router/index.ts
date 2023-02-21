@@ -35,6 +35,30 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("@/views/404.vue"),
   },
   {
+    path: "/privacy-policy",
+    name: "Privacy-policy",
+    beforeEnter: (to, from, next) => {
+      window.location.href = "../assets/docs/privacy-policy.pdf";
+    },
+    component: () => import("@/views/404.vue"),
+  },
+  {
+    path: "/user-agreement",
+    name: "User-agreement",
+    beforeEnter: (to, from, next) => {
+      window.location.href = "../assets/docs/user-agreement.pdf";
+    },
+    component: () => import("@/views/404.vue"),
+  },
+  {
+    path: "/personal-data",
+    name: "Personal-data",
+    beforeEnter: (to, from, next) => {
+      window.location.href = "../assets/docs/personal-data.pdf";
+    },
+    component: () => import("@/views/404.vue"),
+  },
+  {
     path: "/invest",
     name: "Invest",
     component: () =>
