@@ -89,7 +89,13 @@ const routes: Array<RouteRecordRaw> = [
     path: "/introduce",
     name: "Introduce",
     component: () =>
-      import(/* webpackChunkName: "donate" */ "../views/Introduce.vue"),
+      import(/* webpackChunkName: "introduce" */ "../views/Introduce.vue"),
+  },
+  {
+    path: "/soulmate",
+    name: "Soulmate",
+    component: () =>
+      import(/* webpackChunkName: "soulmate" */ "../views/Soulmate.vue"),
   },
 ];
 
