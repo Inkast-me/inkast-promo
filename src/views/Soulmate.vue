@@ -3,8 +3,8 @@
     <h1>Предсказатель соулмейта</h1>
     <button id="getSoulmate">Найти соулмейта</button>
     <div class="soulmate__attribute">
-        <span>Цвет глаз:</span>
-        <p id="eyeColor"></p>
+      <span>Цвет глаз:</span>
+      <p id="eyeColor"></p>
     </div>
     <p id="hairColor"></p>
     <p id="region"></p>
