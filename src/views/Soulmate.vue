@@ -3,41 +3,30 @@
     <div class="soulmate__contents">
       <div class="fortune-telling__bubble">Гадание</div>
       <h1>На соулмейта</h1>
-      <!-- <button id="getSoulmate">Найти соулмейта</button> -->
       <div class="soulmate__characteristics">
         <div class="soulmate__attribute">
           <span>Цвет глаз:</span>
           <div id="discoverEyeColor" class="hidden__btn">Узнать</div>
-          <!-- <p id="eyeColor"></p> -->
         </div>
         <div class="soulmate__attribute">
           <span>Цвет волос:</span>
           <div id="discoverHairColor" class="hidden__btn">Узнать</div>
-          <!-- <p id="hairColor"></p> -->
         </div>
         <div class="soulmate__attribute">
           <span>Место проживания:</span>
           <div id="discoverRegion" class="hidden__btn">Узнать</div>
-          <!-- <p id="region"></p> -->
         </div>
         <div class="soulmate__attribute">
           <span>Любимая еда:</span>
           <div id="discoverFavoriteFood" class="hidden__btn">Узнать</div>
-          <!-- <p id="favoriteFood"></p> -->
         </div>
         <div class="soulmate__attribute" id="soulmateInterests">
           <span>Интересы:</span>
           <div id="discoverInterests" class="hidden__btn">Узнать</div>
         </div>
-        <!-- <div id="interests">
-          <p id="interestFirst"></p>
-          <p id="interestSecond"></p>
-          <p id="interestThird"></p>
-        </div> -->
         <div class="soulmate__attribute">
           <span>Тип соулмейта:</span>
           <div id="discoverSoulmateType" class="hidden__btn">Узнать</div>
-          <!-- <p id="soulmateType"></p> -->
         </div>
       </div>
       <div class="find-your-soulmate">
