@@ -35,7 +35,10 @@
         <div class="find-your-soulmate__wrapper">
           <img src="@/assets/logo.svg" alt="inkast-logo" />
           <p>
-            Найти своего соулмейта ты<br class="hiddenBr">сможешь в<a href="/"> Инкаст</a
+            Найти своего соулмейта ты<br class="hiddenBr" />сможешь в<a
+              href="/"
+            >
+              Инкаст</a
             ><img
               src="@/assets/soulmate/heart-on-fire.png"
               alt="heart-on-fire"
@@ -54,7 +57,9 @@ export default {
   setup() {
     async function getRandomData() {
       //let response = await fetch("./assets/soulmateCheck/soulmateData.json");
-      let response = await fetch("https://inkast.me/assets/soulmateCheck/soulmateData.json");
+      let response = await fetch(
+        "https://inkast.me/assets/soulmateCheck/soulmateData.json"
+      );
       let data;
       try {
         data = await response.json();
@@ -336,7 +341,8 @@ export default {
         }
 
         @media (max-width: 576px) {
-          p,a {
+          p,
+          a {
             display: inline;
             font-size: 14px;
           }
@@ -417,7 +423,7 @@ export default {
       .fortune-telling__bubble {
         padding: 4px 16px;
         border: 1px solid #fff !important;
-        font-size: 14px;  
+        font-size: 14px;
       }
     }
   }
@@ -530,7 +536,7 @@ export default {
     }
 
     @media (max-width: 576px) {
-      animation: showHiddenCharacteristicsMobile .2s ease-in-out;
+      animation: showHiddenCharacteristicsMobile 0.2s ease-in-out;
     }
 
     .newView {
