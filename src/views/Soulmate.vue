@@ -1,8 +1,10 @@
 <template>
   <section class="soulmate__container">
     <div class="soulmate__contents">
-      <div class="fortune-telling__bubble">Гадание</div>
-      <h1>На соулмейта</h1>
+      <div class="soulmate__contents-wrapper">
+        <div class="fortune-telling__bubble">Гадание</div>
+        <h1>На соулмейта</h1>
+      </div>
       <div class="soulmate__characteristics">
         <div class="soulmate__attribute">
           <span>Цвет глаз:</span>
@@ -47,7 +49,13 @@ export default {
   setup() {
     async function getRandomData() {
       let response = await fetch("./assets/soulmateCheck/soulmateData.json");
-      let data = await response.json();
+      //let response = await fetch("https://inkast.me/assets/soulmateCheck/soulmateData.json");
+      let data;
+      try {
+        data = await response.json();
+      } catch (error) {
+        console.error("Ошибка при получении данных:", error);
+      }
 
       let getRandomElement = (array) =>
         array[Math.floor(Math.random() * array.length)];
@@ -200,24 +208,26 @@ export default {
   padding: 1.667vw 0 1.667vw 1.667vw;
 
   .soulmate__contents {
+    z-index: 10;
+    position: relative;
     overflow-y: scroll;
     display: flex;
     flex-flow: nowrap column;
-    border-radius: 1.111vw;
-    padding: 2.083vw 1.875vw 2.431vw 1.875vw;
-    width: 47.153vw;
+    border-radius: 15.998px;
+    padding: 29.995px 27px 0 27px;
+    width: 679.003px;
     height: 100%;
     background-color: #fff;
 
     .fortune-telling__bubble {
       width: fit-content;
-      padding: 0.556vw 1.667vw;
-      border: 0.139vw solid #d172fd;
-      border-radius: 6.944vw;
+      padding: 8.006px 24.005px;
+      border: 2.002px solid #d172fd;
+      border-radius: 99.994px;
       color: #d172fd;
       font-style: normal;
       font-weight: 400;
-      font-size: 1.389vw;
+      font-size: 20.002px;
       line-height: 140%;
       letter-spacing: -0.06px;
       text-transform: capitalize;
@@ -227,45 +237,60 @@ export default {
       display: flex;
       flex-flow: nowrap column;
       // padding-top: 1.667vw;
-      gap: 1.111vw;
-      margin-bottom: 2.778vw;
+      gap: 15.998px;
+      margin-bottom: 40.003px;
+
+      @media (max-width: 768px) {
+        padding: 27px 27px;
+      }
     }
 
     h1 {
-      margin-top: 1.111vw;
-      margin-bottom: 2.014vw;
+      margin-top: 15.998px;
+      margin-bottom: 29.002px;
       font-family: "Stratos LC Web";
       font-style: normal;
       font-weight: 400;
-      font-size: 6.111vw;
+      font-size: 87.998px;
       line-height: 95%;
       letter-spacing: -0.025em;
       font-feature-settings: "pnum" on, "lnum" on;
     }
+
     h1::after {
-      padding-top: 2.014vw;
+      padding-top: 29.002px;
       content: "";
       display: block;
       width: 100%;
       height: 1px;
       border-bottom: 1px dashed #ececec;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     .find-your-soulmate {
+      position: sticky;
+      width: 100%;
+      bottom: 0;
+      padding-bottom: 32px;
       margin-top: auto;
+      background: #fff;
+
       .find-your-soulmate__wrapper {
         display: flex;
         flex-flow: nowrap row;
         align-items: center;
-        padding: 2.361vw 0 0 0;
+        padding: 33.998px 0 0 0;
 
         img:first-child {
-          height: 2.5vw;
+          height: 36px;
           margin-right: 1.111vw;
         }
         img:last-child {
-          height: 1.944vw;
-          margin-left: 0.556vw;
+          height: 27.994px;
+          margin-left: 8.006px;
         }
 
         p,
@@ -273,7 +298,7 @@ export default {
           margin: 0;
           font-style: normal;
           font-weight: 400;
-          font-size: 1.389vw;
+          font-size: 20.002px;
           line-height: 140%;
           letter-spacing: -0.06px;
         }
@@ -282,6 +307,16 @@ export default {
           text-decoration: none;
           color: #d172fd;
         }
+
+        @media (max-width: 768px) {
+          justify-content: center;
+          padding-top: 16px;
+          padding-bottom: 24px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        padding-bottom: 0;
       }
     }
 
@@ -295,9 +330,36 @@ export default {
 
     @media (max-width: 768px) {
       width: 100%;
+      padding: 0;
+      // height: auto;
+
+      .soulmate__contents-wrapper {
+        padding: 0 24px;
+        display: flex;
+        flex-flow: nowrap column;
+        background: url("../../src/assets/soulmate/soulmate__couple-bg-mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 30vh;
+
+        h1 {
+          color: #fff;
+        }
+
+        .fortune-telling__bubble {
+          margin-top: auto;
+          color: #fff;
+          border: 2px solid #fff;
+        }
+
+        .bg-blur::after {
+          display: none;
+        }
+      }
     }
   }
 
+  /*
   .soulmate__contents::-webkit-scrollbar {
     width: 8px;
     height: 4px;
@@ -315,6 +377,8 @@ export default {
   .soulmate__contents::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 255, 0.4);
   }
+
+*/
 
   .soulmate__picture {
     flex: 1 1 auto;
@@ -345,8 +409,8 @@ export default {
   .bg-blur::after {
     content: "";
     position: absolute;
-    width: 40.347vw;
-    height: 40.556vw;
+    width: 580.997px;
+    height: 584.006px;
     background-color: #04fdff;
     top: 35%;
     left: 50%;
@@ -366,9 +430,13 @@ export default {
     p {
       font-style: normal;
       font-weight: 400;
-      font-size: 1.806vw;
+      font-size: 26.006px;
       line-height: 140%;
       letter-spacing: -0.06px;
+
+      // @media (max-width:768px) {
+      //   font-size: 26px;
+      // }
     }
 
     .hidden__btn {
@@ -378,18 +446,18 @@ export default {
       justify-content: center;
       align-content: center;
       background: #dceaf9;
-      border-radius: 0.833vw;
+      border-radius: 11.995px;
       font-style: normal;
-      padding: 0.625vw 0.833vw 0.764vw;
+      padding: 9px 11.995px 11.002px;
       font-weight: 400;
-      font-size: 1.667vw;
+      font-size: 24.005px;
       line-height: 140%;
       letter-spacing: -0.06px;
-      min-width: 13.403vw;
+      min-width: 193.003px;
     }
 
     .open__btn {
-      max-width: 23.958vw;
+      max-width: 344.995px;
       justify-content: flex-end;
       text-align: end;
     }
@@ -400,24 +468,25 @@ export default {
 
     .newView {
       background-color: #fff;
-      border: 0.139vw solid #dceaf9;
+      border: 2.002px solid #dceaf9;
     }
 
     @keyframes showHiddenCharacteristics {
       20% {
         background-color: #ffffff;
-        border: 0.139vw solid #9c97fe;
-        box-shadow: 0px 0.139vw 8px rgba(122, 174, 254, 0.25);
+        border: 2.002px solid #9c97fe;
+        box-shadow: 0px 2.002px 8px rgba(122, 174, 254, 0.25);
       }
       100% {
         background-color: #fff;
-        border: 0.139vw solid #dceaf9;
+        border: 2.002px solid #dceaf9;
       }
     }
   }
 
   @media (max-width: 768px) {
-    padding: 1.667vw;
+    // height: 100%;
+    padding: 24px;
   }
 }
 </style>
