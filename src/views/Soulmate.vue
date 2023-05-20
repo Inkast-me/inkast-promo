@@ -34,8 +34,13 @@
       <div class="find-your-soulmate">
         <div class="find-your-soulmate__wrapper">
           <img src="@/assets/logo.svg" alt="inkast-logo" />
-          <p>Найти своего соулмейта ты сможешь в <a href="/">Инкаст</a></p>
-          <img src="@/assets/soulmate/heart-on-fire.png" alt="heart-on-fire" />
+          <p>
+            Найти своего соулмейта ты<br class="hiddenBr">сможешь в<a href="/"> Инкаст</a
+            ><img
+              src="@/assets/soulmate/heart-on-fire.png"
+              alt="heart-on-fire"
+            />
+          </p>
         </div>
       </div>
     </div>
@@ -50,7 +55,6 @@ export default {
     async function getRandomData() {
       //let response = await fetch("./assets/soulmateCheck/soulmateData.json");
       let response = await fetch("https://inkast.me/assets/soulmateCheck/soulmateData.json");
-      
       let data;
       try {
         data = await response.json();
@@ -183,6 +187,8 @@ export default {
           );
         });
 
+      /*
+
       console.log("Цвет глаз:", randomData.eyeColor);
       console.log("Цвет волос:", randomData.hairColor);
       console.log("Регион:", randomData.region);
@@ -194,6 +200,8 @@ export default {
         randomData.interest03
       );
       console.log("Вид соулмейта:", randomData.soulmateType);
+
+      */
     });
   },
 };
@@ -244,6 +252,12 @@ export default {
       @media (max-width: 768px) {
         padding: 27px 27px;
       }
+
+      @media (max-width: 576px) {
+        padding: 16px 16px 0 16px;
+        margin-bottom: 0;
+        gap: 8px;
+      }
     }
 
     h1 {
@@ -291,7 +305,6 @@ export default {
         }
         img:last-child {
           height: 27.994px;
-          margin-left: 8.006px;
         }
 
         p,
@@ -302,6 +315,13 @@ export default {
           font-size: 20.002px;
           line-height: 140%;
           letter-spacing: -0.06px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .hiddenBr {
+          display: none;
         }
 
         a {
@@ -314,10 +334,33 @@ export default {
           padding-top: 16px;
           padding-bottom: 24px;
         }
+
+        @media (max-width: 576px) {
+          p,a {
+            display: inline;
+            font-size: 14px;
+          }
+
+          img:first-child {
+            margin-right: 16px;
+          }
+
+          img:last-child {
+            display: none;
+          }
+
+          .hiddenBr {
+            display: block;
+          }
+        }
       }
 
       @media (max-width: 768px) {
         padding-bottom: 0;
+      }
+
+      @media (max-width: 576px) {
+        padding: 0 16px;
       }
     }
 
@@ -341,6 +384,7 @@ export default {
         background: url("../../src/assets/soulmate/soulmate__couple-bg-mobile.png");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center bottom;
         height: 30vh;
 
         h1 {
@@ -356,6 +400,24 @@ export default {
         .bg-blur::after {
           display: none;
         }
+      }
+    }
+
+    @media (max-width: 576px) {
+      .soulmate__contents-wrapper {
+        padding: 0 16px 24px 16px;
+
+        h1 {
+          font-size: 44px;
+          margin-top: 8px;
+          margin-bottom: 0;
+        }
+      }
+
+      .fortune-telling__bubble {
+        padding: 4px 16px;
+        border: 1px solid #fff !important;
+        font-size: 14px;  
       }
     }
   }
@@ -467,6 +529,10 @@ export default {
       animation: showHiddenCharacteristics 1s ease-in-out;
     }
 
+    @media (max-width: 576px) {
+      animation: showHiddenCharacteristicsMobile .2s ease-in-out;
+    }
+
     .newView {
       background-color: #fff;
       border: 2.002px solid #dceaf9;
@@ -475,12 +541,47 @@ export default {
     @keyframes showHiddenCharacteristics {
       20% {
         background-color: #ffffff;
-        border: 2.002px solid #9c97fe;
-        box-shadow: 0px 2.002px 8px rgba(122, 174, 254, 0.25);
+        border: 2px solid #9c97fe;
+        box-shadow: 0px 2px 8px rgba(122, 174, 254, 0.25);
       }
       100% {
         background-color: #fff;
-        border: 2.002px solid #dceaf9;
+        border: 2px solid #dceaf9;
+      }
+    }
+
+    @keyframes showHiddenCharacteristicsMobile {
+      20% {
+        background-color: #ffffff;
+        border: 1px solid #9c97fe;
+        box-shadow: 0px 1px 8px rgba(122, 174, 254, 0.25);
+      }
+      100% {
+        background-color: #fff;
+        border: 1px solid #dceaf9;
+      }
+    }
+
+    @media (max-width: 576px) {
+      span,
+      p {
+        font-size: 16px;
+        margin-right: 24px;
+      }
+
+      .hidden__btn {
+        min-width: inherit;
+        font-size: 14px;
+        padding: 9px 16px 11px;
+        border: 1px solid #dceaf9;
+      }
+
+      .open__btn {
+        max-width: none;
+      }
+
+      .newView {
+        text-align: end;
       }
     }
   }
@@ -488,6 +589,10 @@ export default {
   @media (max-width: 768px) {
     // height: 100%;
     padding: 24px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 12px;
   }
 }
 </style>
