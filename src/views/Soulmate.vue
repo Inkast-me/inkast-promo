@@ -48,8 +48,9 @@
 export default {
   setup() {
     async function getRandomData() {
-      // let response = await fetch("./assets/soulmateCheck/soulmateData.json");
+      //let response = await fetch("./assets/soulmateCheck/soulmateData.json");
       let response = await fetch("https://inkast.me/assets/soulmateCheck/soulmateData.json");
+      
       let data;
       try {
         data = await response.json();
