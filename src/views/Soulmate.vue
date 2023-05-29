@@ -1,7 +1,7 @@
 <template>
   <section class="soulmate__container">
-    <div class="soulmate__contents">
-      <div class="soulmate__contents-wrapper">
+    <div class="soulmate_contents">
+      <div class="soulmate_contents-wrapper">
         <div class="fortune-telling__bubble">Гадание</div>
         <h1>На соулмейта</h1>
       </div>
@@ -55,6 +55,33 @@
 <script>
 export default {
   setup() {
+    function addSEO() {
+      let content = [
+        [
+          "Онлайн-гадание на соулмейта",
+          "Онлайн-гадание на соулмейта - это сервис, который предсказывает внешность и увлечения человека, который предназначен вам судьбой.",
+          "Гадание на соулмейта, предсказатель соулмейта, онлайн гадание на вторую половинку, гадание на возлюбленного, гадание на судьбу, гадание на друга, онлайн таро гадание на любовь, соулмейт, инкаст гадание, инкаст предсказание, как выглядит моя любовь, гадание на любовь онлайн, соулмейт гадание, гадание онлайн бесплатно на любовь, правдивое гадание на любовь, бесплатное гадание на любовь мужчины, бесплатное гадание внешность мужчины, кто твой соулмейт, соулмейт, признаки соулмейта, как выглядит соулмейт, соулмейты по датам, тест твой соулмейт, соулмейт 2023, про соулмейтов, найти соулмейта, тест на соулмейта, соулмейты в реальной, тест соулмейт, как узнать кто твой соулмейт",
+          "Онлайн-гадание на соулмейта",
+          "Онлайн-гадание на соулмейта - это сервис, который предсказывает внешность и увлечения человека, который предназначен вам судьбой.",
+        ],
+        [
+          'meta[name="title"]',
+          'meta[name="description"]',
+          'meta[name="keywords"]',
+          'meta[property="og:title"]',
+          'meta[property="og:description"]',
+        ],
+      ];
+
+      document.title = content[(0, 0)];
+
+      for (let i = 0; i < content[0].length; i++) {
+        let meta = document.querySelector(content[1][i]);
+        meta.setAttribute("content", content[0][i]);
+      }
+    }
+    addSEO();
+
     async function getRandomData() {
       //let response = await fetch("./assets/soulmateCheck/soulmateData.json");
       let response = await fetch(
@@ -221,7 +248,7 @@ export default {
   height: 100vh;
   padding: 1.667vw 0 1.667vw 1.667vw;
 
-  .soulmate__contents {
+  .soulmate_contents {
     z-index: 10;
     position: relative;
     overflow-y: scroll;
@@ -383,7 +410,7 @@ export default {
       padding: 0;
       // height: auto;
 
-      .soulmate__contents-wrapper {
+      .soulmate_contents-wrapper {
         padding: 0 24px;
         display: flex;
         flex-flow: nowrap column;
@@ -410,7 +437,7 @@ export default {
     }
 
     @media (max-width: 576px) {
-      .soulmate__contents-wrapper {
+      .soulmate_contents-wrapper {
         padding: 0 16px 24px 16px;
 
         h1 {
@@ -429,21 +456,21 @@ export default {
   }
 
   /*
-  .soulmate__contents::-webkit-scrollbar {
+  .soulmate_contents::-webkit-scrollbar {
     width: 8px;
     height: 4px;
   }
 
-  .soulmate__contents::-webkit-scrollbar-track {
+  .soulmate_contents::-webkit-scrollbar-track {
     background: transparent;
   }
 
-  .soulmate__contents::-webkit-scrollbar-thumb {
+  .soulmate_contents::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 255, 0.15);
     border-radius: 100px;
   }
 
-  .soulmate__contents::-webkit-scrollbar-thumb:hover {
+  .soulmate_contents::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 255, 0.4);
   }
 
