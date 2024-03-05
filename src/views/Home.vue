@@ -15,7 +15,7 @@
 
     <NotEasy />
 
-    <Algorithm />
+    <!-- <Algorithm /> -->
 
     <Next />
 
@@ -42,7 +42,7 @@ import Intrestings from "@/components/Home/Intrestings.vue";
 import Rare from "@/components/Home/Rare.vue";
 import HowItWorks from "@/components/Home/HowItWorks.vue";
 import NotEasy from "@/components/Home/NotEasy.vue";
-import Algorithm from "@/components/Home/Algorithm.vue";
+// import Algorithm from "@/components/Home/Algorithm.vue";
 import Next from "@/components/Home/Next.vue";
 import Problems from "@/components/Home/Problems.vue";
 import Show from "@/components/Home/Show.vue";
@@ -62,7 +62,6 @@ export default defineComponent({
     Rare,
     HowItWorks,
     NotEasy,
-    Algorithm,
     Problems,
     Show,
     Team,

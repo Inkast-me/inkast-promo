@@ -17,14 +17,14 @@
             </div>
           </div>
           <div class="stuff">
-            <img src="@/assets/invest/fedor.png" alt="Fedor" />
+            <img src="@/assets/invest/natalia.png" alt="Natalia" />
             <div class="stuff-info">
               <a
-                href="https://t.me/padobrik"
-                v-html="t('Investors.hero.CFO')"
+                href="https://t.me/nmaltseva"
+                v-html="t('Investors.hero.CTO')"
                 target="_blank"
               ></a>
-              <span>CFO</span>
+              <span>CTO</span>
             </div>
           </div>
           <div class="stuff">
@@ -39,9 +39,7 @@
             </div>
           </div>
           <div class="invest-us">
-            <a href="mailto:invest@inkast.me?subject=invest"
-              >invest@inkast.me</a
-            >
+            <a href="https://t.me/alencombo" target="_blank">tg: @alencombo</a>
             <span v-html="t('Investors.hero.contacts')"></span>
           </div>
         </div>
@@ -310,6 +308,7 @@ h2::after {
 }
 
 .invest__root-case {
+  display: none;
   min-height: 70vh;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 64px;
@@ -353,6 +352,7 @@ h2::after {
 }
 
 .invest__mvp {
+  display: none;
   z-index: 2;
   position: relative;
 
@@ -446,6 +446,7 @@ h2::after {
 }
 
 .invest__conclusions {
+  display: none;
   min-height: 90vh;
   position: relative;
   z-index: 1;
@@ -462,6 +463,7 @@ h2::after {
 }
 
 .invest__country {
+  display: none;
   position: absolute;
   width: 100%;
   height: auto;

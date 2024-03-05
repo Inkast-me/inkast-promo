@@ -5,7 +5,7 @@
       "product": "Product",
       "team": "Team",
       "invest": "Investors",
-      "donate": "Donate",
+      "donate": "Help the project",
       "language": "RU",
       "join": "Join",
       "support": "Support"
@@ -435,8 +435,8 @@
     },
     "howItWorks": {
       "title": "How it&nbsp;works",
-      "additional": "Today everyone has their digital portrait based on&nbsp;metadata",
-      "description": "You do&nbsp;not have to&nbsp;worry about the privacy of&nbsp;your data, since only you choose the information that appears in&nbsp;the public domain. Therefore, we&nbsp;will use only the metadata you provide to&nbsp;find people who are the most suitable for you. <br><br> For instance, you could find people with similar interests in&nbsp;TikTok video categories or&nbsp;with the same&nbsp;VK subscriptions."
+      "additional": "Scroll through the feed with diverse content, like the memes, movies, books, computer games, favorite music... There are many content categories, and they are constantly being updated!",
+      "description": "We&nbsp;strive to&nbsp;take into account even the rarest interests so&nbsp;that you can definitely find your soulmate. But if&nbsp;your interest is&nbsp;still not represented&nbsp;&mdash; write to&nbsp;us about it&nbsp;on&nbsp;<a href=\"https://t.me/inkast_me/511\" target=\"_blank\" style=\"color: #C06CE8; text-decoration: none\">Telegram!</a>"
     },
     "notEasy": {
       "title": "It&nbsp;is&nbsp;not that easy",
@@ -492,33 +492,33 @@
         "avatar": "Alena.png",
         "emoji": "paw",
         "name": "Alena Samarina",
-        "post": "Analyst & Product Owner",
+        "post": "CEO &amp;&nbsp;Head Marketing",
         "preferredColor": "FFE5D6",
         "description":
           "Carried out projects for Mars, Danone, Nexign, Schlumberger, Gazprom Neft, Severstal and Rosatom <br><br>Multiple winner of&nbsp;case championships and hackathons",
-        "employmentExp": "Work experience: 4&nbsp;years",
+        "employmentExp": "Work experience: 6&nbsp;years",
         "link": "Contact us: info&#64;inkast.me"
       },
       {
         "avatar": "Alexander.png",
         "emoji": "trackball",
         "name": "Alexander Greene",
-        "post": "Product Designer",
+        "post": "COO &amp;&nbsp;Product Designer",
         "preferredColor": "E7E7E9",
         "description":
           "Carried out projects for Yandex, VK, Gazprom, Skyeng and X5&nbsp;Group <br><br> Winner of&nbsp;the HSE Olympiad in&nbsp;the field of&nbsp;design and multiple winner of&nbsp;hackathons",
-        "employmentExp": "Work experience: 4&nbsp;years",
+        "employmentExp": "Work experience: 6&nbsp;years",
         "link": "Contact us: info&#64;inkast.me"
       },
       {
-        "avatar": "Fedor.png",
-        "emoji": "dna",
-        "name": "Fedor Kabachenko",
-        "post": "ML-Engineer",
-        "preferredColor": "94ADE8",
+        "avatar": "Natalia.png",
+        "emoji": "noevilmonkey",
+        "name": "Natalia Maltseva",
+        "post": "CTO &amp;&nbsp;Backend developer",
+        "preferredColor": "E0C49E",
         "description":
-          "Carried out projects for the Central Bank, Rosatom, ParSeq, OneCell and BIOCAD <br><br> Unemployed, but earns",
-        "employmentExp": "Work experience: 2&nbsp;years",
+          "Built a&nbsp;racing car in&nbsp;the electrics department.<br><br>The recipient of the UMNIK grant. Winner of hackathons and case championships",
+        "employmentExp": "Work experience: 5&nbsp;years",
         "link": "Contact us: info&#64;inkast.me"
       },
       {
@@ -528,18 +528,7 @@
         "post": "Front-end developer",
         "preferredColor": "C7C789",
         "description": "Just a cool guy",
-        "employmentExp": "Work experience: 3&nbsp;years",
-        "link": "Contact us: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Natalia.png",
-        "emoji": "noevilmonkey",
-        "name": "Natalia Maltseva",
-        "post": "Backend developer",
-        "preferredColor": "E0C49E",
-        "description":
-          "Built a&nbsp;racing car in&nbsp;the electrics department.<br><br>The recipient of the UMNIK grant. Winner of hackathons and case championships",
-        "employmentExp": "Work experience: 3&nbsp;years",
+        "employmentExp": "Work experience: 5&nbsp;years",
         "link": "Contact us: info&#64;inkast.me"
       },
       {
@@ -549,17 +538,7 @@
         "post": "Android Developer",
         "preferredColor": "E6F7A2",
         "description": "Code on&nbsp;Kotlin",
-        "employmentExp": "Work experience: 1&nbsp;year",
-        "link": "Contact us: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Dmitry.png",
-        "emoji": "offnik",
-        "name": "Timoshenkov Dmitry",
-        "post": "Backend Developer",
-        "preferredColor": "F8DFBE",
-        "description": "Developer in&nbsp;Sixhands",
-        "employmentExp": "Work experience: 2&nbsp;years",
+        "employmentExp": "Work experience: 3&nbsp;year",
         "link": "Contact us: info&#64;inkast.me"
       },
       {
@@ -570,7 +549,58 @@
         "preferredColor": "FFE5D6",
         "description":
           "Carry out projects in&nbsp;the field of&nbsp;neurotechnology <br><br> Know how our brain works and what people need",
+        "employmentExp": "Work experience: 5&nbsp;years",
+        "link": "Contact us: info&#64;inkast.me"
+      },
+      {
+        "avatar": "NataliaT.png",
+        "emoji": "smile",
+        "name": "Natalia Trusova",
+        "post": "Data Analyst",
+        "preferredColor": "94ADE8",
+        "description":
+          "Participation in&nbsp;numerous projects for major firms as&nbsp;part of&nbsp;a&nbsp;consulting team, work in&nbsp;a&nbsp;financial organization, and development of&nbsp;new algorithms to&nbsp;help businesses thrive",
         "employmentExp": "Work experience: 3&nbsp;years",
+        "link": "Contact us: info&#64;inkast.me"
+      },
+      {
+        "avatar": "Sofia.png",
+        "emoji": "sparkles",
+        "name": "Sofia Bolokhovskaya",
+        "post": "Social Media Manager, Marketer",
+        "preferredColor": "F8DFBE",
+        "description": "Executed projects for a&nbsp;consulting agency, a&nbsp;large industrial enterprise, and retail networks.<br><br>Holds a&nbsp;degree in&nbsp;Advertising and Public Relations",
+        "employmentExp": "Work experience: 2&nbsp;years",
+        "link": "Contact us: info&#64;inkast.me"
+      },
+      {
+        "avatar": "Alan.png",
+        "emoji": "goggles",
+        "name": "Alan Gasiev",
+        "post": "I am engaged in product quality control",
+        "preferredColor": "f7f7f7",
+        "description": "This involves defect detection, establishing system requirements, and analyzing its behavior",
+        "employmentExp": "Work experience: 3&nbsp;years",
+        "link": "Contact us: info&#64;inkast.me"
+      },
+      {
+        "avatar": "Andrey.png",
+        "emoji": "winking-face",
+        "name": "Andrey Shabunin",
+        "post": "Android Developer",
+        "preferredColor": "EDECE3",
+        "description": "Workaholic for life<br><br>I code in Kotlin/Java/C++",
+        "employmentExp": "Work experience: 3&nbsp;years",
+        "link": "Contact us: info&#64;inkast.me"
+      },
+      {
+        "avatar": "Misha.png",
+        "emoji": "microscope",
+        "name": "Misha Sanzhak",
+        "post": "DevOps",
+        "preferredColor": "CED6E8",
+        "description": "I&nbsp;write a&nbsp;lot of&nbsp;code and not just YAML. I&nbsp;love mechanical keyboards, powerlifting, and systems",
+        "employmentExp": "Work experience: over 6&nbsp;years",
         "link": "Contact us: info&#64;inkast.me"
       }
     ]
@@ -619,7 +649,7 @@
   "Investors": {
     "hero": {
       "CEO": "Alena Samarina",
-      "CFO": "Fedor Kabachenko",
+      "CTO": "Natalia Maltseva",
       "COO": "Alexander Greene",
       "contacts": "Contact us"
     },

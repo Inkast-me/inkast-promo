@@ -9,6 +9,30 @@
       <router-link to="/" class="nav__logo">
         <img :src="require('@/assets/logo.svg')" alt="InKast" />
       </router-link>
+      <div class="nav__additional">
+        <router-link
+          to="/#follow"
+          class="nav__join"
+          v-html="t('Home.nav.join')"
+          @click="scrollIntoView('#follow')"
+        ></router-link>
+        <router-link
+          to="/donate"
+          class="nav__link"
+          v-html="t('Home.nav.donate')"
+        ></router-link>
+        <img
+          @click="openModal = !openModal"
+          class="nav__burger"
+          :src="require(`@/assets/${openModal ? 'close' : 'burger'}.svg`)"
+          alt="Изначально, наш проект назывался МетаСеть:)"
+        />
+        <div
+          class="nav__language"
+          @click="switchLang"
+          v-html="t('Home.nav.language')"
+        ></div>
+      </div>
       <div class="nav__links-wrapper">
         <router-link
           to="/#product"
@@ -27,36 +51,17 @@
           class="nav__link"
           v-html="t('Home.nav.invest')"
         ></router-link>
-        <router-link
-          to="/donate"
-          class="nav__link"
-          v-html="t('Home.nav.donate')"
-        ></router-link>
         <a
           href="mailto:info@inkast.me"
           class="nav__link"
           target="_blank"
           v-html="t('Home.nav.support')"
         ></a>
-      </div>
-      <div class="nav__additional">
         <div
           class="nav__language"
           @click="switchLang"
           v-html="t('Home.nav.language')"
         ></div>
-        <router-link
-          to="/#follow"
-          class="nav__join"
-          v-html="t('Home.nav.join')"
-          @click="scrollIntoView('#follow')"
-        ></router-link>
-        <img
-          @click="openModal = !openModal"
-          class="nav__burger"
-          :src="require(`@/assets/${openModal ? 'close' : 'burger'}.svg`)"
-          alt="Изначально, наш проект назывался МетаСеть:)"
-        />
       </div>
     </div>
   </nav>
@@ -201,12 +206,19 @@ export default defineComponent({
 
   .content__wrapper {
     padding: 16px 6vw;
-    display: grid;
-    place-items: center flex-start;
-    grid: min-content / auto 1fr auto;
+    display: flex;
+    // display: grid;
+    // place-items: center flex-start;
+    // grid: min-content / auto 1fr auto;
     gap: 4px;
     background: #000;
     transition: transform 0.2s ease-in-out;
+
+    @media (max-width: 576px) {
+      .nav__logo {
+        margin-right: auto;
+      }
+    }
 
     @media (min-width: 992px) {
       gap: 32px;
@@ -233,6 +245,8 @@ export default defineComponent({
 
     @media (min-width: 992px) {
       display: flex;
+      margin-left: auto;
+      align-items: center;
     }
 
     .nav__link {
@@ -266,23 +280,6 @@ export default defineComponent({
       height: 13.1px;
     }
 
-    .nav__link:nth-child(4)::after {
-      content: "";
-      display: inline-block;
-      margin-bottom: 12px;
-      width: 8px;
-      height: 8px;
-      background: #f6526b;
-      border-radius: 100%;
-    }
-  }
-
-  .nav__additional {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    justify-self: flex-end;
-
     .nav__language {
       height: 40px;
       width: 40px;
@@ -297,10 +294,77 @@ export default defineComponent({
       color: #ffffff;
       cursor: pointer;
     }
+  }
+
+  .nav__additional {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-self: flex-end;
+
+    @media (max-width: 576px) {
+      gap: 8px;
+    }
+
+    .nav__language {
+      height: 40px;
+      width: 40px;
+      display: grid;
+      place-items: center;
+
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: -0.015em;
+      font-feature-settings: "pnum" on, "lnum" on;
+      color: #ffffff;
+      cursor: pointer;
+      display: none;
+
+      @media (max-width: 576px) {
+        display: grid;
+      }
+    }
+
+    .nav__link {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: -0.015em;
+      font-feature-settings: "pnum" on, "lnum" on;
+      text-decoration: none;
+      transition: color 0.16s ease-in-out;
+      display: inherit;
+      color: #ffffff;
+      position: relative;
+
+      @media (max-width: 576px) {
+        margin-right: 12px;
+      }
+
+      &:hover,
+      &.active {
+        color: #ffffff33;
+      }
+
+      &.disabled {
+        color: #ffffff33;
+      }
+    }
+
+    .nav__link:nth-child(2)::after {
+      content: "";
+      display: inline-block;
+      margin-bottom: 12px;
+      width: 8px;
+      height: 8px;
+      background: #f6526b;
+      border-radius: 100%;
+    }
 
     .nav__join {
       font-family: "Stratos LC Web";
-      background: #292929;
+      background: #c06ce8;
       border-radius: 8px;
       padding: 12px;
       font-weight: 400;
@@ -321,7 +385,7 @@ export default defineComponent({
       }
 
       &:hover {
-        background-color: #343434;
+        background-color: #b361d9;
       }
     }
 

@@ -1,6 +1,11 @@
 <template>
   <section class="home__how">
     <h2 class="how__header" v-html="t('Home.howItWorks.title')"></h2>
+    <img
+      class="inkast__works"
+      src="@/assets/cards/HowInkastWorks.png"
+      alt="HowInkastWorks"
+    />
     <div class="how__wrapper">
       <h3 class="how__title" v-html="t('Home.howItWorks.additional')"></h3>
       <div
@@ -8,6 +13,7 @@
         v-html="t('Home.howItWorks.description')"
       ></div>
     </div>
+    
   </section>
 </template>
 
@@ -33,6 +39,7 @@ export default defineComponent({
   flex-flow: column;
   overflow: hidden;
   gap: 32px;
+  min-height: 40vh !important;
 
   .how__header {
     margin: 0;
@@ -42,12 +49,12 @@ export default defineComponent({
     font-feature-settings: "pnum" on, "lnum" on;
     color: #111111;
     padding-bottom: 16px;
-    border-bottom: 1px solid #ebebeb;
+    // border-bottom: 1px solid #ebebeb;
     font-size: 30px;
 
     @media (min-width: 768px) {
       font-size: 64px;
-      padding-bottom: 40px;
+      padding-bottom: 8px;
     }
 
     @media (min-width: 992px) {
@@ -95,6 +102,10 @@ export default defineComponent({
         font-size: 20px;
       }
     }
+  }
+  .inkast__works {
+    overflow: hidden;
+    border-radius: 20px;
   }
 }
 </style>

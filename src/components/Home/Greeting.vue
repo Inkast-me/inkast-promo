@@ -59,7 +59,25 @@
           </defs>
         </svg>
       </a>
+      <a href="https://www.youtube.com/@inkast_me" target="_blank">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="81"
+          height="57"
+          fill="none"
+        >
+          <path
+            fill="red"
+            d="M78.965 8.896a10.018 10.018 0 0 0-7.073-7.073C65.656.151 40.64.151 40.64.151S15.622.15 9.386 1.823a10.018 10.018 0 0 0-7.072 7.073C.64 15.132.64 28.15.64 28.15s0 13.018 1.673 19.255a10.017 10.017 0 0 0 7.072 7.072C15.622 56.15 40.64 56.15 40.64 56.15s25.017 0 31.253-1.673a10.017 10.017 0 0 0 7.073-7.072c1.672-6.236 1.672-19.255 1.672-19.255s-.006-13.02-1.672-19.255Z"
+          />
+          <path
+            fill="#fff"
+            d="m32.632 40.15 20.783-11.998-20.783-11.998V40.15Z"
+          />
+        </svg>
+      </a>
     </div>
+    <img src="@/assets/cards/maskot.png" alt="maskot" class="maskot" />
   </section>
 </template>
 
@@ -80,6 +98,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home__greeting {
+  position: relative;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -90,8 +109,9 @@ export default defineComponent({
   padding-right: 34px;
 
   @media (min-width: 768px) {
-    align-items: flex-end;
-    flex-flow: row;
+    // align-items: flex-end;
+    flex-flow: wrap column;
+    gap: 40px;
     margin-bottom: 72px;
   }
 
@@ -116,6 +136,7 @@ export default defineComponent({
 
   .greeting__socials {
     display: flex;
+    align-items: center;
     gap: 24px;
 
     a {
@@ -127,10 +148,29 @@ export default defineComponent({
     }
   }
 
+  .maskot {
+    height: 40.792vw;
+    position: absolute;
+    right: 0;
+    bottom: -34.8%;
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
   .greeting__vk img,
   .greeting__tg img {
     height: 64px;
     width: 64px;
+  }
+
+  .greeting__tg {
+    order: 2;
+  }
+
+  .greeting__vk {
+    order: 3;
   }
 
   .slogan {

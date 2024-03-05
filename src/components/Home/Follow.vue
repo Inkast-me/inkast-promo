@@ -2,6 +2,9 @@
   <section class="home__follow" id="follow">
     <h2 v-html="t('Home.follow.title')"></h2>
     <div class="follow__social-wrapper">
+      <a href="" class="youtube__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="91" height="65" fill="none"><g clip-path="url(#a)"><path fill="#000" d="M88.69 10.488a11.249 11.249 0 0 0-7.942-7.941C73.746.669 45.658.669 45.658.669s-28.09 0-35.092 1.878a11.248 11.248 0 0 0-7.94 7.941C.746 17.49.746 32.107.746 32.107s0 14.617 1.879 21.62a11.247 11.247 0 0 0 7.94 7.94c7.003 1.878 35.093 1.878 35.093 1.878s28.09 0 35.091-1.878a11.247 11.247 0 0 0 7.942-7.94c1.877-7.002 1.877-21.62 1.877-21.62s-.006-14.619-1.877-21.62l-.001.001Z"/><path fill="#fff" d="m36.666 45.58 23.335-13.47-23.335-13.472V45.58Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M.025.5h90.947v64H.025z"/></clipPath></defs></svg>
+      </a>
       <a href="https://vk.com/inkast_me">
         <svg
           width="76"
@@ -246,8 +249,11 @@ export default defineComponent({
 
     a {
       transition: transform 0.2s ease-in-out;
+      display: flex;
+      flex-flow: nowrap row;
+      align-items: center;
 
-      svg {
+      svg:nth-child(2), svg:nth-child(3) {
         height: 52px;
         width: 52px;
 

@@ -8,7 +8,7 @@
       <div class="team__content">
         <div
           class="team__member"
-          v-for="index in 8"
+          v-for="index in 11"
           :key="index"
           :class="{ active: currentMember == index - 1 }"
           @mouseover="currentMember = index - 1"
