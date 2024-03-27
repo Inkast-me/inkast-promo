@@ -13,7 +13,6 @@
         v-html="t('Home.howItWorks.description')"
       ></div>
     </div>
-    
   </section>
 </template>
 
