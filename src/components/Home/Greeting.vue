@@ -77,7 +77,11 @@
         </svg>
       </a>
     </div>
-    <img src="@/assets/cards/maskot.png" alt="maskot" class="maskot" />
+    <img
+      src="@/assets/cards/maskot.png"
+      alt="Маскот приложения по поиску друзей Инкаст "
+      class="maskot"
+    />
   </section>
 </template>
 

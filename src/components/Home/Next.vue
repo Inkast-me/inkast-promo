@@ -5,7 +5,7 @@
       <div class="next__description" v-html="t('Home.next.description')"></div>
       <img
         :src="require(`@/assets/cards/next/${t('Home.next.image')}.png`)"
-        alt=""
+        alt="Кто такой соулмейт"
       />
     </div>
   </section>

@@ -10,10 +10,16 @@
       ></Button>
       <div class="show__couple">
         <div class="couple_left">
-          <img :src="require('@/assets/man.png')" alt="Maaaan" />
+          <img
+            :src="require('@/assets/man.png')"
+            alt="Приложении для поиска любимого человека"
+          />
         </div>
         <div class="couple_right">
-          <img :src="require('@/assets/woman.png')" alt="Not maaaan" />
+          <img
+            :src="require('@/assets/woman.png')"
+            alt="Приложении для поиска любимого человека"
+          />
         </div>
         <a href="#follow" class="couple_join">
           <svg

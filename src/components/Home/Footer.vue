@@ -1,6 +1,6 @@
 <template>
   <div class="home__footer">
-    <span>Inkast 2022</span>
+    <span>Inkast 2022 — {{ currentYear }}</span>
     <span class="footer__love"
       >{{ t("Home.footer.with")
       }}<img src="@/assets/red_heart.png" alt="heart" />{{
@@ -15,14 +15,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   setup() {
     const { t } = useI18n();
+    const currentYear = ref(new Date().getFullYear());
 
     return {
+      currentYear,
       t,
     };
   },

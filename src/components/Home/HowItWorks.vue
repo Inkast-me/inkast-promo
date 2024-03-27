@@ -4,7 +4,7 @@
     <img
       class="inkast__works"
       src="@/assets/cards/HowInkastWorks.png"
-      alt="HowInkastWorks"
+      alt="Как работает Инкаст"
     />
     <div class="how__wrapper">
       <h3 class="how__title" v-html="t('Home.howItWorks.additional')"></h3>

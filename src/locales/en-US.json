@@ -435,7 +435,7 @@
     },
     "howItWorks": {
       "title": "How it&nbsp;works",
-      "additional": "Scroll through the feed with diverse content, like the memes, movies, books, computer games, favorite music... There are many content categories, and they are constantly being updated!",
+      "additional": "Scroll through the feed with diverse content, like the <span style='color: #C06CE8'>memes, movies, books, computer games, favorite music...</span> There are many content categories, and they are constantly being updated!",
       "description": "We&nbsp;strive to&nbsp;take into account even the rarest interests so&nbsp;that you can definitely find your soulmate. But if&nbsp;your interest is&nbsp;still not represented&nbsp;&mdash; write to&nbsp;us about it&nbsp;on&nbsp;<a href=\"https://t.me/inkast_me/511\" target=\"_blank\" style=\"color: #C06CE8; text-decoration: none\">Telegram!</a>"
     },
     "notEasy": {
@@ -460,21 +460,25 @@
         {
           "title": "Lack of&nbsp;time",
           "image": "time",
+          "alt": "How to make acquaintances when lacking time",
           "description": "If&nbsp;you work hard every day and do&nbsp;not have time for dating, you will find a&nbsp;person with the same pace of&nbsp;life"
         },
         {
           "title": "Talking points",
           "image": "message",
+          "alt": "Topics for conversations on a date",
           "description": "The search for topics for a&nbsp;conversation remains in&nbsp;the past, we&nbsp;have already selected the ideal pen pal for you"
         },
         {
           "title": "Loneliness",
           "image": "loneliness",
+          "alt": "How to cope with loneliness",
           "description": "Because of&nbsp;the lack of&nbsp;common interests you can feel lonely even with lots of&nbsp;friends. Our service will help you to&nbsp;find a&nbsp;person with the same traits"
         },
         {
           "title": "Search for friends",
           "image": "friends",
+          "alt": "How to find friends",
           "description": "Dating services only provide romantic offers. In&nbsp;contrast, our status systems will immediatly show what a&nbsp;person is&nbsp;looking for. A&nbsp;friend? A&nbsp;loved one? Or&nbsp;both?"
         }
       ],

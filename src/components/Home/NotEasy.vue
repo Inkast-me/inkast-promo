@@ -11,7 +11,7 @@
       <img
         class="easy__illustration"
         :src="require('@/assets/cards/easy/illustration.png')"
-        alt="Me"
+        alt="Найти лучшего друга"
       />
     </div>
   </section>

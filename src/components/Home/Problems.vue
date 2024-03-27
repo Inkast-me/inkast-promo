@@ -34,7 +34,7 @@
                 `Home.problems.cards[${index - 1}].image`
               )}_mini.png`)
             "
-            :alt="t(`Home.problems.cards[${index - 1}].title`)"
+            :alt="t(`Home.problems.cards[${index - 1}].alt`)"
           />
         </div>
       </div>

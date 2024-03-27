@@ -114,6 +114,7 @@ export default defineComponent({
     min-height: 550px;
     border-radius: 24px;
     padding: 24px 16px;
+    z-index: 2;
 
     @media (min-width: 576px) {
       min-height: 76vh;

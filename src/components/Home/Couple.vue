@@ -5,7 +5,10 @@
       <span v-html="t('Home.couple.additional')"></span>
     </div>
     <div class="couple__media-wrapper">
-      <img :src="require('@/assets/cards/couple.png')" alt="Couple in Russia" />
+      <img
+        :src="require('@/assets/cards/couple.png')"
+        alt="Найти знакомства по интересам"
+      />
       <a href="#follow" class="couple__link">
         <svg
           width="54"
