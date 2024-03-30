@@ -11,8 +11,7 @@
       "support": "Support"
     },
     "greeting": {
-      "hello": "Welcome",
-      "inkast": "to&nbsp;Inkast",
+      "hello": "Welcome <br> to&nbsp;Inkast",
       "slogan": "Social network for soulmate search"
     },
     "selection": {

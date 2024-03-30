@@ -11,8 +11,7 @@
       "support": "Поддержка"
     },
     "greeting": {
-      "hello": "Привет!",
-      "inkast": "Это&nbsp;Inkast",
+      "hello": "Привет! <br> Это&nbsp;Inkast",
       "slogan": "Cоциальная сеть для поиска&nbsp;соулмейта"
     },
     "selection": {
@@ -492,122 +491,117 @@
       "title": "Команда",
       "interactive": "Интерактив",
       "members": [
-      {
-        "avatar": "Alena.png",
-        "emoji": "paw",
-        "name": "Алёна Самарина",
-        "post": "CEO и Head Marketing",
-        "preferredColor": "FFE5D6",
-        "description":
-          "Выполняла проекты для Mars, Danone, Nexign, Schlumberger, Газпром Нефть, Северсталь, Росатом <br><br> Неоднократный победитель кейс-чемпионатов и&nbsp;хакатонов",
-        "employmentExp": "Опыт работы: 6&nbsp;лет",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Alexander.png",
-        "emoji": "trackball",
-        "name": "Александр Грин",
-        "post": "COO и&nbsp;Продуктовый дизайнер",
-        "preferredColor": "E7E7E9",
-        "description":
-          "Выполнял проекты для Яндекса, VK, Газпром, Skyeng и&nbsp;X5&nbsp;Group <br><br> Призер олимпиады ВШЭ в&nbsp;области дизайна и&nbsp;неоднократный победитель хакатонов",
-        "employmentExp": "Опыт работы: 6&nbsp;лет",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Natalia.png",
-        "emoji": "noevilmonkey",
-        "name": "Наталья Мальцева",
-        "post": "CTO и&nbsp;Backend разработчик",
-        "preferredColor": "E0C49E",
-        "description":
-          "Строила гоночный болид в&nbsp;отделе электрики<br><br> Получатель гранта УМНИК. Победитель хакатонов и&nbsp;кейс-чемпионатов",
-        "employmentExp": "Опыт работы: 5&nbsp;лет",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Platon.png",
-        "emoji": "vulcan",
-        "name": "Лапп Платон",
-        "post": "Frontend разработчик",
-        "preferredColor": "C7C789",
-        "description": "Просто хороший парень",
-        "employmentExp": "Опыт работы: 5&nbsp;лет",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Ulyana.png",
-        "emoji": "tiger",
-        "name": "Ульяна Саламатова",
-        "post": "Android разработчик",
-        "preferredColor": "E6F7A2",
-        "description": "Пишу на&nbsp;Kotlin",
-        "employmentExp": "Опыт работы: 3&nbsp;года",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Anna.png",
-        "emoji": "victory",
-        "name": "Анна Грохотова",
-        "post": "Маркетолог",
-        "preferredColor": "FFE5D6",
-        "description":
-          "Выполняю проекты в сфере нейротехнологий <br><br> Знаю, как работает наш мозг и&nbsp;что нужно людям",
-        "employmentExp": "Опыт работы: 5&nbsp;лет",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "NataliaT.png",
-        "emoji": "smile",
-        "name": "Наталья Трусова",
-        "post": "Аналитик данных",
-        "preferredColor": "94ADE8",
-        "description":
-          "Участие во&nbsp;многих проектах для крупных фирм в&nbsp;составе консалтинговой команды, работа в&nbsp;финансовой организации и&nbsp;разработка новых алгоритмов, помогающих бизнесу развиваться",
-        "employmentExp": "Опыт работы: 3&nbsp;года",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Sofia.png",
-        "emoji": "sparkles",
-        "name": "Болоховская Софья",
-        "post": "SMM-менеджер, маркетолог",
-        "preferredColor": "F8DFBE",
-        "description": "Выполняла проекты для консалтингового агентства, крупного промышленного предприятия и&nbsp;розничных сетей<br><br>Имеет высшее образование в&nbsp;сфере Рекламы и&nbsp;связей с&nbsp;общественностью",
-        "employmentExp": "Опыт работы: 2&nbsp;года",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Alan.png",
-        "emoji": "goggles",
-        "name": "Алан Гасиев",
-        "post": "Занимаюсь контролем качества продуктов",
-        "preferredColor": "f7f7f7",
-        "description": "Поиск дефектов, установка требований к&nbsp;системе и&nbsp;анализ её&nbsp;поведения",
-        "employmentExp": "Опыт работы: 3&nbsp;года",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Andrey.png",
-        "emoji": "winking-face",
-        "name": "Андрей Шабунин",
-        "post": "Android разработчик",
-        "preferredColor": "EDECE3",
-        "description": "Трудоголик по жизни<br><br>Пишу на Kotlin/Java/C++",
-        "employmentExp": "Опыт работы: 3&nbsp;года",
-        "link": "Напишите нам: info&#64;inkast.me"
-      },
-      {
-        "avatar": "Misha.png",
-        "emoji": "microscope",
-        "name": "Миша Санжак",
-        "post": "DevOps",
-        "preferredColor": "CED6E8",
-        "description": "Пишу много кода и не только yaml. Люблю механические клавиатуры, становую тягу и системы",
-        "employmentExp": "Опыт работы: больше 6&nbsp;лет",
-        "link": "Contact us: info&#64;inkast.me"
-      }
-    ]
+        {
+          "avatar": "Alena.png",
+          "emoji": "paw",
+          "name": "Алёна Самарина",
+          "post": "CEO и Head Marketing",
+          "preferredColor": "FFE5D6",
+          "description": "Выполняла проекты для Mars, Danone, Nexign, Schlumberger, Газпром Нефть, Северсталь, Росатом <br><br> Неоднократный победитель кейс-чемпионатов и&nbsp;хакатонов",
+          "employmentExp": "Опыт работы: 6&nbsp;лет",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Alexander.png",
+          "emoji": "trackball",
+          "name": "Александр Грин",
+          "post": "COO и&nbsp;Продуктовый дизайнер",
+          "preferredColor": "E7E7E9",
+          "description": "Выполнял проекты для Яндекса, VK, Газпром, Skyeng и&nbsp;X5&nbsp;Group <br><br> Призер олимпиады ВШЭ в&nbsp;области дизайна и&nbsp;неоднократный победитель хакатонов",
+          "employmentExp": "Опыт работы: 6&nbsp;лет",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Natalia.png",
+          "emoji": "noevilmonkey",
+          "name": "Наталья Мальцева",
+          "post": "CTO и&nbsp;Backend разработчик",
+          "preferredColor": "E0C49E",
+          "description": "Строила гоночный болид в&nbsp;отделе электрики<br><br> Получатель гранта УМНИК. Победитель хакатонов и&nbsp;кейс-чемпионатов",
+          "employmentExp": "Опыт работы: 5&nbsp;лет",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Platon.png",
+          "emoji": "vulcan",
+          "name": "Лапп Платон",
+          "post": "Frontend разработчик",
+          "preferredColor": "C7C789",
+          "description": "Просто хороший парень",
+          "employmentExp": "Опыт работы: 5&nbsp;лет",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Ulyana.png",
+          "emoji": "tiger",
+          "name": "Ульяна Саламатова",
+          "post": "Android разработчик",
+          "preferredColor": "E6F7A2",
+          "description": "Пишу на&nbsp;Kotlin",
+          "employmentExp": "Опыт работы: 3&nbsp;года",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Anna.png",
+          "emoji": "victory",
+          "name": "Анна Грохотова",
+          "post": "Маркетолог",
+          "preferredColor": "FFE5D6",
+          "description": "Выполняю проекты в сфере нейротехнологий <br><br> Знаю, как работает наш мозг и&nbsp;что нужно людям",
+          "employmentExp": "Опыт работы: 5&nbsp;лет",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "NataliaT.png",
+          "emoji": "smile",
+          "name": "Наталья Трусова",
+          "post": "Аналитик данных",
+          "preferredColor": "94ADE8",
+          "description": "Участие во&nbsp;многих проектах для крупных фирм в&nbsp;составе консалтинговой команды, работа в&nbsp;финансовой организации и&nbsp;разработка новых алгоритмов, помогающих бизнесу развиваться",
+          "employmentExp": "Опыт работы: 3&nbsp;года",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Sofia.png",
+          "emoji": "sparkles",
+          "name": "Болоховская Софья",
+          "post": "SMM-менеджер, маркетолог",
+          "preferredColor": "F8DFBE",
+          "description": "Выполняла проекты для консалтингового агентства, крупного промышленного предприятия и&nbsp;розничных сетей<br><br>Имеет высшее образование в&nbsp;сфере Рекламы и&nbsp;связей с&nbsp;общественностью",
+          "employmentExp": "Опыт работы: 2&nbsp;года",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Alan.png",
+          "emoji": "goggles",
+          "name": "Алан Гасиев",
+          "post": "Занимаюсь контролем качества продуктов",
+          "preferredColor": "f7f7f7",
+          "description": "Поиск дефектов, установка требований к&nbsp;системе и&nbsp;анализ её&nbsp;поведения",
+          "employmentExp": "Опыт работы: 3&nbsp;года",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Andrey.png",
+          "emoji": "winking-face",
+          "name": "Андрей Шабунин",
+          "post": "Android разработчик",
+          "preferredColor": "EDECE3",
+          "description": "Трудоголик по жизни<br><br>Пишу на Kotlin/Java/C++",
+          "employmentExp": "Опыт работы: 3&nbsp;года",
+          "link": "Напишите нам: info&#64;inkast.me"
+        },
+        {
+          "avatar": "Misha.png",
+          "emoji": "microscope",
+          "name": "Миша Санжак",
+          "post": "DevOps",
+          "preferredColor": "CED6E8",
+          "description": "Пишу много кода и не только yaml. Люблю механические клавиатуры, становую тягу и системы",
+          "employmentExp": "Опыт работы: больше 6&nbsp;лет",
+          "link": "Contact us: info&#64;inkast.me"
+        }
+      ]
     },
     "follow": {
       "title": "Будем <br> друзьями!",
@@ -645,10 +639,6 @@
         "description": "Оформите ежемесячное пожертвование через&nbsp;VK donut. Это поможет нашему развитию"
       }
     }
-  },
-  "404": {
-    "description": "Такой страницы не&nbsp;существует",
-    "main": "На&nbsp;главную"
   },
   "Investors": {
     "hero": {

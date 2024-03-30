@@ -1,9 +1,7 @@
 <template>
   <section class="home__greeting">
     <div class="greetings__ifno">
-      <h1>
-        <span v-html="t('Home.greeting.hello')"></span> <br />
-        <span v-html="t('Home.greeting.inkast')"></span>
+      <h1 v-html="t('Home.greeting.hello')">
       </h1>
       <span v-html="t('Home.greeting.slogan')" class="slogan"></span>
     </div>
@@ -77,11 +75,13 @@
         </svg>
       </a>
     </div>
-    <img
-      src="@/assets/cards/maskot.png"
-      alt="Маскот приложения по поиску друзей Инкаст "
-      class="maskot"
-    />
+    <div class="maskot">
+      <img
+        src="@/assets/cards/maskot.png"
+        alt="Маскот приложения по поиску друзей Инкаст "
+        class="maskot__image"
+      />
+    </div>
   </section>
 </template>
 
@@ -153,13 +153,19 @@ export default defineComponent({
   }
 
   .maskot {
-    height: 40.792vw;
+    height: min(40.792vw, 590px);
     position: absolute;
     right: 0;
     bottom: -34.8%;
 
     @media (max-width: 576px) {
       display: none;
+    }
+
+    &__image {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
     }
   }
 
